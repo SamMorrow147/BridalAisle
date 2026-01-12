@@ -134,26 +134,6 @@ export default function Home() {
           <div className="feature-card">
             <div className="arched-image">
               <Image
-                src="/home/bab-68web.jpg"
-                alt="Wedding dress detail"
-                width={400}
-                height={500}
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <h3 className="feature-label">OFF-THE-RACK</h3>
-            <h1 className="feature-title">Designer Gowns</h1>
-            <p className="feature-description">
-              Say yes and take it home the same day. With over 2,000 designer dresses to choose from, 
-              Bridal Aisle offers an off-the-rack experience unlike any other. Find your dream dress 
-              and take it home the very day you say "yes"—no long wait times, no stress, just pure 
-              bridal excitement.
-            </p>
-          </div>
-          
-          <div className="feature-card">
-            <div className="arched-image">
-              <Image
                 src="/home/bab-108web.jpg"
                 alt="Bridal appointment"
                 width={400}
@@ -187,6 +167,26 @@ export default function Home() {
               Whether you're exploring our Budget Bridal section, taking advantage of layaway, or 
               booking a VIP appointment, we offer options to fit your timeline, preferences, and 
               budget—all while keeping the experience joyful and stress-free.
+            </p>
+          </div>
+          
+          <div className="feature-card">
+            <div className="arched-image">
+              <Image
+                src="/home/bab-68web.jpg"
+                alt="Wedding dress detail"
+                width={400}
+                height={500}
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <h3 className="feature-label">OFF-THE-RACK</h3>
+            <h1 className="feature-title">Designer Gowns</h1>
+            <p className="feature-description">
+              Say yes and take it home the same day. With over 2,000 designer dresses to choose from, 
+              Bridal Aisle offers an off-the-rack experience unlike any other. Find your dream dress 
+              and take it home the very day you say "yes"—no long wait times, no stress, just pure 
+              bridal excitement.
             </p>
           </div>
         </div>
@@ -226,6 +226,9 @@ export default function Home() {
             From stepping into your first dress to the moment you say yes...we're here to make 
             every step seamless.
           </p>
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Link href="/bridal" className="experience-cta-btn">BROWSE BRIDAL COLLECTIONS</Link>
+          </div>
         </div>
         
         <div className="experience-container">
@@ -284,10 +287,6 @@ export default function Home() {
               same day and celebrate saying yes!
             </p>
           </div>
-        </div>
-        
-        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-          <Link href="/bridal" className="experience-cta-btn">BROWSE BRIDAL COLLECTIONS</Link>
         </div>
       </section>
 
