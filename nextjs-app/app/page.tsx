@@ -70,7 +70,7 @@ export default function Home() {
           </div>
           
           <div className="about-content-center">
-            <h3 className="about-label">MINNESOTA'S MOST LOVED BRIDAL BOUTIQUE</h3>
+            <h3 className="about-label">MINNESOTA&apos;S MOST LOVED BRIDAL BOUTIQUE</h3>
             <div className="divider-line"></div>
             <h1 className="about-title">Fall in love with the perfect dress & take it home</h1>
             <h2 className="about-subtitle">that same day.</h2>
@@ -295,12 +295,12 @@ export default function Home() {
       <section className="mens-suits-parallax">
         <div className="parallax-overlay"></div>
         <div className="parallax-content">
-          <h3 className="parallax-label">TAILORED SUITS FOR LIFE'S DEFINING MOMENTS</h3>
+          <h3 className="parallax-label">TAILORED SUITS FOR LIFE&apos;S DEFINING MOMENTS</h3>
           <h1 className="parallax-title">
             <span className="script-text">Timeless style</span>
             <span className="serif-text"> for every occasion.</span>
           </h1>
-          <Link href="/mens-suits" className="parallax-btn">THE WOODS MEN'S SUITS</Link>
+          <Link href="/mens-suits" className="parallax-btn">THE WOODS MEN&apos;S SUITS</Link>
         </div>
       </section>
 

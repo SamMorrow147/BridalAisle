@@ -85,7 +85,7 @@ export default function AppointmentsPage() {
           <div className="appointment-detail-content">
             <h1 className="appointment-detail-title">Bridal Aisle Dress Appointment</h1>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $25.00 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
-            <p>The Bride + 4 guests will enjoy a 90-minute bridal appointment with a personal stylist to assist you in finding 'the one'! While your guests relax in their designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
+            <p>The Bride + 4 guests will enjoy a 90-minute bridal appointment with a personal stylist to assist you in finding &apos;the one&apos;! While your guests relax in their designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
             <p>The bride will have access to all dresses in the store including the Budget Bridal Outlet to try on. This appointment type is recommended for brides with a budget higher than $700.</p>
             <p>All dresses range from $350 - $2,500.</p>
             <Link href="#appointment-1" className="appointment-cta-btn">SCHEDULE YOUR APPOINTMENT</Link>
@@ -140,7 +140,7 @@ export default function AppointmentsPage() {
           <div className="appointment-detail-content">
             <h1 className="appointment-detail-title">VIP Bridal Experience</h1>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $100 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
-            <p>The Bride and up to 10 guests will enjoy a 90-minute bridal appointment with one of our senior stylists to assist you in finding 'the one'! While your guests relax in their semi-private designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
+            <p>The Bride and up to 10 guests will enjoy a 90-minute bridal appointment with one of our senior stylists to assist you in finding &apos;the one&apos;! While your guests relax in their semi-private designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
             <p>All dresses range from $350.00 - $2,500.</p>
             <a href="tel:763-220-2319" className="appointment-cta-btn">CALL TO SCHEDULE</a>
             <ul className="appointment-features-list">

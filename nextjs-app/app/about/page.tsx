@@ -75,7 +75,7 @@ export default function AboutPage() {
           />
         </div>
         <h3>Bridal Luxury, Simplified</h3>
-        <h1>Minnesota's Destination for<br />Effortless Bridal Style</h1>
+        <h1>Minnesota&apos;s Destination for<br />Effortless Bridal Style</h1>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p>
             Welcome to Bridal Aisle Boutique, Minnesota's premier destination for new off-the-rack 
