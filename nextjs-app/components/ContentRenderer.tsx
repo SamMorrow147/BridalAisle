@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 
 interface ContentBlock {
@@ -17,7 +18,7 @@ export default function ContentRenderer({ content }: ContentRendererProps) {
     <div className="content-blocks">
       {content.map((block, index) => {
         if (block.type === 'heading') {
-          const Tag = (`h${block.level}` || 'h2') as keyof JSX.IntrinsicElements;
+          const Tag = (`h${block.level}` || 'h2') as keyof React.JSX.IntrinsicElements;
           return <Tag key={index} className={`heading-${block.level}`}>{block.text}</Tag>;
         }
         

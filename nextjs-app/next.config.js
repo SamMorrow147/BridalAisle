@@ -7,6 +7,8 @@ const nextConfig = {
   reactStrictMode: true,
   // Remove powered-by header for security
   poweredByHeader: false,
+  // Set output file tracing root to silence multiple lockfiles warning
+  outputFileTracingRoot: require('path').join(__dirname),
 };
 
 module.exports = nextConfig;
