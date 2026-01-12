@@ -687,14 +687,13 @@ header,
   width: 100vw;
   margin: 0 !important;
   padding: 0 !important;
-  min-height: 500px;
   box-sizing: border-box;
 }
 
 .experience-image {
   position: relative;
   width: 50vw;
-  min-height: 500px;
+  height: 100%;
   order: 1;
   overflow: hidden;
   margin: 0 !important;
@@ -720,7 +719,6 @@ header,
   color: #fff;
   order: 2;
   width: 50vw;
-  min-height: 500px;
   margin: 0 !important;
   box-sizing: border-box;
   border: none;
@@ -3117,24 +3115,23 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   
   /* Experience Section Mobile */
   .experience-section {
-    padding: 4rem 0;
+    padding: 0 !important;
   }
   
   .experience-container {
     grid-template-columns: 1fr;
-    min-height: auto;
   }
   
   .experience-image {
-    min-height: 400px;
+    height: 400px;
     order: 1;
-    width: 100%;
+    width: 100vw;
   }
   
   .experience-content {
     padding: 3rem 2rem;
     order: 2;
-    width: 100%;
+    width: 100vw;
   }
   
   .experience-heading {
