@@ -2483,6 +2483,7 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   font-family: 'Printed Moments', cursive;
   font-weight: 400;
   font-size: 5rem;
+  white-space: nowrap;
 }
 
 .parallax-title .serif-text {
