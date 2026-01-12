@@ -15,7 +15,7 @@ interface TeamMember {
 }
 
 export default function TeamSection() {
-  const [selectedMember, setSelectedMember] = useState<string | null>('Kaitlin'); // Default to Kaitlin
+  const [selectedMember, setSelectedMember] = useState<string | null>('Annette'); // Default to first member
   const profileRef = useRef<HTMLDivElement>(null);
 
   // Extract team member data from content
@@ -138,7 +138,7 @@ export default function TeamSection() {
                     alt={selectedMemberData.name}
                     width={280}
                     height={350}
-                    style={{ objectFit: 'contain', objectPosition: 'center top' }}
+                    style={{ objectFit: 'cover', objectPosition: 'center center', width: '100%', height: '100%' }}
                   />
                 )}
               </div>
