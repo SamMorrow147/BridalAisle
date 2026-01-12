@@ -28,8 +28,8 @@ export default function MobileNav() {
     document.body.style.overflow = 'unset';
   };
 
-  // Menu portal content
-  const menuContent = (
+  // Menu portal content - only render when mounted
+  const menuContent = mounted ? (
     <>
       {/* Mobile Menu Overlay */}
       {isOpen && (
@@ -73,7 +73,7 @@ export default function MobileNav() {
         </div>
       </div>
     </>
-  );
+  ) : null;
 
   return (
     <>
@@ -111,7 +111,7 @@ export default function MobileNav() {
       </nav>
 
       {/* Render menu at document.body level using portal */}
-      {mounted && createPortal(menuContent, document.body)}
+      {menuContent && createPortal(menuContent, document.body)}
     </>
   );
 }
