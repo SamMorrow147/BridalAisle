@@ -1,0 +1,20 @@
+{
+  "name": "bridal-aisle-rebuild",
+  "version": "1.0.0",
+  "description": "Scrape and rebuild kit for Bridal Aisle website",
+  "scripts": {
+    "scrape:all": "tsx scripts/run-all.ts",
+    "scrape:single": "tsx scripts/scrape.ts",
+    "download": "tsx scripts/download-assets.ts",
+    "scaffold": "tsx scripts/scaffold-nextjs.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
