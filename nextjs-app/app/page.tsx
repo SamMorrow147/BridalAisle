@@ -1,13 +1,17 @@
+'use client';
+
+import { useRef } from 'react';
 import HeroSlideshow from '@/components/HeroSlideshow';
 import BridesSlideshow from '@/components/BridesSlideshow';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import FullwidthSlideshow from '@/components/FullwidthSlideshow';
-import MobileNav from '@/components/MobileNav';
+import MobileNav, { MobileNavRef } from '@/components/MobileNav';
 import FAQ from '@/components/FAQ';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
+  const mobileNavRef = useRef<MobileNavRef>(null);
   const slides = [
     {
       image: '/home/174-a741457-enhanced-nr-ethanhanesphotography-eaa68822.jpg',
@@ -23,10 +27,14 @@ export default function Home() {
     }
   ];
 
+  const handleMenuOpen = () => {
+    mobileNavRef.current?.openMenu();
+  };
+
   return (
     <>
       {/* Hero Slideshow Section - Full Screen */}
-      <HeroSlideshow slides={slides} interval={5000} />
+      <HeroSlideshow slides={slides} interval={5000} onMenuOpen={handleMenuOpen} />
       
       {/* Sticky Navigation - appears after hero */}
       <header className="sticky-header home-nav">
@@ -51,7 +59,7 @@ export default function Home() {
         </nav>
         
         {/* Mobile Navigation */}
-        <MobileNav />
+        <MobileNav ref={mobileNavRef} />
       </header>
       
       <main className="page-container home-page">
@@ -61,10 +69,10 @@ export default function Home() {
         <div className="about-three-column">
           <div className="about-image-left">
             <Image
-              src="/home/bridals-2021-07-30candaceandchasewedding-1-laurenbakerphotography-8914695a.jpg"
-              alt="Bride in wedding dress"
-              width={450}
-              height={650}
+              src="/home/3.jpg"
+              alt="Bride on balcony"
+              width={400}
+              height={450}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%', height: 'auto' }}
             />
           </div>
@@ -80,19 +88,19 @@ export default function Home() {
           <div className="about-images-right">
             <div className="about-image-top">
               <Image
-                src="/home/dsc07957-codeerosephotography-ecc57b89.jpg"
-                alt="Couple kissing"
-                width={400}
-                height={350}
+                src="/home/bridals-2021-07-30candaceandchasewedding-1-laurenbakerphotography-8914695a.jpg"
+                alt="Bride in wedding dress"
+                width={450}
+                height={650}
                 style={{ objectFit: 'cover', borderRadius: '8px', width: '100%', height: 'auto' }}
               />
             </div>
             <div className="about-image-bottom">
               <Image
-                src="/home/3.jpg"
-                alt="Bride on balcony"
+                src="/home/dsc07957-codeerosephotography-ecc57b89.jpg"
+                alt="Couple kissing"
                 width={400}
-                height={450}
+                height={350}
                 style={{ objectFit: 'cover', borderRadius: '8px', width: '100%', height: 'auto' }}
               />
             </div>
@@ -107,9 +115,9 @@ export default function Home() {
             <Image
               src="/home/flower-icon.png"
               alt="Flower icon"
-              width={80}
-              height={100}
-              style={{ filter: 'invert(1) opacity(0.6)' }}
+              width={100}
+              height={125}
+              style={{ filter: 'invert(1) opacity(0.9)' }}
             />
           </div>
           <p className="philosophy-text">
@@ -142,13 +150,13 @@ export default function Home() {
                 priority={false}
               />
             </div>
-            <h3 className="feature-label">PERSONALIZED</h3>
-            <h1 className="feature-title">Stress-free Appointments</h1>
+            <h3 className="feature-label">OFF-THE-RACK</h3>
+            <h1 className="feature-title">Designer Gowns</h1>
             <p className="feature-description">
-              A bridal experience that's all about you. From your first hello to your final fitting, 
-              our expert stylists make your appointment feel effortless and memorable. You'll enjoy 
-              a warm, welcoming atmosphere and personalized guidance that helps you find the dress 
-              that feels like you.
+              Say yes and take it home the same day. With over 2,000 designer dresses to choose from, 
+              Bridal Aisle offers an off-the-rack experience unlike any other. Find your dream dress 
+              and take it home the very day you say "yes"—no long wait times, no stress, just pure 
+              bridal excitement.
             </p>
           </div>
           
@@ -163,12 +171,13 @@ export default function Home() {
                 priority={false}
               />
             </div>
-            <h3 className="feature-label">FLEXIBLE OPTIONS</h3>
-            <h1 className="feature-title">For Every Bride</h1>
+            <h3 className="feature-label">PERSONALIZED</h3>
+            <h1 className="feature-title">Stress-free Appointments</h1>
             <p className="feature-description">
-              Whether you're exploring our Budget Bridal section, taking advantage of layaway, or 
-              booking a VIP appointment, we offer options to fit your timeline, preferences, and 
-              budget—all while keeping the experience joyful and stress-free.
+              A bridal experience that's all about you. From your first hello to your final fitting, 
+              our expert stylists make your appointment feel effortless and memorable. You'll enjoy 
+              a warm, welcoming atmosphere and personalized guidance that helps you find the dress 
+              that feels like you.
             </p>
           </div>
           
@@ -183,13 +192,12 @@ export default function Home() {
                 priority={false}
               />
             </div>
-            <h3 className="feature-label">OFF-THE-RACK</h3>
-            <h1 className="feature-title">Designer Gowns</h1>
+            <h3 className="feature-label">FLEXIBLE OPTIONS</h3>
+            <h1 className="feature-title">For Every Bride</h1>
             <p className="feature-description">
-              Say yes and take it home the same day. With over 2,000 designer dresses to choose from, 
-              Bridal Aisle offers an off-the-rack experience unlike any other. Find your dream dress 
-              and take it home the very day you say "yes"—no long wait times, no stress, just pure 
-              bridal excitement.
+              Whether you're exploring our Budget Bridal section, taking advantage of layaway, or 
+              booking a VIP appointment, we offer options to fit your timeline, preferences, and 
+              budget—all while keeping the experience joyful and stress-free.
             </p>
           </div>
         </div>

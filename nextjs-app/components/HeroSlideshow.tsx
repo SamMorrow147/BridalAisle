@@ -11,9 +11,10 @@ interface Slide {
 interface HeroSlideshowProps {
   slides: Slide[];
   interval?: number;
+  onMenuOpen?: () => void;
 }
 
-export default function HeroSlideshow({ slides, interval = 5000 }: HeroSlideshowProps) {
+export default function HeroSlideshow({ slides, interval = 5000, onMenuOpen }: HeroSlideshowProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -45,6 +46,19 @@ export default function HeroSlideshow({ slides, interval = 5000 }: HeroSlideshow
       ))}
       
       <div className="hero-content-overlay">
+        {/* Hamburger Menu Button for Mobile/Tablet */}
+        <button 
+          className="hero-hamburger-menu" 
+          aria-label="Open menu"
+          onClick={onMenuOpen}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+        
         <div className="hero-logo-top">
           <Image
             src="/White-BA-logo-stacked.png"
