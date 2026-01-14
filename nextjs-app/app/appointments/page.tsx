@@ -3,6 +3,7 @@
 import AppointmentsHeroSlideshow from '@/components/AppointmentsHeroSlideshow';
 import AppointmentDetailSlideshow from '@/components/AppointmentDetailSlideshow';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
+import FAQ from '@/components/FAQ';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -227,7 +228,7 @@ export default function AppointmentsPage() {
           </div>
           <div className="prepare-image">
             <Image
-              src="/appointments/prepare-section.jpg"
+              src="/contact/Contact-image.jpg"
               alt="Bridal boutique interior"
               fill
               style={{ objectFit: 'cover' }}
@@ -267,6 +268,61 @@ export default function AppointmentsPage() {
             highlight: 'I said YES to the dress and couldn\'t be happier!',
             quote: '"BEST experience ever! Stacy was great! She was super attentive to my dress dreams, my budget, and me/my bridal party. I said YES to the dress and couldn\'t be happier! Thank you Stacy and Bridal Aisle for making this experience so special, not only me but my bridal party as well!"',
             image: '/home/jessica-motzko-bridal-aisle-in-store-photo-813be1aa.png'
+          }
+        ]} />
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="bridal-faq-section">
+        <h1 className="faq-heading">FAQ</h1>
+        <FAQ faqs={[
+          {
+            question: "Do I need to set up an appointment to try on wedding dresses?",
+            answer: "Yes. We require all brides to book appointments. Don't hesitate to make your appointment as we book up well in advance. Appointments allow us to provide you and your party with the attention and experience you deserve."
+          },
+          {
+            question: "What is included in a bridal gown appointment?",
+            answer: "During your bridal appointment, you are guaranteed one-on-one attention with a dedicated stylist to guide and assist with your selection, and the exclusive use of an area in the boutique. Our bridal gown appointments are 90 minutes for brides who are ready to take their dream dress home!"
+          },
+          {
+            question: "How many people can I bring to my bridal appointment?",
+            answer: "We welcome parties of up to 4 people plus the Bride. If you anticipate having 5 or more people for your bridal appointment, we offer a VIP appointment with a fee for your convenience."
+          },
+          {
+            question: "Do you offer appointments to try on accessories, like veils and jewelry?",
+            answer: "Absolutely! We find it's much easier to help you find the right additions to your gown when you can try them on together. Please call to get on our schedule or book online here."
+          },
+          {
+            question: "What is your return/exchange policy?",
+            answer: "All sales are final. No exchanges or refunds."
+          },
+          {
+            question: "Can you hold a dress for me while I think it over?",
+            answer: "We can hold your dresses for 24 hours for a non-refundable $50. The $50 will be applied to the purchase of your dress. If you do not purchase your dress within the 24 hour period, the $50 will be retained and the dress will be returned to the floor. This ensures we give every bride the best opportunity to find the dress of her dreams!"
+          },
+          {
+            question: "What sizes do you carry?",
+            answer: "You will find gowns ranging from size 0 to size 32 and all sizes in between when you shop at Bridal Aisle Boutique."
+          },
+          {
+            question: "What is your price range?",
+            answer: "Our dresses range in price from $700-$2,500 with the most average price being in the $1,000-$1,500 range."
+          },
+          {
+            question: "What dresses do you carry?",
+            answer: "We are excited to carry over 2,000 new wedding gowns for you to bring home today. Visit our Instagram or Facebook page for the most updated look at our newest arrivals. As a one-stop shop you will also find, mothers dresses, formal dresses and suits at Bridal Aisle Boutique."
+          },
+          {
+            question: "Are alterations included?",
+            answer: "Alterations are not included with the price of the dress. We will provide you with multiple trusted alteration specialists we refer our clients to around the Twin Cities area."
+          },
+          {
+            question: "Do you offer payment plans?",
+            answer: "You can say \"Yes!\" to the dress without the worry of paying the full amount upfront. At Bridal Aisle Boutique, we offer a 30 day layaway option! Ask a consultant for more details and make your dream come true!"
+          },
+          {
+            question: "Can I bring drinks/food into the store?",
+            answer: "We do not allow drinks or food within the store. Champagne and clear liquids are acceptable but all other substances will be asked to be left in our front waiting area. Champagne must be popped either in our restroom or outside."
           }
         ]} />
       </section>

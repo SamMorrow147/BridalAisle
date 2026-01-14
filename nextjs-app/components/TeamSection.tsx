@@ -23,7 +23,7 @@ export default function TeamSection() {
     const members: TeamMember[] = [];
     const content = contentData.content;
     
-    const memberNames = ['Annette', 'Kaitlin', 'Ashley', 'Cassidy', 'Tonya', 'Ericka', 'Kendra', 'Karina', 'Anna', 'Alex', 'Madeline', 'Tammy', 'Chloe', 'Dana'];
+    const memberNames = ['Annette', 'Kaitlin', 'Ashley', 'Cassidy', 'Tonya', 'Ericka', 'Kendra', 'Anna', 'Alex', 'Madeline', 'Tammy', 'Aspen', 'Chloe', 'Dana'];
     
     memberNames.forEach(name => {
       const nameIndex = content.findIndex(c => c.type === 'heading' && c.level === 2 && c.text === name);
@@ -110,9 +110,9 @@ export default function TeamSection() {
 
   return (
     <section className="content-section centered team-section">
+      <h2 className="team-section-title">A little bit about your Bridal Stylist</h2>
       <div className="team-container">
         <div className="team-nav">
-          <h2 className="team-profile-title">A little bit about<br />your Bridal Stylist</h2>
           {teamMembers.map((member) => (
             <button
               key={member.name}

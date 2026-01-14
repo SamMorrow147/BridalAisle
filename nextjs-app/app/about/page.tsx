@@ -130,40 +130,31 @@ export default function AboutPage() {
             <div className="mission-images-container">
               <div className="mission-image mission-image-1">
                 <Image
-                  src="/about/tiffanyjoannphoto-198.jpg"
+                  src="/about/bab-68web.jpg"
                   alt=""
-                  width={300}
-                  height={400}
-                  style={{ objectFit: 'cover' }}
+                  width={220}
+                  height={290}
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 />
               </div>
               <div className="mission-image mission-image-2">
                 <Image
-                  src="/about/bab-68web.jpg"
+                  src="/about/tiffanyjoannphoto-198.jpg"
                   alt=""
-                  width={300}
-                  height={400}
-                  style={{ objectFit: 'cover' }}
+                  width={350}
+                  height={460}
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 />
               </div>
               <div className="mission-flower-icon">
                 <Image
-                  src="/home/flower-icon.png"
-                  alt="Flower icon"
-                  width={80}
-                  height={100}
-                  style={{ objectFit: 'contain', filter: 'invert(1) opacity(0.6)' }}
+                  src="/about/ba-icon-bouquet-2x.png"
+                  alt="Bouquet icon"
+                  width={120}
+                  height={145}
+                  style={{ objectFit: 'contain', width: '100%', height: '100%' }}
                 />
               </div>
-            </div>
-            <div className="mission-icon">
-              <Image
-                src="/about/ba-icon-bouquet-2x.png"
-                alt=""
-                width={100}
-                height={100}
-                style={{ objectFit: 'contain' }}
-              />
             </div>
           </div>
         </div>
@@ -197,6 +188,7 @@ export default function AboutPage() {
         </div>
         <div className="history-container">
           <div className="history-content">
+            <h3>MEET THE FOUNDERS</h3>
             <h1>A legacy of love & dedication</h1>
             <p>
               Founded by Annette and Brad in 2013, Bridal Aisle began with a simple idea: brides 
@@ -220,7 +212,6 @@ export default function AboutPage() {
               and stress-free.
             </p>
             <div className="history-divider"></div>
-            <h3>MEET THE FOUNDERS</h3>
           </div>
         </div>
       </section>
@@ -250,7 +241,7 @@ export default function AboutPage() {
             src="/about/photo-dec-12-2023-10-44-54-am.jpg"
             alt="I Said Yes at Bridal Aisle"
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>
         <div className="experience-content">

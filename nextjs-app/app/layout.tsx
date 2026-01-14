@@ -122,18 +122,18 @@ export default function RootLayout({
                     src="/new-footer-1-600x101.webp"
                     alt="Footer badge 1"
                     width={80}
-                    height={13}
-                    style={{ objectFit: 'contain', height: 'auto', width: 'auto', maxHeight: '13px' }}
+                    height={26}
+                    style={{ objectFit: 'contain', height: 'auto', width: 'auto', maxHeight: '26px' }}
                   />
                 </a>
                 <span className="badge-separator">+</span>
                 <a href="https://www.clubhausagency.com" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/new-footer-2-600x101.webp"
-                    alt="Footer badge 2"
+                    src="/CH_Tag.png"
+                    alt="CH Tag"
                     width={80}
-                    height={13}
-                    style={{ objectFit: 'contain' }}
+                    height={29}
+                    style={{ objectFit: 'contain', height: 'auto', width: 'auto', maxHeight: '29px' }}
                   />
                 </a>
               </div>

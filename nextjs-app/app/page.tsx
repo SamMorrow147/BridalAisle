@@ -138,7 +138,8 @@ export default function Home() {
                 alt="Bridal appointment"
                 width={400}
                 height={500}
-                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 350px, (max-width: 900px) 45vw, 400px"
+                priority={false}
               />
             </div>
             <h3 className="feature-label">PERSONALIZED</h3>
@@ -158,7 +159,8 @@ export default function Home() {
                 alt="Bride and consultant"
                 width={400}
                 height={500}
-                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 350px, (max-width: 900px) 45vw, 400px"
+                priority={false}
               />
             </div>
             <h3 className="feature-label">FLEXIBLE OPTIONS</h3>
@@ -177,7 +179,8 @@ export default function Home() {
                 alt="Wedding dress detail"
                 width={400}
                 height={500}
-                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 350px, (max-width: 900px) 45vw, 400px"
+                priority={false}
               />
             </div>
             <h3 className="feature-label">OFF-THE-RACK</h3>
@@ -195,8 +198,8 @@ export default function Home() {
       {/* Real Brides Horizontal Carousel */}
       <section className="slideshow-section">
         <BridesSlideshow slides={[
-          { image: '/home/dsc07551-codeerosephotography.jpg', alt: 'Bride portrait' },
           { image: '/home/bn-wedding-72-2.jpg', alt: 'Real bride' },
+          { image: '/home/dsc07551-codeerosephotography.jpg', alt: 'Bride portrait' },
           { image: '/home/168-a741428-enhanced-nr-ethanhanesphotography.jpg', alt: 'Bride outdoor' },
           { image: '/home/tiffanyjoannphoto-56.jpg', alt: 'Bride photo' },
           { image: '/home/1k1a8372.jpg', alt: 'Bride portrait' },
@@ -226,7 +229,7 @@ export default function Home() {
             From stepping into your first dress to the moment you say yes...we're here to make 
             every step seamless.
           </p>
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <div className="experience-cta-mobile" style={{ textAlign: 'center', marginTop: '2rem' }}>
             <Link href="/bridal" className="experience-cta-btn">BROWSE BRIDAL COLLECTIONS</Link>
           </div>
         </div>
@@ -287,6 +290,10 @@ export default function Home() {
               same day and celebrate saying yes!
             </p>
           </div>
+        </div>
+        
+        <div className="experience-cta-desktop" style={{ textAlign: 'center', marginTop: '4rem' }}>
+          <Link href="/bridal" className="experience-cta-btn">BROWSE BRIDAL COLLECTIONS</Link>
         </div>
       </section>
 

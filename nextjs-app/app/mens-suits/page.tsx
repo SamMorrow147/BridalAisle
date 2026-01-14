@@ -1,15 +1,16 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useLayoutEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function MensSuitsPage() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(3); // Start at 4th image (index 3)
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isReady, setIsReady] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
   
   const suitSlides = [
     { image: '/mens-suits/suit-slide-1.jpg', alt: 'Metro suit sage' },
@@ -21,89 +22,145 @@ export default function MensSuitsPage() {
     { image: '/mens-suits/suit-slide-7.jpg', alt: 'Metro suit cornflower' }
   ];
   
-  const slideWidth = 550 + 24; // width + gap (horizontal images)
+  // Slide dimensions
+  const slideWidth = 550;
+  const gap = 24;
+  const totalSlideWidth = slideWidth + gap;
+  
+  // Create extended slides for infinite loop (5 copies)
+  const extendedSlides = [...suitSlides, ...suitSlides, ...suitSlides, ...suitSlides, ...suitSlides];
+  const startOffset = suitSlides.length * 2; // Start in the middle
 
-  // Initialize scroll position to index 3 (4th image)
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft = slideWidth * 3;
+  // Set initial scroll position before paint
+  useLayoutEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.style.scrollBehavior = 'auto';
+      container.scrollLeft = totalSlideWidth * startOffset;
+      requestAnimationFrame(() => {
+        setIsReady(true);
+        container.style.scrollBehavior = 'smooth';
+      });
     }
-  }, [slideWidth]);
+  }, [totalSlideWidth, startOffset]);
+
+  // Handle infinite loop repositioning
+  const handleScrollEnd = useCallback(() => {
+    const container = scrollContainerRef.current;
+    if (!container || isDragging) return;
+    
+    const scrollPos = container.scrollLeft;
+    const currentIndex = Math.round(scrollPos / totalSlideWidth);
+    
+    const minSafeIndex = suitSlides.length;
+    const maxSafeIndex = suitSlides.length * 4 - 1;
+    
+    if (currentIndex < minSafeIndex || currentIndex > maxSafeIndex) {
+      const normalizedIndex = ((currentIndex % suitSlides.length) + suitSlides.length) % suitSlides.length;
+      const newIndex = suitSlides.length * 2 + normalizedIndex;
+      
+      container.style.scrollBehavior = 'auto';
+      container.scrollLeft = newIndex * totalSlideWidth;
+      requestAnimationFrame(() => {
+        container.style.scrollBehavior = 'smooth';
+      });
+    }
+  }, [isDragging, suitSlides.length, totalSlideWidth]);
+
+  // Scroll event handler
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    let scrollTimeout: NodeJS.Timeout;
+    
+    const handleScroll = () => {
+      const scrollPos = container.scrollLeft;
+      const currentIndex = Math.round(scrollPos / totalSlideWidth);
+      const normalizedIndex = ((currentIndex % suitSlides.length) + suitSlides.length) % suitSlides.length;
+      setActiveIndex(normalizedIndex);
+      
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(handleScrollEnd, 150);
+    };
+    
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, [handleScrollEnd, suitSlides.length, totalSlideWidth]);
 
   // Mouse drag handlers
   const handleMouseDown = (e: React.MouseEvent) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
     setIsDragging(true);
-    setStartX(e.pageX - (scrollContainerRef.current?.offsetLeft || 0));
-    setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
+    setStartX(e.pageX);
+    setScrollLeft(container.scrollLeft);
+    container.style.scrollBehavior = 'auto';
+    container.style.scrollSnapType = 'none';
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX - (scrollContainerRef.current?.offsetLeft || 0);
-    const walk = (x - startX) * 2;
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-    }
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const walk = (e.pageX - startX) * 1.5;
+    container.scrollLeft = scrollLeft - walk;
   };
 
   const handleMouseUp = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
     setIsDragging(false);
+    container.style.scrollBehavior = 'smooth';
+    container.style.scrollSnapType = 'x mandatory';
+    const currentPos = container.scrollLeft;
+    const nearestIndex = Math.round(currentPos / totalSlideWidth);
+    container.scrollLeft = nearestIndex * totalSlideWidth;
+    setTimeout(handleScrollEnd, 300);
   };
 
   const handleMouseLeave = () => {
-    setIsDragging(false);
+    if (isDragging) handleMouseUp();
   };
 
-  // Touch handlers for mobile
+  // Touch handlers
   const handleTouchStart = (e: React.TouchEvent) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
     setIsDragging(true);
-    setStartX(e.touches[0].pageX - (scrollContainerRef.current?.offsetLeft || 0));
-    setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
+    setStartX(e.touches[0].pageX);
+    setScrollLeft(container.scrollLeft);
+    container.style.scrollBehavior = 'auto';
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - (scrollContainerRef.current?.offsetLeft || 0);
-    const walk = (x - startX) * 2;
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-    }
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const walk = (e.touches[0].pageX - startX) * 1.5;
+    container.scrollLeft = scrollLeft - walk;
   };
 
   const handleTouchEnd = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
     setIsDragging(false);
+    container.style.scrollBehavior = 'smooth';
+    setTimeout(handleScrollEnd, 300);
   };
 
-  // Track scroll position for current index
-  useEffect(() => {
-    const handleScroll = () => {
-      if (scrollContainerRef.current && !isDragging) {
-        const container = scrollContainerRef.current;
-        const scrollPosition = container.scrollLeft;
-        const index = Math.round(scrollPosition / slideWidth);
-        const clampedIndex = Math.max(0, Math.min(index, suitSlides.length - 1));
-        setCurrentIndex(clampedIndex);
-      }
-    };
-
+  const scrollToSlide = (index: number) => {
     const container = scrollContainerRef.current;
-    if (container) {
-      container.addEventListener('scroll', handleScroll);
-      handleScroll();
-      return () => container.removeEventListener('scroll', handleScroll);
-    }
-  }, [slideWidth, isDragging, suitSlides.length]);
-
-  const scrollToImage = (index: number) => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTo({
-        left: slideWidth * index,
-        behavior: 'smooth'
-      });
-      setCurrentIndex(index);
-    }
+    if (!container) return;
+    const targetIndex = startOffset + index;
+    container.scrollTo({
+      left: targetIndex * totalSlideWidth,
+      behavior: 'smooth'
+    });
   };
 
   useEffect(() => {
@@ -232,9 +289,9 @@ export default function MensSuitsPage() {
         
         <div className="mens-process-grid">
           {/* Row 1: 2 columns */}
-          <div className="process-box row1">
+          <Link href="/appointments#appointment-5" className="process-box row1">
             <p>BOOK YOUR<br />APPOINTMENT ONLINE &gt;</p>
-          </div>
+          </Link>
           
           <div className="process-box row1">
             <p>CONSULT WITH OUR FORMALWEAR STYLIST TO SELECT YOUR PREFERRED STYLE AND COLOR PALETTE.</p>
@@ -280,7 +337,7 @@ export default function MensSuitsPage() {
 
       {/* Suits Slideshow Section */}
       <section className="mens-suits-slideshow-section">
-        <div className="mens-suits-slideshow">
+        <div className="mens-suits-slideshow" style={{ opacity: isReady ? 1 : 0, transition: 'opacity 0.3s ease' }}>
           <div
             ref={scrollContainerRef}
             className={`slideshow-scroll-container ${isDragging ? 'dragging' : ''}`}
@@ -293,8 +350,8 @@ export default function MensSuitsPage() {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            {suitSlides.map((slide, index) => (
-              <div key={index} className="scroll-slide mens-suit-slide">
+            {extendedSlides.map((slide, index) => (
+              <div key={`suit-slide-${index}`} className="scroll-slide mens-suit-slide">
                 <Image
                   src={slide.image}
                   alt={slide.alt}
@@ -302,7 +359,7 @@ export default function MensSuitsPage() {
                   height={400}
                   style={{ objectFit: 'cover', pointerEvents: 'none' }}
                   draggable={false}
-                  priority={index <= 1}
+                  priority={index >= startOffset && index < startOffset + 3}
                 />
               </div>
             ))}
@@ -313,8 +370,8 @@ export default function MensSuitsPage() {
             {suitSlides.map((_, index) => (
               <button
                 key={index}
-                className={`dot ${currentIndex === index ? 'active' : ''}`}
-                onClick={() => scrollToImage(index)}
+                className={`dot ${activeIndex === index ? 'active' : ''}`}
+                onClick={() => scrollToSlide(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
