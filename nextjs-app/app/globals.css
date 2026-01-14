@@ -2432,32 +2432,34 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   gap: 1.5rem;
   overflow-x: scroll;
   overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   cursor: grab;
   padding: 0 calc(50vw - 200px);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  /* Optimizations for smooth GSAP scrolling */
+  will-change: scroll-position;
+  scroll-behavior: auto;
 }
 
 .slideshow-scroll-container::-webkit-scrollbar {
   display: none;
 }
 
-.slideshow-scroll-container.dragging {
+.slideshow-scroll-container:active {
   cursor: grabbing;
-  scroll-snap-type: none;
-  scroll-behavior: auto;
 }
 
 .scroll-slide {
   flex-shrink: 0;
   width: 400px;
   height: 550px;
-  scroll-snap-align: center;
   user-select: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center center;
+  /* GSAP will handle transitions smoothly */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .scroll-slide img {
@@ -4287,12 +4289,18 @@ main.page-container .contact-page-container,
   .slideshow-scroll-container {
     padding: 0 calc(50vw - 140px);
     gap: 1rem;
+    /* Enhanced mobile touch scrolling */
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
   }
-  
+
   .scroll-slide {
     width: 280px;
     height: 400px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    /* GSAP handles smooth transitions on mobile */
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .mens-suits-slideshow .slideshow-scroll-container {
