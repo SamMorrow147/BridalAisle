@@ -2432,34 +2432,36 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   gap: 1.5rem;
   overflow-x: scroll;
   overflow-y: hidden;
-  cursor: grab;
   padding: 0 calc(50vw - 200px);
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  /* Optimizations for smooth GSAP scrolling */
-  will-change: scroll-position;
+  /* Native smooth scrolling with iOS momentum */
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
   scroll-behavior: auto;
+  /* Performance optimizations */
+  will-change: scroll-position;
+  contain: layout style paint;
 }
 
 .slideshow-scroll-container::-webkit-scrollbar {
   display: none;
 }
 
-.slideshow-scroll-container:active {
-  cursor: grabbing;
-}
-
 .scroll-slide {
   flex-shrink: 0;
   width: 400px;
   height: 550px;
+  scroll-snap-align: center;
+  scroll-snap-stop: normal;
   user-select: none;
+  -webkit-user-select: none;
   transform-origin: center center;
-  /* GSAP will handle transitions smoothly */
+  /* Hardware acceleration for smooth transforms */
   will-change: transform, opacity;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  perspective: 1000px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .scroll-slide img {
@@ -4292,15 +4294,20 @@ main.page-container .contact-page-container,
     /* Enhanced mobile touch scrolling */
     touch-action: pan-x;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
   }
 
   .scroll-slide {
     width: 280px;
     height: 400px;
-    /* GSAP handles smooth transitions on mobile */
+    scroll-snap-align: center;
+    /* Hardware acceleration for smooth mobile performance */
     will-change: transform, opacity;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
 
   .mens-suits-slideshow .slideshow-scroll-container {
