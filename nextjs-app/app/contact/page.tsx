@@ -1,134 +1,19 @@
-'use client';
+import type { Metadata } from 'next';
+import ContactPageContent from './ContactPageContent';
 
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import PreparingForVisit from '@/components/PreparingForVisit';
-import PageHead from '@/components/PageHead';
-import Script from 'next/script';
+export const metadata: Metadata = {
+  title: 'Contact Us & Location | Bridal Aisle Boutique',
+  description: 'Visit Bridal Aisle Boutique in Osseo, MN. Hours, directions, parking & contact info. Call (763) 220-2319 or book online. We can\'t wait to meet you!',
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Contact Us & Location | Bridal Aisle Boutique',
+    description: 'Visit Bridal Aisle Boutique in Osseo, MN. Hours, directions, parking & contact info. Call (763) 220-2319 or book online.',
+    url: 'https://bridalaisle.com/contact',
+  },
+};
 
 export default function ContactPage() {
-
-  return (
-    <>
-      <PageHead
-        title="Contact Us & Location"
-        description="Visit Bridal Aisle Boutique in Maple Grove, MN. Hours, directions, parking & contact info. Call (763) 220-2319 or book online. We can't wait to meet you!"
-        canonicalPath="/contact"
-      />
-    <main className="page-container">
-      <section className="contact-page-section">
-        <div className="contact-page-container">
-          {/* Image */}
-          <div className="contact-image-arched-wrapper">
-            <div className="contact-image-arched">
-              <Image
-                src="/contact/Contact.jpg"
-                alt="Couple at Bridal Aisle"
-                fill
-                className="contact-main-image"
-                style={{ objectFit: 'cover' }}
-                priority
-              />
-              <div className="contact-image-logo">
-                <Image
-                  src="/home/flower-icon.png"
-                  alt="Flower icon"
-                  width={80}
-                  height={100}
-                  style={{ objectFit: 'contain', filter: 'invert(1) opacity(0.6)' }}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side - Logo, INQUIRE, and Form */}
-          <div className="contact-form-side">
-            <div className="contact-top-branding">
-              <Image
-                src="/BA-logo-elongated@2x.png"
-                alt="Bridal Aisle"
-                width={300}
-                height={60}
-                style={{ objectFit: 'contain' }}
-              />
-              <h3 className="contact-inquire-label">INQUIRE</h3>
-            </div>
-
-            <h2 className="contact-welcome-heading">We are <span className="excited-ex">ex</span>cited to connect with you!</h2>
-            <p className="contact-intro-text">
-              Fill out the form below & we will be in touch with you within 2 business days! 
-              If you&apos;re looking to book an appointment, <Link href="/appointments">click here</Link>.
-            </p>
-
-            <div className="contact-form-iframe-wrapper">
-              <iframe
-                id="JotFormIFrame-260125051379048"
-                title="BRIDAL AISLE"
-                onLoad={() => window.parent.scrollTo(0, 0)}
-                allowTransparency={true}
-                allow="geolocation; microphone; camera; fullscreen; payment"
-                src="https://form.jotform.com/260125051379048"
-                frameBorder="0"
-                style={{ minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none' }}
-                scrolling="no"
-              />
-            </div>
-          </div>
-
-          {/* Contact Info Grid */}
-          <div className="contact-info-grid">
-            <div className="contact-info-item">
-              <h3>EMAIL</h3>
-              <a href="mailto:info@bridalaislemn.com">
-                info@bridalaislemn.com
-              </a>
-            </div>
-            
-            <div className="contact-info-item">
-              <h3>PHONE</h3>
-              <a href="tel:7632202319">
-                (763) 220-2319
-              </a>
-            </div>
-            
-            <div className="contact-info-item contact-location-item">
-              <h3>OUR LOCATION</h3>
-              <a 
-                href="https://www.google.com/maps/place/Bridal+Aisle+Boutique" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                308 5th Ave. SE, Osseo, MN 55369
-              </a>
-            </div>
-            
-            <div className="contact-info-item contact-hours-item">
-              <h3>HOURS</h3>
-              <div className="contact-hours-list">
-                <p>MON | CLOSED</p>
-                <p>TUES | 10AM – 7PM</p>
-                <p>WED | 10AM – 5PM</p>
-                <p>THU | 10AM – 7PM</p>
-                <p>FRI – SAT | 10AM – 5PM</p>
-                <p>SUN | 12PM – 5PM</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <PreparingForVisit />
-      
-      <Script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" strategy="afterInteractive" />
-      <Script id="jotform-embed" strategy="afterInteractive">
-        {`
-          if (window.jotformEmbedHandler) {
-            window.jotformEmbedHandler("iframe[id='JotFormIFrame-260125051379048']", "https://form.jotform.com/");
-          }
-        `}
-      </Script>
-    </main>
-    </>
-  );
+  return <ContactPageContent />;
 }

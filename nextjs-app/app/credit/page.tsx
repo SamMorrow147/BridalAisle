@@ -1,3 +1,13 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Photo Credit | Bridal Aisle Boutique',
+  description: 'Photography credits for the Bridal Aisle Boutique website. Thank you to our talented photographers.',
+  alternates: {
+    canonical: '/credit',
+  },
+};
+
 export default function PhotoCreditPage() {
   const photographersColumn1 = [
     'Mel Morris Photography',

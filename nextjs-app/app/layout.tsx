@@ -8,8 +8,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
-  description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Maple Grove, MN. Book now!',
-  keywords: 'bridal shop Minnesota, wedding dresses Minneapolis, off the rack wedding dresses, bridal boutique Maple Grove, mens suits, budget bridal, same day wedding dress',
+  description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Osseo, MN. Book now!',
+  keywords: 'bridal shop Minnesota, wedding dresses Minneapolis, off the rack wedding dresses, bridal boutique Osseo, mens suits, budget bridal, same day wedding dress',
   authors: [{ name: 'Bridal Aisle Boutique' }],
   creator: 'Bridal Aisle Boutique',
   publisher: 'Bridal Aisle Boutique',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: 'https://bridalaisle.com',
     siteName: 'Bridal Aisle Boutique',
     title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
-    description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Maple Grove, MN.',
+    description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Osseo, MN.',
     images: [
       {
         url: '/og-image.jpg', // You'll need to create this

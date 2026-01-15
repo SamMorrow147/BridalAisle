@@ -1,8 +1,22 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import contentData from '@/content/about/content.json';
 import imagesData from '@/content/about/images.json';
 import TeamSection from '@/components/TeamSection';
 import FAQ from '@/components/FAQ';
+
+export const metadata: Metadata = {
+  title: 'About Us | Bridal Aisle Boutique',
+  description: 'Meet the team behind Minnesota\'s most loved bridal boutique. Learn about our story, mission, and commitment to making every bride\'s experience unforgettable.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About Us | Bridal Aisle Boutique',
+    description: 'Meet the team behind Minnesota\'s most loved bridal boutique. Learn about our story, mission, and commitment to making every bride\'s experience unforgettable.',
+    url: 'https://bridalaisle.com/about',
+  },
+};
 
 export default function AboutPage() {
   const content = contentData.content;
