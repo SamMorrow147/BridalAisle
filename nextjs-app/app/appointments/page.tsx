@@ -80,8 +80,7 @@ export default function AppointmentsPage() {
             { image: '/appointments/appt-1-2.jpg', alt: 'Bridal appointment' },
             { image: '/appointments/appt-1-3.jpg', alt: 'Bridal appointment' },
             { image: '/appointments/appt-1-4.jpg', alt: 'Bridal appointment' },
-            { image: '/appointments/appt-1-5.jpg', alt: 'Bridal appointment' },
-            { image: '/appointments/appt-1-6.jpg', alt: 'Bridal appointment' }
+            { image: '/appointments/appt-1-5.jpg', alt: 'Bridal appointment' }
           ]} />
           <div className="appointment-detail-content">
             <h1 className="appointment-detail-title">Bridal Aisle Dress Appointment</h1>
