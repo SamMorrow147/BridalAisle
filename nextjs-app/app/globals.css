@@ -2099,12 +2099,14 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   margin-bottom: -6rem; /* Desktop only: create 3D overlap effect */
   position: relative;
   z-index: 5; /* Desktop only: ensure it overlaps next section */
+  transform: rotate(-2deg); /* Desktop only: subtle tilt for organic look */
 }
 
 .about-image-bottom {
   width: 100%;
   order: 1; /* Desktop only: move to top */
   margin-top: -5rem; /* Desktop only: pull up significantly */
+  transform: rotate(1.5deg); /* Desktop only: subtle tilt for organic look */
 }
 
 .about-image-bottom {
