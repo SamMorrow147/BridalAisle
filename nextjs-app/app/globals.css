@@ -2088,13 +2088,18 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
 
 .about-images-right {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.about-image-top,
+.about-image-top {
+  width: 100%;
+  order: 2; /* Desktop only: move to bottom */
+}
+
 .about-image-bottom {
   width: 100%;
+  order: 1; /* Desktop only: move to top */
 }
 
 .about-image-bottom {
