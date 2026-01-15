@@ -171,7 +171,6 @@ export default function AppointmentsPage() {
           </div>
           <AppointmentDetailSlideshow slides={[
             { image: '/appointments/appt-4.jpg', alt: 'Accessory appointment' },
-            { image: '/appointments/appt-4-1.jpg', alt: 'Accessory appointment' },
             { image: '/appointments/appt-4-2.jpg', alt: 'Accessory appointment' },
             { image: '/appointments/appt-4-3.jpg', alt: 'Accessory appointment' },
             { image: '/appointments/appt-4-4.jpg', alt: 'Accessory appointment' },
