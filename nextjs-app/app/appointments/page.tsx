@@ -4,6 +4,7 @@ import AppointmentsHeroSlideshow from '@/components/AppointmentsHeroSlideshow';
 import AppointmentDetailSlideshow from '@/components/AppointmentDetailSlideshow';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import FAQ from '@/components/FAQ';
+import PageHead from '@/components/PageHead';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,7 +19,13 @@ export default function AppointmentsPage() {
   ];
 
   return (
-    <main className="page-container">
+    <>
+      <PageHead
+        title="Book Your Bridal Appointment"
+        description="Schedule your personalized bridal appointment at Minnesota's premier boutique. Try on 2,000+ designer gowns with expert stylists. Same-day take home available. Book now!"
+        canonicalPath="/appointments"
+      />
+      <main className="page-container">
       {/* Hero Section */}
       <section className="appointments-hero-section">
         <AppointmentsHeroSlideshow slides={heroSlides} interval={5000} />
@@ -325,5 +332,6 @@ export default function AppointmentsPage() {
         ]} />
       </section>
     </main>
+    </>
   );
 }

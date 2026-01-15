@@ -7,6 +7,7 @@ import TestimonialCarousel from '@/components/TestimonialCarousel';
 import FullwidthSlideshow from '@/components/FullwidthSlideshow';
 import MobileNav, { MobileNavRef } from '@/components/MobileNav';
 import FAQ from '@/components/FAQ';
+import PageHead from '@/components/PageHead';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -33,6 +34,11 @@ export default function Home() {
 
   return (
     <>
+      <PageHead
+        title="Minnesota's Premier Bridal & Formalwear Destination"
+        description="Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Maple Grove, MN. Book now!"
+        canonicalPath="/"
+      />
       {/* Hero Slideshow Section - Full Screen */}
       <HeroSlideshow slides={slides} interval={5000} onMenuOpen={handleMenuOpen} />
       

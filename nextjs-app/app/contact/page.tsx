@@ -4,11 +4,18 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import PreparingForVisit from '@/components/PreparingForVisit';
+import PageHead from '@/components/PageHead';
 import Script from 'next/script';
 
 export default function ContactPage() {
 
   return (
+    <>
+      <PageHead
+        title="Contact Us & Location"
+        description="Visit Bridal Aisle Boutique in Maple Grove, MN. Hours, directions, parking & contact info. Call (763) 220-2319 or book online. We can't wait to meet you!"
+        canonicalPath="/contact"
+      />
     <main className="page-container">
       <section className="contact-page-section">
         <div className="contact-page-container">
@@ -122,5 +129,6 @@ export default function ContactPage() {
         `}
       </Script>
     </main>
+    </>
   );
 }

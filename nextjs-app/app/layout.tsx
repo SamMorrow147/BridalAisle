@@ -3,11 +3,61 @@ import Image from 'next/image';
 import Link from 'next/link';
 import MobileNav from '@/components/MobileNav';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Bridal Aisle',
-  description: 'Bridal boutique and men\'s formal wear',
+  title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
+  description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Maple Grove, MN. Book now!',
+  keywords: 'bridal shop Minnesota, wedding dresses Minneapolis, off the rack wedding dresses, bridal boutique Maple Grove, mens suits, budget bridal, same day wedding dress',
+  authors: [{ name: 'Bridal Aisle Boutique' }],
+  creator: 'Bridal Aisle Boutique',
+  publisher: 'Bridal Aisle Boutique',
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
+  metadataBase: new URL('https://bridalaisle.com'), // Update with your actual domain
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://bridalaisle.com',
+    siteName: 'Bridal Aisle Boutique',
+    title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
+    description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Maple Grove, MN.',
+    images: [
+      {
+        url: '/og-image.jpg', // You'll need to create this
+        width: 1200,
+        height: 630,
+        alt: 'Bridal Aisle Boutique - Minnesota Wedding Dresses',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal Destination',
+    description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns. Book your appointment now.',
+    images: ['/og-image.jpg'], // Same image as OG
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your verification code later
+  },
 };
 
 export default function RootLayout({
@@ -24,6 +74,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <GoogleAnalytics />
         {/* Announcement Bar */}
         <div className="announcement-bar">
           <div className="announcement-content">

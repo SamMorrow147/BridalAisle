@@ -5,6 +5,7 @@ import Image from 'next/image';
 import TeamSection from '@/components/TeamSection';
 import FAQ from '@/components/FAQ';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import PageHead from '@/components/PageHead';
 
 export default function AboutPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -119,6 +120,12 @@ export default function AboutPage() {
   
   return (
     <ErrorBoundary>
+    <>
+      <PageHead
+        title="About Us - Meet Our Team & Story"
+        description="Family-owned since 2013. Meet Minnesota's most trusted bridal team. Expert stylists, 2,000+ gowns, genuine care. Learn about our founders Annette & Brad."
+        canonicalPath="/about"
+      />
     <main className="page-container">
       {/* Hero Section */}
       <section className="about-hero-section">
@@ -440,6 +447,7 @@ export default function AboutPage() {
         }
       ]} />
     </section>
+    </>
     </ErrorBoundary>
   );
 }

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQ from '@/components/FAQ';
+import PageHead from '@/components/PageHead';
 
 export default function BridalPage() {
   useEffect(() => {
@@ -62,6 +63,12 @@ export default function BridalPage() {
     };
   }, []);
   return (
+    <>
+      <PageHead
+        title="Wedding Dresses - 2,000+ Designer Gowns"
+        description="Find your dream wedding dress! Shop 2,000+ new designer gowns off-the-rack. Budget Bridal from $350-$600. Take it home today. Sizes 0-32. Book your appointment!"
+        canonicalPath="/bridal"
+      />
     <main className="page-container">
       {/* Hero Section */}
       <section className="bridal-hero">
@@ -432,5 +439,6 @@ export default function BridalPage() {
         <div id="linda-widget-container"></div>
       </section>
     </main>
+    </>
   );
 }

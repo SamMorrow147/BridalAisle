@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useLayoutEffect, useCallback } from 'react
 import Link from 'next/link';
 import Image from 'next/image';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import PageHead from '@/components/PageHead';
 
 export default function MensSuitsPage() {
   const [pageReady, setPageReady] = useState(false);
@@ -259,6 +260,12 @@ export default function MensSuitsPage() {
 
   return (
     <ErrorBoundary>
+    <>
+      <PageHead
+        title="Men's Suits - Rentals & Custom Fits"
+        description="Premium suit rentals & custom fits for weddings, prom & events. DuBois Formalwear partner. Pure silk suits available for purchase. Book your fitting in Maple Grove, MN."
+        canonicalPath="/mens-suits"
+      />
     <main className="page-container">
       {/* Hero Section */}
       <section className="mens-suits-hero">
@@ -424,6 +431,7 @@ export default function MensSuitsPage() {
         <div id="linda-widget-container"></div>
       </section>
     </main>
+    </>
     </ErrorBoundary>
   );
 }
