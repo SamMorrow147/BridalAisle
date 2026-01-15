@@ -5622,7 +5622,7 @@ main.page-container .contact-page-container,
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
 }
@@ -5662,6 +5662,7 @@ main.page-container .contact-page-container,
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+    justify-content: center;
   }
   
   .announcement-text {
@@ -5669,7 +5670,7 @@ main.page-container .contact-page-container,
   }
   
   .announcement-phone {
-    font-size: 0.7rem;
+    display: none;
   }
 }
 

@@ -27,6 +27,7 @@ export default function RootLayout({
         <div className="announcement-bar">
           <div className="announcement-content">
             <h3 className="announcement-text">Our Anniversary Sale is Extended! Special savings on all Accessories and Mothers&apos; Dresses!</h3>
+            <a href="tel:(763) 220-2319" className="announcement-phone">(763) 220-2319</a>
           </div>
         </div>
         
