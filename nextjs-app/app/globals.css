@@ -2095,13 +2095,16 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
 .about-image-top {
   width: 100%;
   order: 2; /* Desktop only: move to bottom */
-  margin-top: 4rem; /* Desktop only: push down significantly */
+  margin-top: 8rem; /* Desktop only: push down to overlap next section */
+  margin-bottom: -6rem; /* Desktop only: create 3D overlap effect */
+  position: relative;
+  z-index: 5; /* Desktop only: ensure it overlaps next section */
 }
 
 .about-image-bottom {
   width: 100%;
   order: 1; /* Desktop only: move to top */
-  margin-top: -3rem; /* Desktop only: pull up */
+  margin-top: -5rem; /* Desktop only: pull up significantly */
 }
 
 .about-image-bottom {
