@@ -2095,6 +2095,7 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
 .about-image-top {
   width: 100%;
   order: 2; /* Desktop only: move to bottom */
+  margin-top: 4rem; /* Desktop only: push down significantly */
 }
 
 .about-image-bottom {
