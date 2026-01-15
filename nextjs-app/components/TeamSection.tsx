@@ -1,9 +1,7 @@
 'use client';
 
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import contentData from '@/content/about/content.json';
-import imagesData from '@/content/about/images.json';
 
 interface TeamMember {
   name: string;
@@ -17,9 +15,31 @@ interface TeamMember {
 export default function TeamSection() {
   const [selectedMember, setSelectedMember] = useState<string | null>('Annette'); // Default to first member
   const profileRef = useRef<HTMLDivElement>(null);
+  const [contentData, setContentData] = useState<any>(null);
+  const [imagesData, setImagesData] = useState<any>(null);
+  const [loadError, setLoadError] = useState(false);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const [content, images] = await Promise.all([
+          import('@/content/about/content.json'),
+          import('@/content/about/images.json')
+        ]);
+        setContentData(content.default);
+        setImagesData(images.default);
+      } catch (err) {
+        console.error('Failed to load team data:', err);
+        setLoadError(true);
+      }
+    }
+    loadData();
+  }, []);
 
   // Extract team member data from content
   const teamMembers = useMemo(() => {
+    if (!contentData || !imagesData) return [];
+    
     const members: TeamMember[] = [];
     const content = contentData.content;
     
@@ -107,6 +127,30 @@ export default function TeamSection() {
       profileRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   };
+
+  // Show loading state
+  if (!contentData || !imagesData) {
+    return (
+      <section className="content-section centered team-section">
+        <div style={{ textAlign: 'center', padding: '4rem 0' }}>
+          <p style={{ color: '#666', fontSize: '1.1rem' }}>Loading team...</p>
+        </div>
+      </section>
+    );
+  }
+
+  // Show error state
+  if (loadError || teamMembers.length === 0) {
+    return (
+      <section className="content-section centered team-section">
+        <div style={{ textAlign: 'center', padding: '4rem 0' }}>
+          <p style={{ color: '#666', fontSize: '1.1rem' }}>Unable to load team information</p>
+        </div>
+      </section>
+    );
+  }
+
+  const selectedProfile = teamMembers.find(m => m.name === selectedMember);
 
   return (
     <section className="content-section centered team-section">

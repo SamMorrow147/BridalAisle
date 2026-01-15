@@ -1,10 +1,104 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import contentData from '@/content/about/content.json';
-import imagesData from '@/content/about/images.json';
 import TeamSection from '@/components/TeamSection';
 import FAQ from '@/components/FAQ';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 export default function AboutPage() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [contentData, setContentData] = useState<any>(null);
+  const [imagesData, setImagesData] = useState<any>(null);
+
+  useEffect(() => {
+    async function loadContent() {
+      try {
+        const [contentModule, imagesModule] = await Promise.all([
+          import('@/content/about/content.json'),
+          import('@/content/about/images.json')
+        ]);
+        
+        setContentData(contentModule.default);
+        setImagesData(imagesModule.default);
+        setIsLoading(false);
+      } catch (err) {
+        console.error('Failed to load content:', err);
+        setError('Failed to load page content');
+        setIsLoading(false);
+      }
+    }
+
+    loadContent();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '#f4f6f4'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{
+            width: '50px',
+            height: '50px',
+            border: '3px solid #e3ddd3',
+            borderTop: '3px solid #827270',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite',
+            margin: '0 auto 1rem'
+          }} />
+          <p style={{ color: '#666', fontSize: '1.1rem' }}>Loading...</p>
+        </div>
+        <style>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    );
+  }
+
+  if (error || !contentData || !imagesData) {
+    return (
+      <div style={{
+        minHeight: '60vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '2rem',
+        textAlign: 'center'
+      }}>
+        <h1 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#2c2c2c' }}>
+          Unable to Load Page
+        </h1>
+        <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '2rem' }}>
+          {error || 'Please try refreshing the page or contact us if the problem persists.'}
+        </p>
+        <button
+          onClick={() => window.location.reload()}
+          style={{
+            padding: '0.75rem 2rem',
+            fontSize: '1rem',
+            backgroundColor: '#827270',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer'
+          }}
+        >
+          Refresh Page
+        </button>
+      </div>
+    );
+  }
+
   const content = contentData.content;
   
   // Find key content pieces
@@ -16,7 +110,7 @@ export default function AboutPage() {
   const quoteAuthor = content.find(c => c.text.includes("Annette hall"))?.text || "";
   
   // Find hero image
-  const heroImage = imagesData.images.find(img => 
+  const heroImage = imagesData.images.find((img: any) => 
     img.localPath.includes('carl-kirsten') || img.localPath.includes('couple')
   );
   
@@ -24,7 +118,7 @@ export default function AboutPage() {
   const backgroundImageName = '8.jpg';
   
   return (
-    <>
+    <ErrorBoundary>
     <main className="page-container">
       {/* Hero Section */}
       <section className="about-hero-section">
@@ -346,6 +440,6 @@ export default function AboutPage() {
         }
       ]} />
     </section>
-    </>
+    </ErrorBoundary>
   );
 }

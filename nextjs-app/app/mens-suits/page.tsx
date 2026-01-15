@@ -3,8 +3,15 @@
 import { useEffect, useRef, useState, useLayoutEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 export default function MensSuitsPage() {
+  const [pageReady, setPageReady] = useState(false);
+
+  useEffect(() => {
+    // Mark page as ready after initial render
+    setPageReady(true);
+  }, []);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -218,7 +225,40 @@ export default function MensSuitsPage() {
       });
     };
   }, []);
+
+  if (!pageReady) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '#f4f6f4'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{
+            width: '50px',
+            height: '50px',
+            border: '3px solid #e3ddd3',
+            borderTop: '3px solid #827270',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite',
+            margin: '0 auto 1rem'
+          }} />
+          <p style={{ color: '#666', fontSize: '1.1rem' }}>Loading...</p>
+        </div>
+        <style>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    );
+  }
+
   return (
+    <ErrorBoundary>
     <main className="page-container">
       {/* Hero Section */}
       <section className="mens-suits-hero">
@@ -384,5 +424,6 @@ export default function MensSuitsPage() {
         <div id="linda-widget-container"></div>
       </section>
     </main>
+    </ErrorBoundary>
   );
 }

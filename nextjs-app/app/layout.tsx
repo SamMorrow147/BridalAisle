@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import MobileNav from '@/components/MobileNav';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -55,7 +56,9 @@ export default function RootLayout({
           {/* Mobile Navigation */}
           <MobileNav />
         </header>
-        {children}
+        <ErrorBoundary>
+          {children}
+        </ErrorBoundary>
         <footer className="main-footer">
           <div className="footer-content">
             <div className="footer-logo-section">
