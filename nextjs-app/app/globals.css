@@ -2611,8 +2611,8 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   scrollbar-width: none;
   /* Native smooth scrolling with iOS momentum */
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: auto;
+  scroll-snap-type: none;
+  scroll-behavior: smooth;
   /* Performance optimizations */
   will-change: scroll-position;
   contain: layout style paint;
@@ -2626,8 +2626,6 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   flex-shrink: 0;
   width: 400px;
   height: 550px;
-  scroll-snap-align: center;
-  scroll-snap-stop: normal;
   user-select: none;
   -webkit-user-select: none;
   transform-origin: center center;
@@ -4622,14 +4620,13 @@ main.page-container .contact-page-container,
     /* Enhanced mobile touch scrolling */
     touch-action: pan-x;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: none;
     overscroll-behavior-x: contain;
   }
 
   .scroll-slide {
     width: 280px;
     height: 400px;
-    scroll-snap-align: center;
     /* Hardware acceleration for smooth mobile performance */
     will-change: transform, opacity;
     backface-visibility: hidden;
