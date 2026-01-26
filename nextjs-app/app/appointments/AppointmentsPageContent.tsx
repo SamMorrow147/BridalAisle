@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import AppointmentsHeroSlideshow from '@/components/AppointmentsHeroSlideshow';
 import AppointmentDetailSlideshow from '@/components/AppointmentDetailSlideshow';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
@@ -7,7 +8,26 @@ import FAQ from '@/components/FAQ';
 import Image from 'next/image';
 import Link from 'next/link';
 
+function scrollToSection(e: React.MouseEvent<HTMLAnchorElement>, id: string) {
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (typeof window !== 'undefined') window.history.replaceState(null, '', '#' + id);
+  }
+}
+
 export default function AppointmentsPageContent() {
+  const [prepareOpen, setPrepareOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
+    }
+  }, []);
   const heroSlides = [
     { image: '/appointments/hero-1.jpg', alt: 'Wedding dress detail' },
     { image: '/appointments/hero-2.jpg', alt: 'Bridal gown' },
@@ -26,7 +46,7 @@ export default function AppointmentsPageContent() {
       </section>
 
       {/* Form Section */}
-      <section className="content-section centered" style={{ 
+      <section id="book-appointment" className="content-section centered" style={{ 
         padding: '8rem 3rem', 
         background: '#f4f6f4',
         minHeight: '70vh'
@@ -51,19 +71,19 @@ export default function AppointmentsPageContent() {
           <h1 className="appointment-menu-title">BRIDAL AISLE</h1>
           <h2 className="appointment-menu-subtitle">Appointment Menu</h2>
           <div className="appointment-menu-grid">
-            <a href="#appointment-1" className="appointment-menu-item">
+            <a href="#appointment-1" className="appointment-menu-item" onClick={(e) => scrollToSection(e, 'appointment-1')}>
               <h3>Bridal Aisle Dress Appointment</h3>
             </a>
-            <a href="#appointment-2" className="appointment-menu-item">
+            <a href="#appointment-2" className="appointment-menu-item" onClick={(e) => scrollToSection(e, 'appointment-2')}>
               <h3>Budget Bridal Outlet Dress Appointment</h3>
             </a>
-            <a href="#appointment-3" className="appointment-menu-item">
+            <a href="#appointment-3" className="appointment-menu-item" onClick={(e) => scrollToSection(e, 'appointment-3')}>
               <h3>VIP Bridal Experience</h3>
             </a>
-            <a href="#appointment-5" className="appointment-menu-item">
+            <a href="#appointment-5" className="appointment-menu-item" onClick={(e) => scrollToSection(e, 'appointment-5')}>
               <h3>Men&apos;s Suit<br />Appointment</h3>
             </a>
-            <a href="#appointment-4" className="appointment-menu-item">
+            <a href="#appointment-4" className="appointment-menu-item" onClick={(e) => scrollToSection(e, 'appointment-4')}>
               <h3>ACCESSORY/Bridal Styling<br />Appointment</h3>
             </a>
           </div>
@@ -89,7 +109,7 @@ export default function AppointmentsPageContent() {
             <p>The Bride + 4 guests will enjoy a 90-minute bridal appointment with a personal stylist to assist you in finding &apos;the one&apos;! While your guests relax in their designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
             <p>The bride will have access to all dresses in the store including the Budget Bridal Outlet to try on. This appointment type is recommended for brides with a budget higher than $700.</p>
             <p>All dresses range from $350 - $2,500.</p>
-            <Link href="#appointment-1" className="appointment-cta-btn">SCHEDULE YOUR APPOINTMENT</Link>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>$25 APPOINTMENT FEE</li>
               <li>UP TO 4 GUESTS</li>
@@ -108,7 +128,7 @@ export default function AppointmentsPageContent() {
             <h3 className="appointment-detail-subtitle">APPT. FEE | $25.00 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
             <p>The Bride + 4 guests will enjoy a 60-minute bridal appointment in our Budget Bridal Outlet section of the store where all dresses are priced $600 or less. While your guests relax in their designated seating area, your personal stylist will guide you in selecting and trying on dresses that suit your style, budget, body shape, and wedding vision.</p>
             <p>The bride will have access to only our Budget Bridal Dresses during their 60-minute appointment.</p>
-            <Link href="#appointment-2" className="appointment-cta-btn">SCHEDULE YOUR APPOINTMENT</Link>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>$25 APPOINTMENT FEE</li>
               <li>UP TO 4 GUESTS</li>
@@ -163,7 +183,7 @@ export default function AppointmentsPageContent() {
             <p>You found your perfect dress, now it&apos;s time to accessorize!</p>
             <p>This appointment is a 60-minute one-on-one consultation with a trained stylist to show you the perfect pairing of a veil or belt (& more) with your wedding dress!</p>
             <p>Feel free to bring in your dress to get the full effect and see how the accessories complement one another.</p>
-            <Link href="#appointment-4" className="appointment-cta-btn">SCHEDULE YOUR APPOINTMENT</Link>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>60-MINUTES WITH A BRIDAL STYLIST</li>
               <li>BRING YOUR DRESS (OPTIONAL)</li>
@@ -171,7 +191,6 @@ export default function AppointmentsPageContent() {
             </ul>
           </div>
           <AppointmentDetailSlideshow slides={[
-            { image: '/appointments/appt-4.jpg', alt: 'Accessory appointment' },
             { image: '/appointments/appt-4-2.jpg', alt: 'Accessory appointment' },
             { image: '/appointments/appt-4-3.jpg', alt: 'Accessory appointment' },
             { image: '/appointments/appt-4-4.jpg', alt: 'Accessory appointment' },
@@ -197,7 +216,7 @@ export default function AppointmentsPageContent() {
             <p>During your 60 Minute appointment, you will have a designated stylist to assist you in selecting the perfect color and style for your wedding or event.</p>
             <p>It is suggested that the couple come in separate from their party members to make their selections. Once the styles are selected, party members are encouraged to make an appointment to get professionally measured with us and we will get your suits ordered!</p>
             <p>All orders and measurements must be provided a month prior to the event date to guarantee you suit rentals or two months prior to the event to guarantee suits for purchase.</p>
-            <Link href="#appointment-5" className="appointment-cta-btn">SCHEDULE YOUR APPOINTMENT</Link>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>No Appointment Fee</li>
               <li>60 Minutes with a bridal stylist</li>
@@ -206,35 +225,43 @@ export default function AppointmentsPageContent() {
         </div>
       </section>
 
-      {/* How to Prepare Section */}
-      <section className="prepare-section">
-        <div className="prepare-header">
+      {/* How to Prepare Section - accordion: click to expand/collapse */}
+      <section className="prepare-section" id="preparing-for-your-appointment">
+        <button
+          type="button"
+          className="prepare-header prepare-header--btn"
+          onClick={() => setPrepareOpen(!prepareOpen)}
+          aria-expanded={prepareOpen}
+        >
           <h1>HOW TO PREPARE FOR YOUR APPOINTMENT</h1>
-        </div>
-        <div className="prepare-container">
-          <div className="prepare-content">
-            <h2 className="prepare-title">A smaller guest list makes for a more meaningful moment</h2>
-            <p className="prepare-text">
-              Finding your dress is a once-in-a-lifetime moment, and bringing just one or two trusted guests allows you to truly focus on what you love. For groups larger than four, please <Link href="/contact">contact us</Link> to book a private appointment for a more comfortable experience.
-            </p>
-            <div className="prepare-divider">
-              <span>→</span>
+          <span className="prepare-icon" aria-hidden="true">{prepareOpen ? '−' : '+'}</span>
+        </button>
+        {prepareOpen && (
+          <div className="prepare-container">
+            <div className="prepare-content">
+              <h2 className="prepare-title">A smaller guest list makes for a more meaningful moment</h2>
+              <p className="prepare-text">
+                Finding your dress is a once-in-a-lifetime moment, and bringing just one or two trusted guests allows you to truly focus on what you love. For groups larger than four, please <Link href="/contact">contact us</Link> to book a private appointment for a more comfortable experience.
+              </p>
+              <div className="prepare-divider">
+                <span>→</span>
+              </div>
+              <h2 className="prepare-title">We&apos;re a shoe-free boutique to keep our gowns pristine</h2>
+              <p className="prepare-text">
+                To protect our dresses from Minnesota&apos;s unpredictable weather, we kindly ask all guests to remove their shoes upon arrival. We&apos;ll provide slippers for you to wear during your appointment, or you may bring your own.
+              </p>
             </div>
-            <h2 className="prepare-title">We&apos;re a shoe-free boutique to keep our gowns pristine</h2>
-            <p className="prepare-text">
-              To protect our dresses from Minnesota&apos;s unpredictable weather, we kindly ask all guests to remove their shoes upon arrival. We&apos;ll provide slippers for you to wear during your appointment, or you may bring your own.
-            </p>
+            <div className="prepare-image">
+              <Image
+                src="/contact/Contact-image.jpg"
+                alt="Bridal boutique interior"
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
+              />
+            </div>
           </div>
-          <div className="prepare-image">
-            <Image
-              src="/contact/Contact-image.jpg"
-              alt="Bridal boutique interior"
-              fill
-              style={{ objectFit: 'cover' }}
-              priority
-            />
-          </div>
-        </div>
+        )}
       </section>
 
       {/* Testimonials Section */}
