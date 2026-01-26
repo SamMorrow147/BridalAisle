@@ -161,7 +161,7 @@ export default function HomePageContent() {
           </div>
           
           <div className="feature-card">
-            <div className="arched-image">
+            <div className="arched-image arched-image--preserve-top">
               <Image
                 src="/home/bab-102web.jpg"
                 alt="Bride and consultant"
@@ -368,38 +368,46 @@ export default function HomePageContent() {
         <h1 className="designers-heading">Designers We Work With</h1>
         <div className="designers-grid">
           <div className="designer-logo">
-            <Image
-              src="/home/barbie-anne-bridal-logo.png"
-              alt="Barbie Anne Bridal"
-              width={280}
-              height={140}
-              style={{ objectFit: 'contain' }}
-            />
+            <a href="https://barbieannebridal.com/collections/modest" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/home/barbie-anne-bridal-logo.png"
+                alt="Barbie Anne Bridal"
+                width={280}
+                height={140}
+                style={{ objectFit: 'contain' }}
+              />
+            </a>
           </div>
           
           <div className="designer-logo designer-text">
-            <h2 className="designer-name">Moonlight /</h2>
-            <h3 className="designer-name">Val Steffani</h3>
+            <a href="https://www.valstefani.com" target="_blank" rel="noopener noreferrer">
+              <h2 className="designer-name">Moonlight /</h2>
+              <h3 className="designer-name">Val Steffani</h3>
+            </a>
           </div>
           
           <div className="designer-logo">
-            <Image
-              src="/home/psf-logo.png"
-              alt="Pure Silk Fabrics"
-              width={250}
-              height={100}
-              style={{ objectFit: 'contain' }}
-            />
+            <a href="https://puresilkfabrics.com/suits/metro-suits/" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/home/psf-logo.png"
+                alt="Pure Silk Fabrics"
+                width={250}
+                height={100}
+                style={{ objectFit: 'contain' }}
+              />
+            </a>
           </div>
           
           <div className="designer-logo">
-            <Image
-              src="/home/dubois-logo.png"
-              alt="DB•FW"
-              width={200}
-              height={80}
-              style={{ objectFit: 'contain' }}
-            />
+            <a href="https://www.dbformalwear.com/online-catalog" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/home/dubois-logo.png"
+                alt="DB Formalwear"
+                width={200}
+                height={80}
+                style={{ objectFit: 'contain' }}
+              />
+            </a>
           </div>
         </div>
       </section>

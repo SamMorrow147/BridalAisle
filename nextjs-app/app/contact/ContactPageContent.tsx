@@ -9,9 +9,17 @@ export default function ContactPageContent() {
   return (
     <>
     <main className="page-container">
+      {/* Contact Hero Parallax - full width, shows top of image, "Contact Us" overlay */}
+      <section className="contact-hero-parallax" aria-label="Contact Us">
+        <div className="contact-hero-parallax-overlay" />
+        <div className="contact-hero-parallax-content">
+          <h1 className="contact-hero-parallax-title">Contact Us</h1>
+        </div>
+      </section>
+
       <section className="contact-page-section">
         <div className="contact-page-container">
-          {/* Image */}
+          {/* Left Column: Image + Contact Info */}
           <div className="contact-image-arched-wrapper">
             <div className="contact-image-arched">
               <Image
@@ -22,52 +30,19 @@ export default function ContactPageContent() {
                 style={{ objectFit: 'cover' }}
                 priority
               />
-              <div className="contact-image-logo">
+              <div className="contact-image-submark">
                 <Image
-                  src="/home/flower-icon.png"
-                  alt="Flower icon"
-                  width={80}
-                  height={100}
-                  style={{ objectFit: 'contain', filter: 'invert(1) opacity(0.6)' }}
+                  src="/ba-submark2-dark_2x.png"
+                  alt="Bridal Aisle submark"
+                  width={120}
+                  height={120}
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
             </div>
           </div>
 
-          {/* Right Side - Logo, INQUIRE, and Form */}
-          <div className="contact-form-side">
-            <div className="contact-top-branding">
-              <Image
-                src="/BA-logo-elongated@2x.png"
-                alt="Bridal Aisle"
-                width={300}
-                height={60}
-                style={{ objectFit: 'contain' }}
-              />
-              <h3 className="contact-inquire-label">INQUIRE</h3>
-            </div>
-
-            <h2 className="contact-welcome-heading">We are <span className="excited-ex">ex</span>cited to connect with you!</h2>
-            <p className="contact-intro-text">
-              Fill out the form below & we will be in touch with you within 2 business days! 
-              If you&apos;re looking to book an appointment, <Link href="/appointments">click here</Link>.
-            </p>
-
-            <div className="contact-form-iframe-wrapper">
-              <iframe
-                id="JotFormIFrame-260125051379048"
-                title="BRIDAL AISLE"
-                onLoad={() => window.parent.scrollTo(0, 0)}
-                allowTransparency={true}
-                allow="geolocation; microphone; camera; fullscreen; payment"
-                src="https://form.jotform.com/260125051379048"
-                style={{ minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none' }}
-                scrolling="no"
-              />
-            </div>
-          </div>
-
-          {/* Contact Info Grid */}
+          {/* Contact Info - under the image, centered in left column */}
           <div className="contact-info-grid">
             <div className="contact-info-item">
               <h3>EMAIL</h3>
@@ -104,6 +79,40 @@ export default function ContactPageContent() {
                 <p>FRI – SAT | 10AM – 5PM</p>
                 <p>SUN | 12PM – 5PM</p>
               </div>
+            </div>
+          </div>
+
+          {/* Right Side - Logo, INQUIRE, and Form */}
+          <div className="contact-form-side">
+            <div className="contact-top-branding">
+              <Image
+                src="/BA-logo-elongated@2x.png"
+                alt="Bridal Aisle"
+                width={300}
+                height={60}
+                style={{ objectFit: 'contain' }}
+              />
+              <h3 className="contact-inquire-label">INQUIRE</h3>
+            </div>
+
+            <h2 className="contact-welcome-heading">We are <span className="excited-ex">ex</span>cited to connect with you!</h2>
+            <p className="contact-intro-text">
+              Fill out the form below & we will be in touch with you within 2 business days! 
+              If you&apos;re looking to book an appointment, <Link href="/appointments">click here</Link>.
+            </p>
+
+            <div className="contact-form-iframe-wrapper">
+              <iframe
+                id="JotFormIFrame-260125051379048"
+                title="BRIDAL AISLE"
+                onLoad={() => window.parent.scrollTo(0, 0)}
+                // @ts-expect-error React expects lowercase allowtransparency for DOM passthrough; TS types use allowTransparency
+                allowtransparency="true"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://form.jotform.com/260125051379048"
+                style={{ minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none' }}
+                scrolling="no"
+              />
             </div>
           </div>
         </div>

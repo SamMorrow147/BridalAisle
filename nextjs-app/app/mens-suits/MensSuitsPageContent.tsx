@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState, useLayoutEffect, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import BridesSlideshow from '@/components/BridesSlideshow';
 
 export default function MensSuitsPageContent() {
   const [pageReady, setPageReady] = useState(false);
@@ -12,166 +13,11 @@ export default function MensSuitsPageContent() {
     // Mark page as ready after initial render
     setPageReady(true);
   }, []);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [isReady, setIsReady] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-  
-  const suitSlides = [
-    { image: '/mens-suits/suit-slide-1.jpg', alt: 'Metro suit sage' },
-    { image: '/mens-suits/suit-slide-2.jpg', alt: 'Metro suit rust' },
-    { image: '/mens-suits/suit-slide-3.jpg', alt: 'Metro suit tan' },
-    { image: '/mens-suits/suit-slide-4.jpg', alt: 'Metro suit tan' },
-    { image: '/mens-suits/suit-slide-5.jpg', alt: 'Metro suit light grey' },
-    { image: '/mens-suits/suit-slide-6.jpg', alt: 'Metro suit camel' },
-    { image: '/mens-suits/suit-slide-7.jpg', alt: 'Metro suit cornflower' }
-  ];
-  
-  // Slide dimensions
-  const slideWidth = 550;
-  const gap = 24;
-  const totalSlideWidth = slideWidth + gap;
-  
-  // Create extended slides for infinite loop (5 copies)
-  const extendedSlides = [...suitSlides, ...suitSlides, ...suitSlides, ...suitSlides, ...suitSlides];
-  const startOffset = suitSlides.length * 2; // Start in the middle
-
-  // Set initial scroll position before paint
-  useLayoutEffect(() => {
-    const container = scrollContainerRef.current;
-    if (container) {
-      container.style.scrollBehavior = 'auto';
-      container.scrollLeft = totalSlideWidth * startOffset;
-      requestAnimationFrame(() => {
-        setIsReady(true);
-        container.style.scrollBehavior = 'smooth';
-      });
-    }
-  }, [totalSlideWidth, startOffset]);
-
-  // Handle infinite loop repositioning
-  const handleScrollEnd = useCallback(() => {
-    const container = scrollContainerRef.current;
-    if (!container || isDragging) return;
-    
-    const scrollPos = container.scrollLeft;
-    const currentIndex = Math.round(scrollPos / totalSlideWidth);
-    
-    const minSafeIndex = suitSlides.length;
-    const maxSafeIndex = suitSlides.length * 4 - 1;
-    
-    if (currentIndex < minSafeIndex || currentIndex > maxSafeIndex) {
-      const normalizedIndex = ((currentIndex % suitSlides.length) + suitSlides.length) % suitSlides.length;
-      const newIndex = suitSlides.length * 2 + normalizedIndex;
-      
-      container.style.scrollBehavior = 'auto';
-      container.scrollLeft = newIndex * totalSlideWidth;
-      requestAnimationFrame(() => {
-        container.style.scrollBehavior = 'smooth';
-      });
-    }
-  }, [isDragging, suitSlides.length, totalSlideWidth]);
-
-  // Scroll event handler
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    
-    let scrollTimeout: NodeJS.Timeout;
-    
-    const handleScroll = () => {
-      const scrollPos = container.scrollLeft;
-      const currentIndex = Math.round(scrollPos / totalSlideWidth);
-      const normalizedIndex = ((currentIndex % suitSlides.length) + suitSlides.length) % suitSlides.length;
-      setActiveIndex(normalizedIndex);
-      
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(handleScrollEnd, 150);
-    };
-    
-    container.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      container.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeout);
-    };
-  }, [handleScrollEnd, suitSlides.length, totalSlideWidth]);
-
-  // Mouse drag handlers
-  const handleMouseDown = (e: React.MouseEvent) => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    setIsDragging(true);
-    setStartX(e.pageX);
-    setScrollLeft(container.scrollLeft);
-    container.style.scrollBehavior = 'auto';
-    container.style.scrollSnapType = 'none';
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    const walk = (e.pageX - startX) * 1.5;
-    container.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    setIsDragging(false);
-    container.style.scrollBehavior = 'smooth';
-    container.style.scrollSnapType = 'x mandatory';
-    const currentPos = container.scrollLeft;
-    const nearestIndex = Math.round(currentPos / totalSlideWidth);
-    container.scrollLeft = nearestIndex * totalSlideWidth;
-    setTimeout(handleScrollEnd, 300);
-  };
-
-  const handleMouseLeave = () => {
-    if (isDragging) handleMouseUp();
-  };
-
-  // Touch handlers
-  const handleTouchStart = (e: React.TouchEvent) => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX);
-    setScrollLeft(container.scrollLeft);
-    container.style.scrollBehavior = 'auto';
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return;
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    const walk = (e.touches[0].pageX - startX) * 1.5;
-    container.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    setIsDragging(false);
-    container.style.scrollBehavior = 'smooth';
-    setTimeout(handleScrollEnd, 300);
-  };
-
-  const scrollToSlide = (index: number) => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    const targetIndex = startOffset + index;
-    container.scrollTo({
-      left: targetIndex * totalSlideWidth,
-      behavior: 'smooth'
-    });
-  };
 
   useEffect(() => {
-    // Load Linda widget script
+    // Load Linda widget script only when main content is shown (container exists)
+    if (!pageReady) return;
+
     const container = document.getElementById('linda-widget-container');
     if (!container) return;
 
@@ -213,8 +59,8 @@ export default function MensSuitsPageContent() {
 
     return () => {
       observer.disconnect();
-      if (script && script.parentNode === container) {
-        container.removeChild(script);
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
       }
       // Also clean up any widget elements
       const widgetElements = container.querySelectorAll('[class*="linda"], [id*="linda"], [class*="gb-widget"]');
@@ -224,7 +70,7 @@ export default function MensSuitsPageContent() {
         }
       });
     };
-  }, []);
+  }, [pageReady]);
 
   if (!pageReady) {
     return (
@@ -296,26 +142,30 @@ export default function MensSuitsPageContent() {
             </div>
             
             <div className="mens-logos">
-              <Image
-                src="/home/dubois-logo.png"
-                alt="DB•FW"
-                width={120}
-                height={60}
-                style={{ objectFit: 'contain' }}
-              />
-              <Image
-                src="/home/psf-logo.png"
-                alt="Pure Silk Fabrics"
-                width={180}
-                height={80}
-                style={{ objectFit: 'contain' }}
-              />
+              <a href="https://www.dbformalwear.com/online-catalog" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/home/dubois-logo.png"
+                  alt="DB Formalwear"
+                  width={120}
+                  height={60}
+                  style={{ objectFit: 'contain' }}
+                />
+              </a>
+              <a href="https://puresilkfabrics.com/suits/metro-suits/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/home/psf-logo.png"
+                  alt="Pure Silk Fabrics"
+                  width={180}
+                  height={80}
+                  style={{ objectFit: 'contain' }}
+                />
+              </a>
             </div>
           </div>
           
           <div className="mens-image-right">
             <Image
-              src="/mens-suits/groom-suit-brick.jpg"
+              src="/mens-suits/hero-groom.jpg"
               alt="Groom in suit"
               fill
               style={{ objectFit: 'cover' }}
@@ -376,53 +226,26 @@ export default function MensSuitsPageContent() {
         </div>
       </section>
 
-      {/* Suits Slideshow Section */}
-      <section className="mens-suits-slideshow-section">
-        <div className="mens-suits-slideshow" style={{ opacity: isReady ? 1 : 0, transition: 'opacity 0.3s ease' }}>
-          <div
-            ref={scrollContainerRef}
-            className={`slideshow-scroll-container ${isDragging ? 'dragging' : ''}`}
-            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            {extendedSlides.map((slide, index) => (
-              <div key={`suit-slide-${index}`} className="scroll-slide mens-suit-slide">
-                <Image
-                  src={slide.image}
-                  alt={slide.alt}
-                  width={550}
-                  height={400}
-                  style={{ objectFit: 'cover', pointerEvents: 'none' }}
-                  draggable={false}
-                  priority={index >= startOffset && index < startOffset + 3}
-                />
-              </div>
-            ))}
-          </div>
-          
-          {/* Navigation Dots */}
-          <div className="slideshow-dots">
-            {suitSlides.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${activeIndex === index ? 'active' : ''}`}
-                onClick={() => scrollToSlide(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Linda Widget Section */}
       <section className="linda-widget-section">
         <div id="linda-widget-container"></div>
+      </section>
+
+      {/* Photo Gallery - in tan section, below the Linda widget */}
+      <section className="mens-gallery-section">
+        <BridesSlideshow slides={[
+          { image: '/mens-suits/suit-slide-1.jpg', alt: 'Metro suit' },
+          { image: '/mens-suits/suit-slide-2.jpg', alt: 'Metro suit' },
+          { image: '/mens-suits/suit-slide-3.jpg', alt: 'Metro suit' },
+          { image: '/mens-suits/suit-slide-4.jpg', alt: 'Metro suit' },
+          { image: '/mens-suits/suit-slide-5.jpg', alt: 'Metro suit' },
+          { image: '/mens-suits/suit-slide-6.jpg', alt: 'Metro suit' },
+          { image: '/mens-suits/suit-slide-7.jpg', alt: 'Metro suit' },
+          { image: '/mens-suits/groom-suit-brick.jpg', alt: 'Groom in suit' },
+          { image: '/mens-suits/hero-groom.jpg', alt: 'Groom formalwear' },
+          { image: '/home/groomportraits-2021-07-30candaceandchase-31-laurenbakerphotography-ee15a496.jpg', alt: 'Groom portrait' },
+          { image: '/home/bk-bride-groom-7.jpg', alt: 'Bride and groom' }
+        ]} />
       </section>
     </main>
     </>
