@@ -21,6 +21,9 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
   const slideElementsRef = useRef<HTMLElement[]>([]);
   const animationFrameRef = useRef<number | null>(null);
   const lastScrollRef = useRef(0);
+  const isDraggingRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const scrollStartRef = useRef(0);
   
   // Slide dimensions
   const slideWidth = 400;
@@ -54,15 +57,16 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
     lastScrollRef.current = scrollPos;
     
     const containerRect = container.getBoundingClientRect();
-    const containerCenter = containerRect.width / 2;
+    const containerCenterX = containerRect.left + containerRect.width / 2;
     
     slideElementsRef.current.forEach((slideElement, index) => {
       if (!slideElement) return;
       
-      const slideLeft = index * totalSlideWidth - scrollPos;
-      const slideCenter = slideLeft + slideWidth / 2;
-      const distanceFromCenter = Math.abs(slideCenter - containerCenter);
-      const maxDistance = containerRect.width / 2 + slideWidth / 2;
+      // Get actual position of slide in viewport
+      const slideRect = slideElement.getBoundingClientRect();
+      const slideCenterX = slideRect.left + slideRect.width / 2;
+      const distanceFromCenter = Math.abs(slideCenterX - containerCenterX);
+      const maxDistance = containerRect.width / 2 + slideRect.width / 2;
       
       // Smooth scale from 1.0 (center) to 0.88 (edges)
       const normalizedDistance = Math.min(distanceFromCenter / maxDistance, 1);
@@ -190,6 +194,44 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
     scrollToSlide(prevIndex);
   };
 
+  // Mouse drag handlers for desktop
+  const handleMouseDown = (e: React.MouseEvent) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    isDraggingRef.current = true;
+    dragStartXRef.current = e.pageX;
+    scrollStartRef.current = container.scrollLeft;
+    container.style.cursor = 'grabbing';
+    container.style.scrollBehavior = 'auto';
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDraggingRef.current) return;
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    e.preventDefault();
+    const x = e.pageX;
+    const walk = (dragStartXRef.current - x) * 2; // Multiply by 2 for faster scroll
+    container.scrollLeft = scrollStartRef.current + walk;
+  };
+
+  const handleMouseUp = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    isDraggingRef.current = false;
+    container.style.cursor = 'grab';
+    container.style.scrollBehavior = 'smooth';
+  };
+
+  const handleMouseLeave = () => {
+    if (isDraggingRef.current) {
+      handleMouseUp();
+    }
+  };
+
   // Collect slide element refs
   const setSlideRef = (el: HTMLDivElement | null, index: number) => {
     if (el) {
@@ -229,6 +271,10 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
           opacity: 0,
           scrollBehavior: 'auto' // Let GSAP handle smooth scrolling
         }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
       >
         {extendedSlides.map((slide, index) => (
           <div 
