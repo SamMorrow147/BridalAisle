@@ -178,6 +178,18 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
     });
   };
 
+  // Navigate to next slide
+  const goToNext = () => {
+    const nextIndex = (activeIndex + 1) % slides.length;
+    scrollToSlide(nextIndex);
+  };
+
+  // Navigate to previous slide
+  const goToPrev = () => {
+    const prevIndex = (activeIndex - 1 + slides.length) % slides.length;
+    scrollToSlide(prevIndex);
+  };
+
   // Collect slide element refs
   const setSlideRef = (el: HTMLDivElement | null, index: number) => {
     if (el) {
@@ -201,6 +213,15 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
 
   return (
     <div className="brides-slideshow">
+      {/* Previous Arrow */}
+      <button
+        className="slideshow-arrow slideshow-arrow-prev"
+        onClick={goToPrev}
+        aria-label="Previous slide"
+      >
+        ‹
+      </button>
+
       <div
         ref={scrollContainerRef}
         className="slideshow-scroll-container"
@@ -227,6 +248,15 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
           </div>
         ))}
       </div>
+
+      {/* Next Arrow */}
+      <button
+        className="slideshow-arrow slideshow-arrow-next"
+        onClick={goToNext}
+        aria-label="Next slide"
+      >
+        ›
+      </button>
       
       {/* Navigation Dots */}
       <div className="slideshow-dots">
