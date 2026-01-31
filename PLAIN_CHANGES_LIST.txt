@@ -1,0 +1,51 @@
+CONTACT PAGE CHANGES - PLAIN LANGUAGE LIST
+==========================================
+
+1. Made contact info block smaller and moved it under the main image, off to the left but centered in its column
+
+2. Fixed hero parallax image so the very top of the image shows at the very top of the hero section
+
+3. Built "Preparing for your visit" carousel section:
+   - 4 slides total, each showing 2 cards
+   - Line with arrow between the two cards on each slide
+   - Click the arrow to go to next slide
+   - Drag/swipe left or right to navigate (works on desktop and mobile)
+   - Each slide has its own background image
+
+4. Populated all 4 slides with content:
+   Slide 1: "Smaller guest list" + "Shoe-free boutique"
+   Slide 2: "Earlier you shop" + "Arriving on time"
+   Slide 3: "If you need to cancel" + "Right undergarments"
+   Slide 4: "Appointments adult-only" + "Food & beverage policy"
+
+5. Added images for each slide:
+   Slide 1: Contact-image.jpg
+   Slide 2: bab-99web-6a226f86.jpg
+   Slide 3: bab-108web-93b94283.jpg
+   Slide 4: bab-54web-5eab03dd.jpg
+
+6. Reduced top spacing of right column (logo and form) to bring it higher
+
+7. Made "We are excited to connect with you!" heading always fit on one line
+
+8. Reordered contact info section:
+   - Location on top
+   - Email and phone side-by-side underneath
+   - Hours at the bottom
+
+9. Adjusted text sizes in contact info:
+   - Made labels smaller (OUR LOCATION, EMAIL, PHONE, HOURS)
+   - Made email/phone/address links bigger
+   - Made hours list smaller (MON | CLOSED, TUES | 10AM-7PM, etc.)
+
+10. Made carousel titles darker color (rgba(47,50,51,1))
+
+11. Added horizontal swipe/drag functionality for entire carousel row on mobile
+
+12. Added desktop drag functionality - you can click and drag the carousel left/right with mouse
+
+13. Fixed React console error about allowTransparency prop on JotForm iframe
+
+14. Added visual feedback - cursor changes to grab/grabbing when hovering over carousel
+
+15. Fixed typo in text: "you-and" changed to "you—and" (em dash)

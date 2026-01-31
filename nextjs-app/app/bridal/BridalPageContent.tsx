@@ -222,7 +222,7 @@ export default function BridalPageContent() {
             </div>
             
             <div style={{ marginTop: '1rem', marginBottom: '2rem' }}>
-              <a href="#" className="view-collection-link">VIEW THE COLLECTION →</a>
+              <a href="https://barbieannebridal.com/collections/modest" target="_blank" rel="noopener noreferrer" className="view-collection-link">VIEW THE COLLECTION →</a>
             </div>
             
             <h3 className="designer-message-label">A MESSAGE FROM BRIDAL AISLE</h3>
@@ -282,12 +282,12 @@ export default function BridalPageContent() {
             <p className="bridal-section-text">
               Our stylists are here to help you create a look that feels cohesive and personal, from subtle 
               sparkle to statement elegance. We proudly carry designer accessories from{' '}
-              <a href="#" style={{ textDecoration: 'underline', color: '#2f3233' }}>Marionat</a>,{' '}
-              <a href="#" style={{ textDecoration: 'underline', color: '#2f3233' }}>JL Johnson</a>, and more.
+              <a href="https://marionat.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#2f3233' }}>Marionat</a>,{' '}
+              <a href="https://jljohnsonbridals.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#2f3233' }}>JL Johnson</a>, and more.
             </p>
             
             <div style={{ marginTop: '2.5rem' }}>
-              <Link href="/appointments" className="bridal-cta-btn">ACCESSORIES APPOINTMENTS</Link>
+              <Link href="/appointments#appointment-4" className="bridal-cta-btn">ACCESSORIES APPOINTMENTS</Link>
             </div>
           </div>
           

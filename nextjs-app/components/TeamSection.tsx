@@ -23,7 +23,7 @@ export default function TeamSection() {
     const members: TeamMember[] = [];
     const content = contentData.content;
     
-    const memberNames = ['Annette', 'Kaitlin', 'Ashley', 'Cassidy', 'Tonya', 'Ericka', 'Kendra', 'Anna', 'Alex', 'Madeline', 'Tammy', 'Aspen', 'Chloe', 'Dana'];
+    const memberNames = ['Annette', 'Kaitlin', 'Ashley', 'Cassidy', 'Tonya', 'Ericka', 'Kendra', 'Anna', 'Madeline', 'Tammy', 'Chloe', 'Dana'];
     
     memberNames.forEach(name => {
       const nameIndex = content.findIndex(c => c.type === 'heading' && c.level === 2 && c.text === name);
