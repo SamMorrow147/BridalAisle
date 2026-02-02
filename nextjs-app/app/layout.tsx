@@ -133,9 +133,9 @@ export default function RootLayout({
             <div className="footer-links-section">
               <h3>LINKS</h3>
               <ul>
-                <li><a href="/appointments">APPOINTMENTS</a></li>
-                <li><a href="/contact">CONTACT & LOCATION</a></li>
-                <li><a href="/appointments#faq">FAQ&apos;S</a></li>
+                <li><Link href="/appointments">APPOINTMENTS</Link></li>
+                <li><Link href="/contact">CONTACT & LOCATION</Link></li>
+                <li><Link href="/appointments#faq">FAQ&apos;S</Link></li>
                 <li><a href="https://budgetbridaloutlet.com/" target="_blank" rel="noopener">BUDGET BRIDAL OUTLET</a></li>
               </ul>
             </div>
@@ -172,9 +172,9 @@ export default function RootLayout({
               <div className="footer-bottom-links">
                 <a href="https://www.naomigoff.com/" target="_blank" rel="noopener">SITE DESIGN CREDIT</a>
                 <span>|</span>
-                <a href="/credit">PHOTO CREDIT</a>
+                <Link href="/credit">PHOTO CREDIT</Link>
                 <span>|</span>
-                <a href="/privacy-policy">PRIVACY POLICY</a>
+                <Link href="/privacy-policy">PRIVACY POLICY</Link>
               </div>
             </div>
             <div className="footer-badge">

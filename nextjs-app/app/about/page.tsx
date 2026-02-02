@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import contentData from '@/content/about/content.json';
 import imagesData from '@/content/about/images.json';
 import TeamSection from '@/components/TeamSection';
@@ -266,9 +267,9 @@ export default function AboutPage() {
           <p className="experience-text">
             Every appointment is crafted to reflect your personality, your budget, and your vision.
           </p>
-          <a href="/appointments" className="experience-button">
+          <Link href="/appointments" className="experience-button">
             SCHEDULE YOUR APPOINTMENT
-          </a>
+          </Link>
         </div>
       </div>
     </section>
