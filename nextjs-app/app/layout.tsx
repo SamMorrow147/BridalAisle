@@ -4,6 +4,7 @@ import Link from 'next/link';
 import MobileNav from '@/components/MobileNav';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { SITE_URL } from '@/app/lib/site';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,14 +19,14 @@ export const metadata: Metadata = {
     email: true,
     address: true,
   },
-  metadataBase: new URL('https://bridalaisle.com'), // Update with your actual domain
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://bridalaisle.com',
+    url: SITE_URL,
     siteName: 'Bridal Aisle Boutique',
     title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
     description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Osseo, MN.',
@@ -134,9 +135,11 @@ export default function RootLayout({
               <h3>LINKS</h3>
               <ul>
                 <li><Link href="/appointments">APPOINTMENTS</Link></li>
+                <li><Link href="/bridal">BRIDAL</Link></li>
+                <li><Link href="/mens-suits">MEN&apos;S SUITS</Link></li>
+                <li><Link href="/about">ABOUT</Link></li>
                 <li><Link href="/contact">CONTACT & LOCATION</Link></li>
                 <li><Link href="/appointments#faq">FAQ&apos;S</Link></li>
-                <li><a href="https://budgetbridaloutlet.com/" target="_blank" rel="noopener">BUDGET BRIDAL OUTLET</a></li>
               </ul>
             </div>
             
