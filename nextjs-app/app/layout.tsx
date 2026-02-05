@@ -88,7 +88,7 @@ export default function RootLayout({
         <div className="announcement-bar">
           <div className="announcement-content">
             <div className="announcement-spacer" aria-hidden="true" />
-            <h3 className="announcement-text">Shop our Mothers&apos; Dresses now through the end of January for 40% off!</h3>
+            <h3 className="announcement-text">Moving to Maple Grove soon!</h3>
             <a href="tel:(763) 220-2319" className="announcement-phone">(763) 220-2319</a>
           </div>
         </div>
