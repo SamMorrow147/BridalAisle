@@ -69,11 +69,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M824358H');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
         {/* Favicons & App Icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="/home/ba-submark-2x-e31c28b4.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/home/ba-submark-2x-e31c28b4.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/home/ba-submark-2x-e31c28b4.png" />
+        <link rel="apple-touch-icon" href="/home/ba-submark-2x-e31c28b4.png" />
         <link rel="manifest" href="/manifest.json" />
         
         {/* Fonts */}
@@ -83,6 +94,17 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M824358H"
+            height={0}
+            width={0}
+            style={{ display: 'none', visibility: 'hidden' }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <GoogleAnalytics />
         {/* Announcement Bar */}
         <div className="announcement-bar">
