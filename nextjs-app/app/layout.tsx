@@ -80,6 +80,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
+        {/* Mailchimp */}
+        <script
+          id="mcjs"
+          dangerouslySetInnerHTML={{
+            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/632d6f51d6b447d5dd0aac702/69e49655636a18d4e1e744996.js");`,
+          }}
+        />
+        {/* End Mailchimp */}
         {/* Favicons & App Icons */}
         <link rel="icon" type="image/png" href="/home/ba-submark-2x-e31c28b4.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/home/ba-submark-2x-e31c28b4.png" />
