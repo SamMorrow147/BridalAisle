@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Add your verification code later
+    google: '9_FyoXW5DB2wyhTHkVwh_ZNrxQiDWLGhLqdtetf5liQ',
   },
 };
 
