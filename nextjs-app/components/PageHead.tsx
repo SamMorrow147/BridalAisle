@@ -34,15 +34,15 @@ export default function PageHead({ title, description, ogImage = '/og-image.jpg'
     // Open Graph tags
     updateMetaTag('og:title', `${title} | Bridal Aisle Boutique`, true);
     updateMetaTag('og:description', description, true);
-    updateMetaTag('og:image', `https://bridalaisle.com${ogImage}`, true);
-    updateMetaTag('og:url', `https://bridalaisle.com${canonicalPath}`, true);
+    updateMetaTag('og:image', `https://www.bridalaislemn.com${ogImage}`, true);
+    updateMetaTag('og:url', `https://www.bridalaislemn.com${canonicalPath}`, true);
     updateMetaTag('og:type', 'website', true);
     
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', `${title} | Bridal Aisle Boutique`);
     updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', `https://bridalaisle.com${ogImage}`);
+    updateMetaTag('twitter:image', `https://www.bridalaislemn.com${ogImage}`);
     
     // Update canonical link
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -51,7 +51,7 @@ export default function PageHead({ title, description, ogImage = '/og-image.jpg'
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = `https://bridalaisle.com${canonicalPath}`;
+    canonical.href = `https://www.bridalaislemn.com${canonicalPath}`;
   }, [title, description, ogImage, canonicalPath]);
 
   return null; // This component doesn't render anything
