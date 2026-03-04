@@ -2609,14 +2609,10 @@ body:has(.home-page) > header.sticky-header:not(.home-nav) {
   overflow-y: hidden;
   padding: 0 calc(50vw - 200px);
   scrollbar-width: none;
-  /* Native smooth scrolling with iOS momentum */
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: none;
-  scroll-behavior: smooth;
-  /* Performance optimizations */
-  will-change: scroll-position;
-  contain: layout style paint;
-  /* Enable drag scrolling */
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
   cursor: grab;
 }
 

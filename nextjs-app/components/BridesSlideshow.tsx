@@ -169,6 +169,8 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
   const scrollToSlide = (index: number) => {
     const container = scrollContainerRef.current;
     if (!container) return;
+
+    gsap.killTweensOf(container);
     
     const targetIndex = startOffset + index;
     const targetScroll = targetIndex * totalSlideWidth;
@@ -194,42 +196,41 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
     scrollToSlide(prevIndex);
   };
 
-  // Mouse drag handlers for desktop
-  const handleMouseDown = (e: React.MouseEvent) => {
+  // Pointer-based drag handlers (works across mouse, trackpad, and touch in all browsers including Safari)
+  const handlePointerDown = (e: React.PointerEvent) => {
     const container = scrollContainerRef.current;
     if (!container) return;
-    
+
+    gsap.killTweensOf(container);
+
     isDraggingRef.current = true;
-    dragStartXRef.current = e.pageX;
+    dragStartXRef.current = e.clientX;
     scrollStartRef.current = container.scrollLeft;
     container.style.cursor = 'grabbing';
-    container.style.scrollBehavior = 'auto';
+    container.setPointerCapture(e.pointerId);
   };
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handlePointerMove = (e: React.PointerEvent) => {
     if (!isDraggingRef.current) return;
     const container = scrollContainerRef.current;
     if (!container) return;
-    
+
     e.preventDefault();
-    const x = e.pageX;
-    const walk = (dragStartXRef.current - x) * 2; // Multiply by 2 for faster scroll
+    const walk = (dragStartXRef.current - e.clientX) * 2;
     container.scrollLeft = scrollStartRef.current + walk;
   };
 
-  const handleMouseUp = () => {
+  const handlePointerUp = (e: React.PointerEvent) => {
     const container = scrollContainerRef.current;
     if (!container) return;
-    
+
     isDraggingRef.current = false;
     container.style.cursor = 'grab';
-    container.style.scrollBehavior = 'smooth';
+    container.releasePointerCapture(e.pointerId);
   };
 
-  const handleMouseLeave = () => {
-    if (isDraggingRef.current) {
-      handleMouseUp();
-    }
+  const handlePointerCancel = (e: React.PointerEvent) => {
+    handlePointerUp(e);
   };
 
   // Collect slide element refs
@@ -267,14 +268,11 @@ export default function BridesSlideshow({ slides }: BridesSlideshowProps) {
       <div
         ref={scrollContainerRef}
         className="slideshow-scroll-container"
-        style={{ 
-          opacity: 0,
-          scrollBehavior: 'auto' // Let GSAP handle smooth scrolling
-        }}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
+        style={{ opacity: 0 }}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
       >
         {extendedSlides.map((slide, index) => (
           <div 
