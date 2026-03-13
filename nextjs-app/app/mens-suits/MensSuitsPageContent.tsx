@@ -1,23 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import BridesSlideshow from '@/components/BridesSlideshow';
 
 export default function MensSuitsPageContent() {
-  const [pageReady, setPageReady] = useState(false);
-
   useEffect(() => {
-    // Mark page as ready after initial render
-    setPageReady(true);
-  }, []);
-
-  useEffect(() => {
-    // Load Linda widget script only when main content is shown (container exists)
-    if (!pageReady) return;
-
+    // Load Linda widget script after component mounts
     const container = document.getElementById('linda-widget-container');
     if (!container) return;
 
@@ -70,38 +61,7 @@ export default function MensSuitsPageContent() {
         }
       });
     };
-  }, [pageReady]);
-
-  if (!pageReady) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: '#f4f6f4'
-      }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{
-            width: '50px',
-            height: '50px',
-            border: '3px solid #e3ddd3',
-            borderTop: '3px solid #827270',
-            borderRadius: '50%',
-            animation: 'spin 1s linear infinite',
-            margin: '0 auto 1rem'
-          }} />
-          <p style={{ color: '#666', fontSize: '1.1rem' }}>Loading...</p>
-        </div>
-        <style>{`
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-        `}</style>
-      </div>
-    );
-  }
+  }, []);
 
   return (
     <ErrorBoundary>
@@ -111,11 +71,11 @@ export default function MensSuitsPageContent() {
       <section className="mens-suits-hero">
         <div className="mens-hero-overlay"></div>
         <div className="mens-hero-content">
-          <h3 className="mens-hero-label">
+          <p className="mens-hero-label">
             <span className="label-line"></span>
             THE WOODS MEN'S SUITS
             <span className="label-line"></span>
-          </h3>
+            </p>
           <h1 className="mens-hero-title">For the groom, the groomsmen & beyond</h1>
           <p className="mens-hero-text">
             From timeless rentals to custom-fit suits you can call your own, Bridal Aisle Boutique 
@@ -129,7 +89,7 @@ export default function MensSuitsPageContent() {
       <section className="mens-rentals-section">
         <div className="mens-two-column">
           <div className="mens-content-left">
-            <h1 className="mens-section-title">Full-service suit rentals for weddings, prom & special events</h1>
+            <h2 className="mens-section-title">Full-service suit rentals for weddings, prom & special events</h2>
             
             <p className="mens-section-text">
               Our partnership with <strong>DuBois Formalwear</strong> ensures every suit meets the 
@@ -145,7 +105,7 @@ export default function MensSuitsPageContent() {
               <a href="https://www.dbformalwear.com/online-catalog" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/home/dubois-logo.png"
-                  alt="DB Formalwear"
+                  alt="DB Formalwear — men's formal attire for weddings, available at Bridal Aisle Boutique Minnesota"
                   width={120}
                   height={60}
                   style={{ objectFit: 'contain' }}
@@ -154,7 +114,7 @@ export default function MensSuitsPageContent() {
               <a href="https://puresilkfabrics.com/suits/metro-suits/" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/home/psf-logo.png"
-                  alt="Pure Silk Fabrics"
+                  alt="Pure Silk Fabrics — custom made suits near Maple Grove MN at Bridal Aisle Boutique"
                   width={180}
                   height={80}
                   style={{ objectFit: 'contain' }}
@@ -166,7 +126,7 @@ export default function MensSuitsPageContent() {
           <div className="mens-image-right">
             <Image
               src="/mens-suits/hero-groom.jpg"
-              alt="Groom in suit"
+              alt="Groom in tailored wedding suit from Bridal Aisle Boutique — formal wear near Maple Grove MN"
               fill
               style={{ objectFit: 'cover' }}
             />
@@ -176,7 +136,7 @@ export default function MensSuitsPageContent() {
 
       {/* Section 3 - The Suit Rental Process */}
       <section className="mens-process-section">
-        <h1 className="mens-process-heading">The Suit Rental Process</h1>
+        <h2 className="mens-process-heading">The Suit Rental Process</h2>
         
         <div className="mens-process-grid">
           {/* Row 1: 2 columns */}
@@ -206,8 +166,8 @@ export default function MensSuitsPageContent() {
       {/* Section 4 - Pure Silk Suits */}
       <section className="mens-silk-suits-section">
         <div className="silk-suits-content">
-          <h3 className="silk-suits-label">OWN YOUR SUIT</h3>
-          <h1 className="silk-suits-title">Pure Silk Suits Designed to Last a Lifetime</h1>
+          <p className="silk-suits-label">OWN YOUR SUIT</p>
+          <h2 className="silk-suits-title">Pure Silk Suits Designed to Last a Lifetime</h2>
           
           <p className="silk-suits-text">
             For those seeking a more permanent addition to their wardrobe, Bridal Aisle now offers pure 

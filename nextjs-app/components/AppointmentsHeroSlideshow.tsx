@@ -47,9 +47,9 @@ export default function AppointmentsHeroSlideshow({ slides, interval = 5000 }: A
       ))}
       
       <div className="appointments-hero-content">
-        <h3 className="appointments-hero-subtitle">book your</h3>
+        <p className="appointments-hero-subtitle">book your</p>
         <h1 className="appointments-hero-title">APPOINTMENT</h1>
-        <h3 className="appointments-hero-description">We carry The Largest selection of in-stock wedding dresses in the midwest</h3>
+        <h2 className="appointments-hero-description">We carry The Largest selection of in-stock wedding dresses in the midwest</h2>
       </div>
     </div>
   );

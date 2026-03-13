@@ -174,7 +174,7 @@ export default function PreparingForVisit() {
           >
             {/* First card */}
             <div className="prepare-card prepare-card--slide-in" style={{ animationName: direction === 'next' ? 'slideInRight' : 'slideInLeft' }}>
-              <h2 className="prepare-title">{page[0].title}</h2>
+              <h3 className="prepare-title">{page[0].title}</h3>
               <p className="prepare-text">
                 {page[0].hasLink ? (
                   <>
@@ -204,7 +204,7 @@ export default function PreparingForVisit() {
 
             {/* Second card */}
             <div className="prepare-card prepare-card--slide-in" style={{ animationName: direction === 'next' ? 'slideInRight' : 'slideInLeft', animationDelay: '0.1s' }}>
-              <h2 className="prepare-title">{page[1].title}</h2>
+              <h3 className="prepare-title">{page[1].title}</h3>
               <p className="prepare-text">{page[1].text}</p>
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function PreparingForVisit() {
           <div className="prepare-image" key={`image-${currentPage}`}>
             <Image
               src={PAGE_IMAGES[currentPage]}
-              alt="Bridal boutique interior"
+              alt="Bridal Aisle Boutique fitting room — formal dresses Maple Grove MN, serving Osseo and surrounding areas"
               fill
               style={{ objectFit: 'cover' }}
               priority

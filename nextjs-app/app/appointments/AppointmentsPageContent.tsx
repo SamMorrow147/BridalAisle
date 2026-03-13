@@ -29,12 +29,12 @@ export default function AppointmentsPageContent() {
     }
   }, []);
   const heroSlides = [
-    { image: '/appointments/hero-1.jpg', alt: 'Wedding dress detail' },
-    { image: '/appointments/hero-2.jpg', alt: 'Bridal gown' },
-    { image: '/appointments/hero-3.jpg', alt: 'Wedding dress' },
-    { image: '/appointments/hero-4.jpg', alt: 'Bridal detail' },
-    { image: '/appointments/hero-5.jpg', alt: 'Wedding dress' },
-    { image: '/appointments/hero-6.jpg', alt: 'Bridal gown' },
+    { image: '/appointments/hero-1.jpg', alt: 'Designer wedding dress at Bridal Aisle Boutique — book a bridal appointment in Minnesota' },
+    { image: '/appointments/hero-2.jpg', alt: 'Designer wedding dress at Bridal Aisle Boutique — book a bridal appointment in Minnesota' },
+    { image: '/appointments/hero-3.jpg', alt: 'Designer wedding dress at Bridal Aisle Boutique — book a bridal appointment in Minnesota' },
+    { image: '/appointments/hero-4.jpg', alt: 'Designer wedding dress at Bridal Aisle Boutique — book a bridal appointment in Minnesota' },
+    { image: '/appointments/hero-5.jpg', alt: 'Designer wedding dress at Bridal Aisle Boutique — book a bridal appointment in Minnesota' },
+    { image: '/appointments/hero-6.jpg', alt: 'Designer wedding dress at Bridal Aisle Boutique — book a bridal appointment in Minnesota' },
   ];
 
   return (
@@ -51,9 +51,9 @@ export default function AppointmentsPageContent() {
         background: '#f4f6f4',
         minHeight: '70vh'
       }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '2rem', color: '#2c2c2c' }}>
+        <h2 style={{ fontSize: '3rem', marginTop: '0', marginBottom: '2rem', color: '#2c2c2c' }}>
           Book an Appointment
-        </h1>
+        </h2>
         <div style={{ width: '100%', maxWidth: '900px', marginTop: '2rem', marginLeft: 'auto', marginRight: 'auto' }}>
           <iframe 
             src="https://app.bridallive.com/forms.html?formType=scheduler&retailerId=b9c2f4ac&lang=en" 
@@ -68,8 +68,8 @@ export default function AppointmentsPageContent() {
       {/* Appointment Menu Section */}
       <section className="appointment-menu-section">
         <div className="appointment-menu-container">
-          <h1 className="appointment-menu-title">BRIDAL AISLE</h1>
-          <h2 className="appointment-menu-subtitle">Appointment Menu</h2>
+          <p className="appointment-menu-title">BRIDAL AISLE</p>
+          <h3 className="appointment-menu-subtitle">Appointment Menu</h3>
           <div className="appointment-menu-grid">
             <a href="#appointment-1" className="appointment-menu-item" onClick={(e) => scrollToSection(e, 'appointment-1')}>
               <h3>Bridal Aisle Dress Appointment</h3>
@@ -96,15 +96,15 @@ export default function AppointmentsPageContent() {
       <section id="appointment-1" className="appointment-detail-section">
         <div className="appointment-detail-container">
           <AppointmentDetailSlideshow slides={[
-            { image: '/appointments/appt-1.jpg', alt: 'Bridal appointment' },
-            { image: '/appointments/appt-1-1.jpg', alt: 'Bridal appointment' },
-            { image: '/appointments/appt-1-2.jpg', alt: 'Bridal appointment' },
-            { image: '/appointments/appt-1-3.jpg', alt: 'Bridal appointment' },
-            { image: '/appointments/appt-1-4.jpg', alt: 'Bridal appointment' },
-            { image: '/appointments/appt-1-5.jpg', alt: 'Bridal appointment' }
+            { image: '/appointments/appt-1.jpg', alt: 'Bride trying on designer wedding gown during bridal appointment at Bridal Aisle Boutique, Osseo MN' },
+            { image: '/appointments/appt-1-1.jpg', alt: 'Bride trying on designer wedding gown during bridal appointment at Bridal Aisle Boutique, Osseo MN' },
+            { image: '/appointments/appt-1-2.jpg', alt: 'Bride trying on designer wedding gown during bridal appointment at Bridal Aisle Boutique, Osseo MN' },
+            { image: '/appointments/appt-1-3.jpg', alt: 'Bride trying on designer wedding gown during bridal appointment at Bridal Aisle Boutique, Osseo MN' },
+            { image: '/appointments/appt-1-4.jpg', alt: 'Bride trying on designer wedding gown during bridal appointment at Bridal Aisle Boutique, Osseo MN' },
+            { image: '/appointments/appt-1-5.jpg', alt: 'Bride trying on designer wedding gown during bridal appointment at Bridal Aisle Boutique, Osseo MN' }
           ]} />
           <div className="appointment-detail-content">
-            <h1 className="appointment-detail-title">Bridal Aisle Dress Appointment</h1>
+            <h2 className="appointment-detail-title">Bridal Aisle Dress Appointment</h2>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $25.00 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
             <p>The Bride + 4 guests will enjoy a 90-minute bridal appointment with a personal stylist to assist you in finding &apos;the one&apos;! While your guests relax in their designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
             <p>The bride will have access to all dresses in the store including the Budget Bridal Outlet to try on. This appointment type is recommended for brides with a budget higher than $700.</p>
@@ -124,7 +124,7 @@ export default function AppointmentsPageContent() {
       <section id="appointment-2" className="appointment-detail-section">
         <div className="appointment-detail-container">
           <div className="appointment-detail-content">
-            <h1 className="appointment-detail-title">Budget Bridal Outlet Dress Appointment</h1>
+            <h2 className="appointment-detail-title">Budget Bridal Outlet Dress Appointment</h2>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $25.00 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
             <p>The Bride + 4 guests will enjoy a 60-minute bridal appointment in our Budget Bridal Outlet section of the store where all dresses are priced $600 or less. While your guests relax in their designated seating area, your personal stylist will guide you in selecting and trying on dresses that suit your style, budget, body shape, and wedding vision.</p>
             <p>The bride will have access to only our Budget Bridal Dresses during their 60-minute appointment.</p>
@@ -137,11 +137,11 @@ export default function AppointmentsPageContent() {
             </ul>
           </div>
           <AppointmentDetailSlideshow slides={[
-            { image: '/appointments/appt-2.jpg', alt: 'Budget bridal appointment' },
-            { image: '/appointments/appt-2-1.jpg', alt: 'Budget bridal appointment' },
-            { image: '/appointments/appt-2-2.jpg', alt: 'Budget bridal appointment' },
-            { image: '/appointments/appt-2-3.jpg', alt: 'Budget bridal appointment' },
-            { image: '/appointments/appt-2-4.jpg', alt: 'Budget bridal appointment' }
+            { image: '/appointments/appt-2.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
+            { image: '/appointments/appt-2-1.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
+            { image: '/appointments/appt-2-2.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
+            { image: '/appointments/appt-2-3.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
+            { image: '/appointments/appt-2-4.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' }
           ]} />
         </div>
       </section>
@@ -150,16 +150,16 @@ export default function AppointmentsPageContent() {
       <section id="appointment-3" className="appointment-detail-section">
         <div className="appointment-detail-container">
           <AppointmentDetailSlideshow slides={[
-            { image: '/appointments/appt-3.jpg', alt: 'VIP bridal experience' },
-            { image: '/appointments/appt-3-1.jpg', alt: 'VIP bridal experience' },
-            { image: '/appointments/appt-3-2.jpg', alt: 'VIP bridal experience' },
-            { image: '/appointments/appt-3-3.jpg', alt: 'VIP bridal experience' },
-            { image: '/appointments/appt-3-4.jpg', alt: 'VIP bridal experience' },
-            { image: '/appointments/appt-3-5.jpg', alt: 'VIP bridal experience' },
-            { image: '/appointments/appt-3-6.jpg', alt: 'VIP bridal experience' }
+            { image: '/appointments/appt-3.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' },
+            { image: '/appointments/appt-3-1.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' },
+            { image: '/appointments/appt-3-2.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' },
+            { image: '/appointments/appt-3-3.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' },
+            { image: '/appointments/appt-3-4.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' },
+            { image: '/appointments/appt-3-5.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' },
+            { image: '/appointments/appt-3-6.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' }
           ]} />
           <div className="appointment-detail-content">
-            <h1 className="appointment-detail-title">VIP Bridal Experience</h1>
+            <h2 className="appointment-detail-title">VIP Bridal Experience</h2>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $100 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
             <p>The Bride and up to 10 guests will enjoy a 90-minute bridal appointment with one of our senior stylists to assist you in finding &apos;the one&apos;! While your guests relax in their semi-private designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
             <p>All dresses range from $350.00 - $2,500.</p>
@@ -178,7 +178,7 @@ export default function AppointmentsPageContent() {
       <section id="appointment-4" className="appointment-detail-section">
         <div className="appointment-detail-container">
           <div className="appointment-detail-content">
-            <h1 className="appointment-detail-title">Accessory/Bridal Styling Appointment</h1>
+            <h2 className="appointment-detail-title">Accessory/Bridal Styling Appointment</h2>
             <h3 className="appointment-detail-subtitle">WE CHARGE A $25 CANCELLATION FEE IF NOT CANCELLED AT LEAST 48 HOURS BEFORE APPOINTMENT</h3>
             <p>You found your perfect dress, now it&apos;s time to accessorize!</p>
             <p>This appointment is a 60-minute one-on-one consultation with a trained stylist to show you the perfect pairing of a veil or belt (& more) with your wedding dress!</p>
@@ -191,10 +191,10 @@ export default function AppointmentsPageContent() {
             </ul>
           </div>
           <AppointmentDetailSlideshow slides={[
-            { image: '/appointments/appt-4-2.jpg', alt: 'Accessory appointment' },
-            { image: '/appointments/appt-4-3.jpg', alt: 'Accessory appointment' },
-            { image: '/appointments/appt-4-4.jpg', alt: 'Accessory appointment' },
-            { image: '/appointments/appt-4-5.jpg', alt: 'Accessory appointment' }
+            { image: '/appointments/appt-4-2.jpg', alt: 'Bride trying on wedding veils and accessories — styling appointment at Bridal Aisle Boutique MN' },
+            { image: '/appointments/appt-4-3.jpg', alt: 'Bride trying on wedding veils and accessories — styling appointment at Bridal Aisle Boutique MN' },
+            { image: '/appointments/appt-4-4.jpg', alt: 'Bride trying on wedding veils and accessories — styling appointment at Bridal Aisle Boutique MN' },
+            { image: '/appointments/appt-4-5.jpg', alt: 'Bride trying on wedding veils and accessories — styling appointment at Bridal Aisle Boutique MN' }
           ]} />
         </div>
       </section>
@@ -203,15 +203,15 @@ export default function AppointmentsPageContent() {
       <section id="appointment-5" className="appointment-detail-section">
         <div className="appointment-detail-container">
           <AppointmentDetailSlideshow slides={[
-            { image: '/appointments/appt-5.jpg', alt: "Men's suits appointment" },
-            { image: '/appointments/appt-5-1.jpg', alt: "Men's suits appointment" },
-            { image: '/appointments/appt-5-2.jpg', alt: "Men's suits appointment" },
-            { image: '/appointments/appt-5-3.jpg', alt: "Men's suits appointment" },
-            { image: '/appointments/appt-5-4.jpg', alt: "Men's suits appointment" },
-            { image: '/appointments/appt-5-5.jpg', alt: "Men's suits appointment" }
+            { image: '/appointments/appt-5.jpg', alt: 'Groom selecting men\'s formal attire for wedding at Bridal Aisle Boutique — wedding suits Minnesota' },
+            { image: '/appointments/appt-5-1.jpg', alt: 'Groom selecting men\'s formal attire for wedding at Bridal Aisle Boutique — wedding suits Minnesota' },
+            { image: '/appointments/appt-5-2.jpg', alt: 'Groom selecting men\'s formal attire for wedding at Bridal Aisle Boutique — wedding suits Minnesota' },
+            { image: '/appointments/appt-5-3.jpg', alt: 'Groom selecting men\'s formal attire for wedding at Bridal Aisle Boutique — wedding suits Minnesota' },
+            { image: '/appointments/appt-5-4.jpg', alt: 'Groom selecting men\'s formal attire for wedding at Bridal Aisle Boutique — wedding suits Minnesota' },
+            { image: '/appointments/appt-5-5.jpg', alt: 'Groom selecting men\'s formal attire for wedding at Bridal Aisle Boutique — wedding suits Minnesota' }
           ]} />
           <div className="appointment-detail-content">
-            <h1 className="appointment-detail-title">The Wood&apos;s Men&apos;s Suits</h1>
+            <h2 className="appointment-detail-title">The Wood&apos;s Men&apos;s Suits</h2>
             <p>We carry suits for rental or for purchase.</p>
             <p>During your 60 Minute appointment, you will have a designated stylist to assist you in selecting the perfect color and style for your wedding or event.</p>
             <p>It is suggested that the couple come in separate from their party members to make their selections. Once the styles are selected, party members are encouraged to make an appointment to get professionally measured with us and we will get your suits ordered!</p>
@@ -233,20 +233,20 @@ export default function AppointmentsPageContent() {
           onClick={() => setPrepareOpen(!prepareOpen)}
           aria-expanded={prepareOpen}
         >
-          <h1>HOW TO PREPARE FOR YOUR APPOINTMENT</h1>
+          <h2>HOW TO PREPARE FOR YOUR APPOINTMENT</h2>
           <span className="prepare-icon" aria-hidden="true">{prepareOpen ? '−' : '+'}</span>
         </button>
         {prepareOpen && (
           <div className="prepare-container">
             <div className="prepare-content">
-              <h2 className="prepare-title">A smaller guest list makes for a more meaningful moment</h2>
+              <h3 className="prepare-title">A smaller guest list makes for a more meaningful moment</h3>
               <p className="prepare-text">
                 Finding your dress is a once-in-a-lifetime moment, and bringing just one or two trusted guests allows you to truly focus on what you love. For groups larger than four, please <Link href="/contact">contact us</Link> to book a private appointment for a more comfortable experience.
               </p>
               <div className="prepare-divider">
                 <span>→</span>
               </div>
-              <h2 className="prepare-title">We&apos;re a shoe-free boutique to keep our gowns pristine</h2>
+              <h3 className="prepare-title">We&apos;re a shoe-free boutique to keep our gowns pristine</h3>
               <p className="prepare-text">
                 To protect our dresses from Minnesota&apos;s unpredictable weather, we kindly ask all guests to remove their shoes upon arrival. We&apos;ll provide slippers for you to wear during your appointment, or you may bring your own.
               </p>
@@ -300,7 +300,7 @@ export default function AppointmentsPageContent() {
 
       {/* FAQ Section */}
       <section id="faq" className="bridal-faq-section">
-        <h1 className="faq-heading">FAQ</h1>
+        <h2 className="faq-heading">FAQ</h2>
         <FAQ faqs={[
           {
             question: "Do I need to set up an appointment to try on wedding dresses?",

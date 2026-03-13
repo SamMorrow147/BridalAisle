@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
 import AppointmentsPageContent from './AppointmentsPageContent';
+import { SITE_URL } from '@/app/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Book Your Bridal Appointment | Bridal Aisle Boutique',
-  description: 'Schedule your personalized bridal appointment at Minnesota\'s premier boutique. Try on 2,000+ designer gowns with expert stylists. Same-day take home available. Book now!',
+  title: 'Book a Bridal Appointment in Minnesota | Bridal Aisle Boutique — Osseo MN',
+  description: "Book your bridal appointment at Bridal Aisle Boutique — Minnesota's best wedding dress shop. Bridal, VIP, Budget & Men's Suit appointments. Same-day dress purchase in Osseo MN.",
   alternates: {
     canonical: '/appointments',
   },
   openGraph: {
-    title: 'Book Your Bridal Appointment | Bridal Aisle Boutique',
-    description: 'Schedule your personalized bridal appointment at Minnesota\'s premier boutique. Try on 2,000+ designer gowns with expert stylists. Same-day take home available.',
-    url: 'https://bridalaisle.com/appointments',
+    title: 'Book a Bridal Appointment in Minnesota | Bridal Aisle Boutique — Osseo MN',
+    description: "Book your bridal appointment at Bridal Aisle Boutique — Minnesota's best wedding dress shop. Bridal, VIP, Budget & Men's Suit appointments. Same-day dress purchase in Osseo MN.",
+    url: `${SITE_URL}/appointments`,
   },
 };
 

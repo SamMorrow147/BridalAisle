@@ -162,19 +162,19 @@ export default function TeamSection() {
             <div className="team-profile-content">
               {selectedMemberData.about && (
                 <div className="team-profile-section">
-                  <h5>TELL US A BIT ABOUT YOURSELF</h5>
+                  <p className="team-profile-label">TELL US A BIT ABOUT YOURSELF</p>
                   <p>{selectedMemberData.about}</p>
                 </div>
               )}
               {selectedMemberData.favorite && (
                 <div className="team-profile-section">
-                  <h5>FAVORITE PART ABOUT BEING A BRIDAL STYLIST</h5>
+                  <p className="team-profile-label">FAVORITE PART ABOUT BEING A BRIDAL STYLIST</p>
                   <p>{selectedMemberData.favorite}</p>
                 </div>
               )}
               {selectedMemberData.advice && (
                 <div className="team-profile-section">
-                  <h5>ONE PIECE OF ADVICE YOU WOULD LIKE TO PASS ON TO BRIDES BEFORE THEIR APPOINTMENT</h5>
+                  <p className="team-profile-label">ONE PIECE OF ADVICE YOU WOULD LIKE TO PASS ON TO BRIDES BEFORE THEIR APPOINTMENT</p>
                   <p>{selectedMemberData.advice}</p>
                 </div>
               )}

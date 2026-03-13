@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
 import HomePageContent from './HomePageContent';
+import { SITE_URL } from '@/app/lib/site';
 
 export const metadata: Metadata = {
-  title: "Minnesota's Premier Bridal & Formalwear Destination | Bridal Aisle Boutique",
-  description: "Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Osseo, MN. Book now!",
+  title: 'Buy Wedding Dresses in Minnesota | Bridal Aisle Boutique — Wedding Dress Shop Osseo MN',
+  description: "Shop 2,000+ designer wedding dresses at Bridal Aisle Boutique — Minnesota's best wedding dress shop in Osseo MN. Take your dream gown home the same day. Book now.",
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Bridal Aisle Boutique | Minnesota's Premier Bridal & Formalwear Destination",
-    description: "Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Osseo, MN.",
-    url: 'https://bridalaisle.com',
+    title: 'Buy Wedding Dresses in Minnesota | Bridal Aisle Boutique — Wedding Dress Shop Osseo MN',
+    description: "Shop 2,000+ designer wedding dresses at Bridal Aisle Boutique — Minnesota's best wedding dress shop in Osseo MN. Take your dream gown home the same day. Book now.",
+    url: SITE_URL,
   },
 };
 

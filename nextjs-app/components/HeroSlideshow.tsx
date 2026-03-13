@@ -62,7 +62,7 @@ export default function HeroSlideshow({ slides, interval = 5000, onMenuOpen }: H
         <div className="hero-logo-top">
           <Image
             src="/White-BA-logo-stacked.png"
-            alt="Bridal Aisle"
+            alt="Bridal Aisle Boutique — buy designer wedding dresses in Minnesota"
             width={200}
             height={250}
             priority
@@ -70,7 +70,7 @@ export default function HeroSlideshow({ slides, interval = 5000, onMenuOpen }: H
         </div>
         
         <div className="hero-text">
-          <h3 className="hero-subtitle">your dream dress</h3>
+          <p className="hero-subtitle">your dream dress</p>
           <h1 className="hero-title">IS AT BRIDAL AISLE</h1>
           <a href="/appointments" className="hero-cta">
             APPOINTMENTS

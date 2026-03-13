@@ -68,7 +68,7 @@ export default function BridalPageContent() {
       <section className="bridal-hero">
         <div className="bridal-hero-overlay"></div>
         <div className="bridal-hero-content">
-          <h3 className="bridal-hero-label">FOR THE MODERN BRIDE</h3>
+          <p className="bridal-hero-label">FOR THE MODERN BRIDE</p>
           <h1 className="bridal-hero-title">Discover Wedding Dresses that Feel Like You</h1>
           <div className="hero-divider"></div>
           <p className="bridal-hero-text">
@@ -87,15 +87,15 @@ export default function BridalPageContent() {
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
               <img 
                 src="/bridal/bride-veil.jpg" 
-                alt="Bride with flowing veil"
+                alt="Bride in elegant designer wedding dress and veil — buy wedding dresses near Maple Grove MN"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>
           
           <div className="bridal-content-right">
-            <h3 className="bridal-section-label">OFF-THE-RACK WEDDING DRESSES</h3>
-            <h1 className="bridal-section-title">Thousands of designer gowns, ready when you are</h1>
+            <p className="bridal-section-label">OFF-THE-RACK WEDDING DRESSES</p>
+            <h2 className="bridal-section-title">Thousands of designer gowns, ready when you are</h2>
             <div className="bridal-horizontal-divider"></div>
             
             <p className="bridal-section-text">
@@ -122,8 +122,8 @@ export default function BridalPageContent() {
       <section className="bridal-made-to-order">
         <div className="bridal-mto-overlay"></div>
         <div className="bridal-mto-content">
-          <h3 className="bridal-mto-label">MADE TO ORDER FOR YOUR MOMENT</h3>
-          <h1 className="bridal-mto-title">Custom-designed gowns, made just for you</h1>
+          <p className="bridal-mto-label">MADE TO ORDER FOR YOUR MOMENT</p>
+          <h2 className="bridal-mto-title">Custom-designed gowns, made just for you</h2>
           <p className="bridal-mto-text">
             In addition to our in-stock selection, Bridal Aisle Boutique offers made-to-order wedding 
             dresses from two exceptional designers—each known for their quality, craftsmanship, and 
@@ -136,7 +136,7 @@ export default function BridalPageContent() {
       <section className="bridal-designer-section">
         <div className="bridal-two-column">
           <div className="bridal-content-left">
-            <h1 className="designer-script-title">Moonlight Bridal</h1>
+            <h3 className="designer-script-title">Moonlight Bridal</h3>
             
             <p className="bridal-section-text">
               We offer the Tango, Collection, and Modest lines from Moonlight Bridal. While we don't 
@@ -148,7 +148,7 @@ export default function BridalPageContent() {
             <div className="bridal-image-mobile-insert">
               <Image
                 src="/bridal/moonlight-bride.jpg"
-                alt="Moonlight Bridal"
+                alt="Moonlight Bridal elegant wedding gown — designer bridal dress available near Maple Grove MN"
                 width={600}
                 height={800}
                 style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -179,7 +179,7 @@ export default function BridalPageContent() {
           <div className="bridal-image-right">
             <Image
               src="/bridal/moonlight-bride.jpg"
-              alt="Moonlight Bridal"
+              alt="Moonlight Bridal elegant wedding gown — designer bridal dress available near Maple Grove MN"
               width={600}
               height={800}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -194,7 +194,7 @@ export default function BridalPageContent() {
           <div className="bridal-image-left">
             <Image
               src="/bridal/barbie-anne-bride.jpg"
-              alt="Barbie Anne Bridal Modest Collection"
+              alt="Barbie Anne Bridal modest wedding dress — modest bridal gowns Minnesota, available to order"
               width={600}
               height={800}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%', height: '100%' }}
@@ -202,7 +202,7 @@ export default function BridalPageContent() {
           </div>
           
           <div className="bridal-content-right">
-            <h1 className="designer-script-title">Barbie Anne<br />Bridal Modest<br />Collection</h1>
+            <h3 className="designer-script-title">Barbie Anne<br />Bridal Modest<br />Collection</h3>
             
             <p className="bridal-section-text">
               We currently only offer the Modest line from Barbie Anne Bridal. While we don't carry every 
@@ -214,7 +214,7 @@ export default function BridalPageContent() {
             <div className="bridal-image-mobile-insert">
               <Image
                 src="/bridal/barbie-anne-bride.jpg"
-                alt="Barbie Anne Bridal Modest Collection"
+                alt="Barbie Anne Bridal modest wedding dress — modest bridal gowns Minnesota, available to order"
                 width={600}
                 height={800}
                 style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -251,18 +251,18 @@ export default function BridalPageContent() {
           <div className="acc-img-top-left acc-desktop-only">
             <Image
               src="/bridal/acc-top-left.jpg"
-              alt="Accessory detail"
-              width={180}
-              height={200}
-              style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
-            />
-          </div>
+                alt="Bridal accessories — veil and hairpiece at Bridal Aisle Boutique, wedding dress shop Osseo MN"
+                width={180}
+                height={200}
+                style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
+              />
+            </div>
           
           {/* Top Left Image - Mobile (swapped with bottom-right) */}
           <div className="acc-img-top-left acc-mobile-only">
             <Image
               src="/bridal/accessories-img2.jpg"
-              alt="Bride with consultant"
+              alt="Bride being styled with bridal accessories — elegant bridal dress styling near Maple Grove MN"
               width={180}
               height={200}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -271,8 +271,8 @@ export default function BridalPageContent() {
           
           {/* Center Content - spans middle */}
           <div className="accessories-content-center">
-            <h3 className="bridal-section-label">COMPLETE YOUR BRIDAL LOOK</h3>
-            <h1 className="accessories-title">The finishing touches that make it yours</h1>
+            <p className="bridal-section-label">COMPLETE YOUR BRIDAL LOOK</p>
+            <h2 className="accessories-title">The finishing touches that make it yours</h2>
             
             <p className="bridal-section-text">
               Your dress tells your story—your accessories complete it. Bridal Aisle Boutique carries 
@@ -295,7 +295,7 @@ export default function BridalPageContent() {
           <div className="acc-img-top-right acc-desktop-only">
             <Image
               src="/bridal/acc-top-right.jpg"
-              alt="Dress detail"
+              alt="Close-up of designer wedding gown detail — affordable designer dresses near Maple Grove MN"
               width={180}
               height={200}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -306,7 +306,7 @@ export default function BridalPageContent() {
           <div className="acc-img-top-right acc-mobile-only">
             <Image
               src="/bridal/accessories-img1.jpg"
-              alt="Bride trying on dress"
+              alt="Bride trying on wedding dress and veil — best place to find bridesmaid & bridal dresses Minnesota"
               width={180}
               height={250}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -317,7 +317,7 @@ export default function BridalPageContent() {
           <div className="acc-img-bottom-left acc-desktop-only">
             <Image
               src="/bridal/accessories-img1.jpg"
-              alt="Bride trying on dress"
+              alt="Bride trying on wedding dress and veil — best place to find bridesmaid & bridal dresses Minnesota"
               width={180}
               height={250}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -328,7 +328,7 @@ export default function BridalPageContent() {
           <div className="acc-img-bottom-left acc-mobile-only">
             <Image
               src="/bridal/acc-top-right.jpg"
-              alt="Dress detail"
+              alt="Close-up of designer wedding gown detail — affordable designer dresses near Maple Grove MN"
               width={180}
               height={200}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -339,7 +339,7 @@ export default function BridalPageContent() {
           <div className="acc-img-bottom-right acc-desktop-only">
             <Image
               src="/bridal/accessories-img2.jpg"
-              alt="Bride with consultant"
+              alt="Bride being styled with bridal accessories — elegant bridal dress styling near Maple Grove MN"
               width={180}
               height={250}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -350,7 +350,7 @@ export default function BridalPageContent() {
           <div className="acc-img-bottom-right acc-mobile-only">
             <Image
               src="/bridal/acc-top-left.jpg"
-              alt="Accessory detail"
+              alt="Bridal accessories — veil and hairpiece at Bridal Aisle Boutique, wedding dress shop Osseo MN"
               width={180}
               height={250}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -362,8 +362,8 @@ export default function BridalPageContent() {
       {/* Section 7 - Layaway */}
       <section className="bridal-layaway-section">
         <div className="layaway-content-circle">
-          <h3 className="layaway-label">FLEXIBLE OPTIONS FOR EVERY BRIDE</h3>
-          <h1 className="layaway-title">Layaway Available</h1>
+          <p className="layaway-label">FLEXIBLE OPTIONS FOR EVERY BRIDE</p>
+          <h2 className="layaway-title">Layaway Available</h2>
           <div className="layaway-divider"></div>
           <p className="layaway-text">
             Say yes to your dress with confidence. We offer a 30-day layaway option, allowing you 
@@ -375,7 +375,7 @@ export default function BridalPageContent() {
 
       {/* FAQ Section */}
       <section className="bridal-faq-section">
-        <h1 className="faq-heading">FAQ</h1>
+        <h2 className="faq-heading">FAQ</h2>
         <FAQ faqs={[
           {
             question: "Do I need to set up an appointment to try on wedding dresses?",

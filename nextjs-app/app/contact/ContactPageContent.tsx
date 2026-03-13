@@ -24,7 +24,7 @@ export default function ContactPageContent() {
             <div className="contact-image-arched">
               <Image
                 src="/contact/Contact.jpg"
-                alt="Couple at Bridal Aisle"
+                alt="Couple at Bridal Aisle Boutique — wedding dress shop Osseo MN, moving to Maple Grove MN soon"
                 fill
                 className="contact-main-image"
                 style={{ objectFit: 'cover' }}
@@ -33,7 +33,7 @@ export default function ContactPageContent() {
               <div className="contact-image-submark">
                 <Image
                   src="/ba-submark2-dark_2x.png"
-                  alt="Bridal Aisle submark"
+                  alt="Bridal Aisle Boutique logo — wedding dress shop Osseo MN"
                   width={120}
                   height={120}
                   style={{ objectFit: 'contain' }}
@@ -87,7 +87,7 @@ export default function ContactPageContent() {
             <div className="contact-top-branding">
               <Image
                 src="/BA-logo-elongated@2x.png"
-                alt="Bridal Aisle"
+                alt="Bridal Aisle Boutique — formal wear and bridal gowns near Maple Grove MN"
                 width={300}
                 height={60}
                 style={{ objectFit: 'contain' }}

@@ -15,15 +15,15 @@ export default function HomePageContent() {
   const slides = [
     {
       image: '/home/174-a741457-enhanced-nr-ethanhanesphotography-eaa68822.jpg',
-      alt: 'Couple at wedding ceremony'
+      alt: 'Happy Minnesota bride and groom in designer wedding attire from Bridal Aisle Boutique, Osseo MN'
     },
     {
       image: '/home/32-a740573-enhanced-nr-ethanhanesphotography-d7ea15a2.jpg',
-      alt: 'Bride and groom portrait'
+      alt: 'Bride in off-the-rack designer wedding dress from Bridal Aisle Boutique — wedding dress shopping Minnesota'
     },
     {
       image: '/home/groomportraits-2021-07-30candaceandchase-31-laurenbakerphotography-ee15a496.jpg',
-      alt: 'Groom portrait'
+      alt: 'Groom in men\'s formal attire for wedding — Bridal Aisle Boutique, Minnesota'
     }
   ];
 
@@ -47,7 +47,7 @@ export default function HomePageContent() {
             <Link href="/">
               <Image
                 src="/home/ba-submark-2x-e31c28b4.png"
-                alt="Bridal Aisle"
+                alt="Bridal Aisle Boutique logo — wedding dress shop in Osseo MN"
                 width={60}
                 height={80}
               />
@@ -70,7 +70,7 @@ export default function HomePageContent() {
           <div className="about-image-left">
             <Image
               src="/home/3.jpg"
-              alt="Bride on balcony"
+              alt="Bride in elegant bridal gown from Bridal Aisle Boutique — Minnesota's premier wedding dress shop"
               width={400}
               height={450}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%', height: 'auto' }}
@@ -78,10 +78,10 @@ export default function HomePageContent() {
           </div>
           
           <div className="about-content-center">
-            <h3 className="about-label">MINNESOTA&apos;S MOST LOVED BRIDAL BOUTIQUE</h3>
+            <p className="about-label">MINNESOTA&apos;S MOST LOVED BRIDAL BOUTIQUE</p>
             <div className="divider-line"></div>
-            <h1 className="about-title">Fall in love with the perfect dress & take it home</h1>
-            <h2 className="about-subtitle">that same day.</h2>
+            <h2 className="about-title">Fall in love with the perfect dress & take it home</h2>
+            <h3 className="about-subtitle">that same day.</h3>
             <Link href="/about" className="about-btn">LEARN ABOUT US</Link>
           </div>
           
@@ -114,7 +114,7 @@ export default function HomePageContent() {
           <div className="flower-icon">
             <Image
               src="/home/flower-icon.png"
-              alt="Flower icon"
+              alt=""
               width={100}
               height={125}
               style={{ filter: 'invert(1) opacity(0.9)' }}
@@ -143,15 +143,15 @@ export default function HomePageContent() {
             <div className="arched-image">
               <Image
                 src="/home/bab-108web.jpg"
-                alt="Bridal appointment"
+                alt="Showroom at Bridal Aisle Boutique — one of Minnesota's best wedding dress shops, Osseo MN"
                 width={400}
                 height={500}
                 sizes="(max-width: 768px) 350px, (max-width: 900px) 45vw, 400px"
                 priority={false}
               />
             </div>
-            <h3 className="feature-label">OFF-THE-RACK</h3>
-            <h1 className="feature-title">Designer Gowns</h1>
+            <p className="feature-label">OFF-THE-RACK</p>
+            <h2 className="feature-title">Designer Gowns</h2>
             <p className="feature-description">
               Say yes and take it home the same day. With over 2,000 designer dresses to choose from, 
               Bridal Aisle offers an off-the-rack experience unlike any other. Find your dream dress 
@@ -164,15 +164,15 @@ export default function HomePageContent() {
             <div className="arched-image arched-image--preserve-top">
               <Image
                 src="/home/bab-102web.jpg"
-                alt="Bride and consultant"
+                alt="Personal bridal stylist helping bride choose a designer wedding dress — wedding dress shopping Minnesota"
                 width={400}
                 height={500}
                 sizes="(max-width: 768px) 350px, (max-width: 900px) 45vw, 400px"
                 priority={false}
               />
             </div>
-            <h3 className="feature-label">PERSONALIZED</h3>
-            <h1 className="feature-title">Stress-free Appointments</h1>
+            <p className="feature-label">PERSONALIZED</p>
+            <h2 className="feature-title">Stress-free Appointments</h2>
             <p className="feature-description">
               A bridal experience that's all about you. From your first hello to your final fitting, 
               our expert stylists make your appointment feel effortless and memorable. You'll enjoy 
@@ -185,15 +185,15 @@ export default function HomePageContent() {
             <div className="arched-image">
               <Image
                 src="/home/bab-68web.jpg"
-                alt="Wedding dress detail"
+                alt="Close-up of affordable designer wedding dress — off-the-rack at Bridal Aisle Boutique, MN"
                 width={400}
                 height={500}
                 sizes="(max-width: 768px) 350px, (max-width: 900px) 45vw, 400px"
                 priority={false}
               />
             </div>
-            <h3 className="feature-label">FLEXIBLE OPTIONS</h3>
-            <h1 className="feature-title">For Every Bride</h1>
+            <p className="feature-label">FLEXIBLE OPTIONS</p>
+            <h2 className="feature-title">For Every Bride</h2>
             <p className="feature-description">
               Whether you're exploring our Budget Bridal section, taking advantage of layaway, or 
               booking a VIP appointment, we offer options to fit your timeline, preferences, and 
@@ -206,33 +206,33 @@ export default function HomePageContent() {
       {/* Real Brides Horizontal Carousel */}
       <section className="slideshow-section">
         <BridesSlideshow slides={[
-          { image: '/home/bn-wedding-72-2.jpg', alt: 'Real bride' },
-          { image: '/home/dsc07551-codeerosephotography.jpg', alt: 'Bride portrait' },
-          { image: '/home/168-a741428-enhanced-nr-ethanhanesphotography.jpg', alt: 'Bride outdoor' },
-          { image: '/home/tiffanyjoannphoto-56.jpg', alt: 'Bride photo' },
-          { image: '/home/1k1a8372.jpg', alt: 'Bride portrait' },
-          { image: '/home/514962061-n.jpg', alt: 'Bride photo' },
-          { image: '/home/2.jpg', alt: 'Bride portrait' },
-          { image: '/home/781a7553.jpg', alt: 'Bride outdoor' },
-          { image: '/home/carl-kirstencoupleportraits-emmahaletphotography2022-35.jpg', alt: 'Couple portrait' },
-          { image: '/home/annaisidro-0112.jpg', alt: 'Bride photo' },
-          { image: '/home/bk-bride-groom-7.jpg', alt: 'Bride and groom' },
-          { image: '/home/ericvestphotography-carmen-and-nick-swedding-276.jpg', alt: 'Wedding couple' },
-          { image: '/home/annaisidro-0114.jpg', alt: 'Bride portrait' },
-          { image: '/home/dsc097932-codeerosephotography.jpg', alt: 'Bride photo' },
-          { image: '/home/kaysha1.jpg', alt: 'Bride portrait' },
-          { image: '/home/strongportraits-205-melissa-otto-photography.jpg', alt: 'Bride photo' },
-          { image: '/home/strongportraits-99-melissa-otto-photography.jpg', alt: 'Bride portrait' },
-          { image: '/home/melmorrisphotography.jpg', alt: 'Bride photo' },
-          { image: '/home/groomportraits-2021-07-30candaceandchase-31-laurenbakerphotography-ee15a496.jpg', alt: 'Groom portrait' }
+          { image: '/home/bn-wedding-72-2.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/dsc07551-codeerosephotography.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/168-a741428-enhanced-nr-ethanhanesphotography.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/tiffanyjoannphoto-56.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/1k1a8372.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/514962061-n.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/2.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/781a7553.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/carl-kirstencoupleportraits-emmahaletphotography2022-35.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/annaisidro-0112.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/bk-bride-groom-7.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/ericvestphotography-carmen-and-nick-swedding-276.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/annaisidro-0114.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/dsc097932-codeerosephotography.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/kaysha1.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/strongportraits-205-melissa-otto-photography.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/strongportraits-99-melissa-otto-photography.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/melmorrisphotography.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' },
+          { image: '/home/groomportraits-2021-07-30candaceandchase-31-laurenbakerphotography-ee15a496.jpg', alt: 'Real Minnesota bride in designer wedding gown from Bridal Aisle Boutique, Osseo MN' }
         ]} />
       </section>
 
       {/* Experience Section - 4 Steps with Center Image */}
       <section className="experience-section">
         <div className="experience-header">
-          <h3 className="experience-label">THE BRIDAL AISLE</h3>
-          <h1 className="experience-title">Experience</h1>
+          <p className="experience-label">THE BRIDAL AISLE</p>
+          <h2 className="experience-title">Experience</h2>
           <p className="experience-subtitle">
             From stepping into your first dress to the moment you say yes...we're here to make 
             every step seamless.
@@ -245,8 +245,8 @@ export default function HomePageContent() {
         <div className="experience-container">
           {/* Top Left - 01 */}
           <div className="experience-step step-top-left">
-            <h2 className="step-number-script">01</h2>
-            <h2 className="step-title-exp">GET ENGAGED</h2>
+            <h3 className="step-number-script">01</h3>
+            <h3 className="step-title-exp">GET ENGAGED</h3>
             <p>
               Take a moment to soak it all in, this season deserves to be celebrated. When you're 
               ready to find the dress, plan to start shopping about four months to a year before 
@@ -256,8 +256,8 @@ export default function HomePageContent() {
           
           {/* Bottom Left - 02 */}
           <div className="experience-step step-bottom-left">
-            <h2 className="step-number-script">02</h2>
-            <h2 className="step-title-exp">BROWSE GOWNS</h2>
+            <h3 className="step-number-script">02</h3>
+            <h3 className="step-title-exp">BROWSE GOWNS</h3>
             <p>
               Get inspired before your appointment. Follow us on{' '}
               <a href="https://instagram.com/bridal.aisle.mn" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -271,7 +271,7 @@ export default function HomePageContent() {
           <div className="experience-center-image">
             <Image
               src="/home/bab-103web.jpg"
-              alt="Bride trying on dress"
+              alt="Bride trying on designer gowns at bridal appointment — best wedding dress shop in Minnesota"
               width={400}
               height={450}
               style={{ objectFit: 'cover' }}
@@ -280,8 +280,8 @@ export default function HomePageContent() {
           
           {/* Top Right - 03 */}
           <div className="experience-step step-top-right">
-            <h2 className="step-number-script">03</h2>
-            <h2 className="step-title-exp">BOOK APPOINTMENT</h2>
+            <h3 className="step-number-script">03</h3>
+            <h3 className="step-title-exp">BOOK APPOINTMENT</h3>
             <p>
               Gather your "I Do Crew" and schedule a time to shop with your dedicated stylist. With 
               thousands of designer gowns in a wide range of styles and sizes, you're sure to find 
@@ -291,8 +291,8 @@ export default function HomePageContent() {
           
           {/* Bottom Right - 04 */}
           <div className="experience-step step-bottom-right">
-            <h2 className="step-number-script">04</h2>
-            <h2 className="step-title-exp">SAY YES</h2>
+            <h3 className="step-number-script">04</h3>
+            <h3 className="step-title-exp">SAY YES</h3>
             <p>
               When you find your dream dress, you shouldn't have to wait. Take it home the very 
               same day and celebrate saying yes!
@@ -309,11 +309,11 @@ export default function HomePageContent() {
       <section className="mens-suits-parallax">
         <div className="parallax-overlay"></div>
         <div className="parallax-content">
-          <h3 className="parallax-label">TAILORED SUITS FOR LIFE&apos;S DEFINING MOMENTS</h3>
-          <h1 className="parallax-title">
+          <p className="parallax-label">TAILORED SUITS FOR LIFE&apos;S DEFINING MOMENTS</p>
+          <h2 className="parallax-title">
             <span className="script-text">Timeless style</span>
             <span className="serif-text"> for every occasion.</span>
-          </h1>
+          </h2>
           <Link href="/mens-suits" className="parallax-btn">THE WOODS MEN&apos;S SUITS</Link>
         </div>
       </section>
@@ -365,13 +365,13 @@ export default function HomePageContent() {
 
       {/* Designers Section */}
       <section className="designers-section">
-        <h1 className="designers-heading">Designers We Work With</h1>
+        <h2 className="designers-heading">Designers We Work With</h2>
         <div className="designers-grid">
           <div className="designer-logo">
             <a href="https://barbieannebridal.com/collections/modest" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/home/barbie-anne-bridal-logo.png"
-                alt="Barbie Anne Bridal"
+                alt="Barbie Anne Bridal — modest wedding dress designer at Bridal Aisle Boutique Minnesota"
                 width={280}
                 height={140}
                 style={{ objectFit: 'contain' }}
@@ -390,7 +390,7 @@ export default function HomePageContent() {
             <a href="https://puresilkfabrics.com/suits/metro-suits/" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/home/psf-logo.png"
-                alt="Pure Silk Fabrics"
+                alt="Pure Silk Fabrics — men's formal attire brand at Bridal Aisle Boutique Minnesota"
                 width={250}
                 height={100}
                 style={{ objectFit: 'contain' }}
@@ -402,7 +402,7 @@ export default function HomePageContent() {
             <a href="https://www.dbformalwear.com/online-catalog" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/home/dubois-logo.png"
-                alt="DB Formalwear"
+                alt="DuBois Formalwear — wedding suit brand at Bridal Aisle Boutique, Osseo MN"
                 width={200}
                 height={80}
                 style={{ objectFit: 'contain' }}
@@ -414,7 +414,7 @@ export default function HomePageContent() {
 
       {/* FAQ Section - Hidden on Desktop */}
       <section className="bridal-faq-section mobile-only">
-        <h1 className="faq-heading">FAQ</h1>
+        <h2 className="faq-heading">FAQ</h2>
         <FAQ faqs={[
           {
             question: "Do I need to set up an appointment to try on wedding dresses?",

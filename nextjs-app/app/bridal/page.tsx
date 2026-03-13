@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
 import BridalPageContent from './BridalPageContent';
+import { SITE_URL } from '@/app/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Wedding Dresses - 2,000+ Designer Gowns | Bridal Aisle Boutique',
-  description: 'Find your dream wedding dress! Shop 2,000+ new designer gowns off-the-rack. Budget Bridal from $350-$600. Take it home today. Sizes 0-32. Book your appointment!',
+  title: 'Buy Wedding Dresses in Minnesota | Designer & Affordable Bridal Gowns — Bridal Aisle Boutique near Maple Grove MN',
+  description: 'Shop designer wedding dresses, modest bridal gowns, bridesmaid dresses & wedding guest attire at Bridal Aisle Boutique near Maple Grove MN. 2,000+ off-the-rack gowns, sizes 0–32.',
   alternates: {
     canonical: '/bridal',
   },
   openGraph: {
-    title: 'Wedding Dresses - 2,000+ Designer Gowns | Bridal Aisle Boutique',
-    description: 'Find your dream wedding dress! Shop 2,000+ new designer gowns off-the-rack. Budget Bridal from $350-$600. Take it home today. Sizes 0-32.',
-    url: 'https://bridalaisle.com/bridal',
+    title: 'Buy Wedding Dresses in Minnesota | Designer & Affordable Bridal Gowns — Bridal Aisle Boutique near Maple Grove MN',
+    description: 'Shop designer wedding dresses, modest bridal gowns, bridesmaid dresses & wedding guest attire at Bridal Aisle Boutique near Maple Grove MN. 2,000+ off-the-rack gowns, sizes 0–32.',
+    url: `${SITE_URL}/bridal`,
   },
 };
 

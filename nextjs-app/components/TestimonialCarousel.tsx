@@ -64,9 +64,9 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
     <div className="testimonial-carousel">
       <div className={`testimonial-grid ${isAnimating ? `slide-out-${direction}` : 'slide-in'}`}>
         <div className="testimonial-text-side">
-          <h1 className="testimonial-quote-script">
+          <blockquote className="testimonial-quote-script">
             {current.highlight || 'I found a dress that exceeded my expectations & I could not be happier!'}
-          </h1>
+          </blockquote>
           
           <div className="divider-short"></div>
           
@@ -83,7 +83,7 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
             </button>
           </div>
           
-          <h3 className="testimonial-name">{current.name}</h3>
+          <p className="testimonial-name">{current.name}</p>
         </div>
         
         <div className="testimonial-image-side">

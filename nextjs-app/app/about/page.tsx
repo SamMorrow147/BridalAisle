@@ -5,17 +5,18 @@ import contentData from '@/content/about/content.json';
 import imagesData from '@/content/about/images.json';
 import TeamSection from '@/components/TeamSection';
 import FAQ from '@/components/FAQ';
+import { SITE_URL } from '@/app/lib/site';
 
 export const metadata: Metadata = {
-  title: 'About Us | Bridal Aisle Boutique',
-  description: 'Meet the team behind Minnesota\'s most loved bridal boutique. Learn about our story, mission, and commitment to making every bride\'s experience unforgettable.',
+  title: "About Bridal Aisle Boutique — One of Minnesota's Best Wedding Dress Shops | Osseo MN Since 2013",
+  description: "Learn about Bridal Aisle Boutique — one of Minnesota's best wedding dress shops since 2013. Award-winning bridal boutique in Osseo MN. Designer gowns, suits & stress-free appointments.",
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: 'About Us | Bridal Aisle Boutique',
-    description: 'Meet the team behind Minnesota\'s most loved bridal boutique. Learn about our story, mission, and commitment to making every bride\'s experience unforgettable.',
-    url: 'https://bridalaisle.com/about',
+    title: "About Bridal Aisle Boutique — One of Minnesota's Best Wedding Dress Shops | Osseo MN Since 2013",
+    description: "Learn about Bridal Aisle Boutique — one of Minnesota's best wedding dress shops since 2013. Award-winning bridal boutique in Osseo MN. Designer gowns, suits & stress-free appointments.",
+    url: `${SITE_URL}/about`,
   },
 };
 
@@ -46,7 +47,7 @@ export default function AboutPage() {
         <div className="about-hero-background">
           <Image
             src={`/about/${backgroundImageName}`}
-            alt="Couple at wedding background"
+            alt="Wedding couple in designer attire — real Minnesota bride and groom from Bridal Aisle Boutique"
             fill
             className="about-hero-bg-image"
             priority
@@ -60,7 +61,7 @@ export default function AboutPage() {
               <div className="about-hero-image-cutout">
                 <Image
                   src={`/about/${heroImage.localPath.split('/').pop()}`}
-                  alt="Couple at wedding"
+                  alt="Carl and Kirsten — Bridal Aisle Boutique real couple, best wedding dress shop Minnesota 2022"
                   width={600}
                   height={800}
                   className="about-hero-image"
@@ -71,7 +72,7 @@ export default function AboutPage() {
             )}
           </div>
           <div className="about-hero-content-box">
-            <h3>{heroSubheading}</h3>
+            <p className="about-hero-label">{heroSubheading}</p>
             <h1>{heroHeading}</h1>
             <p>{heroDescription}</p>
           </div>
@@ -83,14 +84,14 @@ export default function AboutPage() {
         <div className="footer-logo-section" style={{ marginBottom: '2rem' }}>
           <Image
             src="/BA-oval-gray@2x.png"
-            alt="Bridal Aisle Boutique"
+            alt="Bridal Aisle Boutique — trusted wedding dress shop in Osseo MN since 2013"
             width={180}
             height={180}
             style={{ width: '180px', height: 'auto' }}
           />
         </div>
-        <h3>Bridal Luxury, Simplified</h3>
-        <h1>Minnesota&apos;s Destination for<br />Effortless Bridal Style</h1>
+        <p className="about-page-label">Bridal Luxury, Simplified</p>
+        <h2 className="about-destination-heading">Minnesota&apos;s Destination for<br />Effortless Bridal Style</h2>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p>
             Welcome to Bridal Aisle Boutique, Minnesota's premier destination for new off-the-rack 
@@ -112,7 +113,7 @@ export default function AboutPage() {
         <div className="quote-section-background">
           <Image
             src="/about/1k1a8372-9f1aecd7.jpg"
-            alt=""
+            alt="Bridal Aisle Boutique showroom — buy wedding dresses in Minnesota, 2,000+ gowns in Osseo MN"
             fill
             priority
             style={{ objectFit: 'cover' }}
@@ -120,8 +121,8 @@ export default function AboutPage() {
           <div className="quote-section-overlay"></div>
         </div>
         <div className="quote-section-content">
-          <h2>{quote}</h2>
-          <h3>{quoteAuthor}</h3>
+          <blockquote>{quote}</blockquote>
+          <cite>{quoteAuthor}</cite>
         </div>
       </section>
 
@@ -129,7 +130,7 @@ export default function AboutPage() {
       <section className="content-section mission-section">
         <div className="mission-container">
           <div className="mission-content">
-            <h1>A bridal boutique built on heart & honesty</h1>
+            <h2 style={{ marginTop: 0 }}>A bridal boutique built on heart & honesty</h2>
             <div className="mission-divider"></div>
             <p>
               Bridal Aisle Boutique was created with a simple mission: to make the joy of wedding 
@@ -145,8 +146,8 @@ export default function AboutPage() {
             <div className="mission-images-container">
               <div className="mission-image mission-image-1">
                 <Image
-                  src="/about/bab-68web.jpg"
-                  alt=""
+              src="/about/bab-68web.jpg"
+              alt="Bridal fitting area at Bridal Aisle Boutique — affordable wedding dress shop Osseo MN"
                   width={220}
                   height={290}
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
@@ -154,8 +155,8 @@ export default function AboutPage() {
               </div>
               <div className="mission-image mission-image-2">
                 <Image
-                  src="/about/tiffanyjoannphoto-198.jpg"
-                  alt=""
+              src="/about/tiffanyjoannphoto-198.jpg"
+              alt="Bridal Aisle Boutique stylist — personalised wedding dress shopping experience in Minnesota"
                   width={350}
                   height={460}
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
@@ -163,8 +164,8 @@ export default function AboutPage() {
               </div>
               <div className="mission-flower-icon">
                 <Image
-                  src="/about/ba-icon-bouquet-2x.png"
-                  alt="Bouquet icon"
+                src="/about/ba-icon-bouquet-2x.png"
+                alt=""
                   width={120}
                   height={145}
                   style={{ objectFit: 'contain', width: '100%', height: '100%' }}
@@ -181,8 +182,8 @@ export default function AboutPage() {
           <div className="history-images-container">
             <div className="history-image history-image-1">
               <Image
-                src="/about/bab-146web.jpg"
-                alt=""
+              src="/about/bab-146web.jpg"
+              alt="Spacious showroom at Bridal Aisle Boutique — buy wedding dresses in Osseo MN, serving all of Minnesota"
                 width={750}
                 height={750}
                 style={{ objectFit: 'cover' }}
@@ -192,7 +193,7 @@ export default function AboutPage() {
               <div className="history-image-cutout">
                 <Image
                   src="/about/annette_and_brad.jpg"
-                  alt="Annette and Brad"
+                  alt="Annette and Brad Hall — founders of Bridal Aisle Boutique, best wedding dress shop Minnesota since 2013"
                   width={220}
                   height={308}
                   style={{ objectFit: 'cover' }}
@@ -203,8 +204,8 @@ export default function AboutPage() {
         </div>
         <div className="history-container">
           <div className="history-content">
-            <h3>MEET THE FOUNDERS</h3>
-            <h1>A legacy of love & dedication</h1>
+          <p className="about-page-label">MEET THE FOUNDERS</p>
+          <h2>A legacy of love & dedication</h2>
             <p>
               Founded by Annette and Brad in 2013, Bridal Aisle began with a simple idea: brides 
               deserve stunning designer gowns without the designer price tag. What started as a small, 
@@ -236,7 +237,7 @@ export default function AboutPage() {
         <div className="about-bg-image-container">
           <Image
             src="/about/img-0257-bg.jpg"
-            alt=""
+            alt="Bridal Aisle Boutique team — expert stylists at one of Minnesota's best wedding dress shops"
             fill
             priority
             style={{ objectFit: 'cover', opacity: 0.8 }}
@@ -254,13 +255,13 @@ export default function AboutPage() {
         <div className="experience-image">
           <Image
             src="/about/photo-dec-12-2023-10-44-54-am.jpg"
-            alt="I Said Yes at Bridal Aisle"
+            alt="Bride holding 'I Said Yes at Bridal Aisle' sign — buy your wedding dress in Minnesota today"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>
         <div className="experience-content">
-          <h2 className="experience-heading">Your day, done your way</h2>
+          <h3 className="experience-heading">Your day, done your way</h3>
           <p className="experience-text">
             From the moment you walk in, our team is here to make your experience as special as your wedding day. Choose from three appointment options, enjoy one-on-one styling guidance, and say yes to your dress or suit with confidence.
           </p>
@@ -276,13 +277,13 @@ export default function AboutPage() {
 
     {/* Awards Section */}
     <section id="awards" className="awards-section">
-      <h1>Our Awards</h1>
+      <h2>Our Awards</h2>
       <div className="awards-grid">
-        <Image src="/about/award-1.png" alt="Metro North Chamber of Commerce" width={200} height={150} style={{ objectFit: 'contain' }} />
-        <Image src="/about/award-2.png" alt="The Knot Best of Weddings Hall of Fame" width={200} height={150} style={{ objectFit: 'contain' }} />
-        <Image src="/about/award-3.png" alt="Minnesota's Best" width={200} height={150} style={{ objectFit: 'contain' }} />
-        <Image src="/about/award-4.png" alt="Biz Winner" width={200} height={150} style={{ objectFit: 'contain' }} />
-        <Image src="/about/award-5.png" alt="Family Business of the Year" width={200} height={150} style={{ objectFit: 'contain' }} />
+        <Image src="/about/award-1.png" alt="Metro North Chamber of Commerce award — Bridal Aisle Boutique, best wedding dress shop Osseo MN" width={200} height={150} style={{ objectFit: 'contain' }} />
+        <Image src="/about/award-2.png" alt="The Knot Best of Weddings Hall of Fame — Bridal Aisle Boutique best wedding dress shop Minnesota" width={200} height={150} style={{ objectFit: 'contain' }} />
+        <Image src="/about/award-3.png" alt="Minnesota's Best award — Bridal Aisle Boutique, top-rated wedding dress shop in Minnesota" width={200} height={150} style={{ objectFit: 'contain' }} />
+        <Image src="/about/award-4.png" alt="Biz Winner award — Bridal Aisle Boutique, Osseo MN best bridal boutique" width={200} height={150} style={{ objectFit: 'contain' }} />
+        <Image src="/about/award-5.png" alt="Family Business of the Year — Bridal Aisle Boutique, affordable wedding dresses Minnesota since 2013" width={200} height={150} style={{ objectFit: 'contain' }} />
       </div>
     </section>
 
@@ -291,25 +292,25 @@ export default function AboutPage() {
       <div className="about-testimonial-background">
         <Image
           src="/about/pints-072.jpg"
-          alt=""
+          alt="Bridal Aisle Boutique team — Minnesota's best wedding dress shop, community event"
           fill
           style={{ objectFit: 'cover' }}
         />
         <div className="about-testimonial-overlay"></div>
       </div>
       <div className="about-testimonial-content">
-        <h3>LOVE FROM PAST BRIDES</h3>
+        <p className="about-love-label">LOVE FROM PAST BRIDES</p>
         <div className="about-testimonial-divider"></div>
-        <h1>
+        <blockquote>
           Is there a way I can add more than 5 stars? Because this place deserves it!! Not only are the owners and employees extremely friendly and helpful, but they also listened to what my vision was and then made it come to life significantly under my budget. I loved that they let me look around first to show them what I wanted. Found the dress of my dreams for only $800, and took it home that same day, and I will recommend this place to everyone looking for formal attire.&quot;
-        </h1>
+        </blockquote>
         <h2>Hannah Davis</h2>
       </div>
     </section>
 
     {/* FAQ Section */}
     <section className="bridal-faq-section">
-      <h1 className="faq-heading">FAQ</h1>
+      <h2 className="faq-heading">FAQ</h2>
       <FAQ faqs={[
         {
           question: "Do I need to set up an appointment to try on wedding dresses?",
