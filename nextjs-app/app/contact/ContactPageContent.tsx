@@ -65,7 +65,7 @@ export default function ContactPageContent() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                308 5th Ave. SE, Osseo, MN 55369
+                15825 95th Ave N, Maple Grove, MN 55369
               </a>
             </div>
             

@@ -17,6 +17,7 @@ const routes: Array<{
   { path: 'mens-suits', changeFrequency: 'weekly', priority: 0.8 },
   { path: 'about', changeFrequency: 'monthly', priority: 0.7 },
   { path: 'contact', changeFrequency: 'monthly', priority: 0.8 },
+  { path: 'blog', changeFrequency: 'monthly', priority: 0.6 },
   { path: 'credit', changeFrequency: 'yearly', priority: 0.3 },
   { path: 'privacy-policy', changeFrequency: 'yearly', priority: 0.3 },
 ];

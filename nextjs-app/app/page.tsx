@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: "Shop 2,000+ designer wedding dresses at Bridal Aisle Boutique — Minnesota's best wedding dress shop in Osseo MN. Take your dream gown home the same day. Book now.",
     url: SITE_URL,
   },
+  verification: {
+    other: {
+      'msvalidate.01': '87C730D8277F754A488388D1876F7B8B',
+    },
+  },
 };
 
 export default function Home() {

@@ -170,6 +170,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li><Link href="/about">ABOUT</Link></li>
                 <li><Link href="/contact">CONTACT & LOCATION</Link></li>
                 <li><Link href="/appointments#faq">FAQ&apos;S</Link></li>
+                <li><Link href="/blog">OUR BLOG</Link></li>
               </ul>
             </div>
             
