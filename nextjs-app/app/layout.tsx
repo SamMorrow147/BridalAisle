@@ -118,7 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div className="announcement-bar">
           <div className="announcement-content">
             <div className="announcement-spacer" aria-hidden="true" />
-            <h3 className="announcement-text">Moving to Maple Grove soon!</h3>
+            <h3 className="announcement-text">Now in Our New Location</h3>
             <a href="tel:(763) 220-2319" className="announcement-phone">(763) 220-2319</a>
           </div>
         </div>

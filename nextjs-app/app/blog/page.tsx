@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
           <h1>Our Blog</h1>
           <p className="blog-intro">
             Ideas and advice from the team at Bridal Aisle Boutique—your Minnesota wedding dress shop
-            in Osseo (moving to Maple Grove soon).
+            in Maple Grove.
           </p>
           <ul className="blog-index-list">
             {posts.map((post) => (

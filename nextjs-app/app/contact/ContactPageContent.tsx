@@ -24,7 +24,7 @@ export default function ContactPageContent() {
             <div className="contact-image-arched">
               <Image
                 src="/contact/Contact.jpg"
-                alt="Couple at Bridal Aisle Boutique — wedding dress shop Osseo MN, moving to Maple Grove MN soon"
+                alt="Couple at Bridal Aisle Boutique — wedding dress shop Maple Grove MN"
                 fill
                 className="contact-main-image"
                 style={{ objectFit: 'cover' }}
