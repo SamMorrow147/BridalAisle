@@ -126,22 +126,22 @@ export default function AppointmentsPageContent() {
           <div className="appointment-detail-content">
             <h2 className="appointment-detail-title">Budget Bridal Outlet Dress Appointment</h2>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $25.00 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
-            <p>The Bride + 4 guests will enjoy a 60-minute bridal appointment in our Budget Bridal Outlet section of the store where all dresses are priced $600 or less. While your guests relax in their designated seating area, your personal stylist will guide you in selecting and trying on dresses that suit your style, budget, body shape, and wedding vision.</p>
-            <p>The bride will have access to only our Budget Bridal Dresses during their 60-minute appointment.</p>
+            <p>The Bride + 4 guests will enjoy a 90-minute bridal appointment in our Budget Bridal Outlet section of the store where all dresses are priced $800 or less. While your guests relax in their designated seating area, your personal stylist will guide you in selecting and trying on dresses that suit your style, budget, body shape, and wedding vision.</p>
+            <p>The bride will have access to only our Budget Bridal Dresses during their 90-minute appointment.</p>
             <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>$25 APPOINTMENT FEE</li>
               <li>UP TO 4 GUESTS</li>
-              <li>60 MINUTES WITH A BRIDAL STYLIST</li>
+              <li>90 MINUTES WITH A BRIDAL STYLIST</li>
               <li>ACCESS TO ONLY BUDGET BRIDAL DRESSES</li>
             </ul>
           </div>
           <AppointmentDetailSlideshow slides={[
-            { image: '/appointments/appt-2.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
-            { image: '/appointments/appt-2-1.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
-            { image: '/appointments/appt-2-2.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
-            { image: '/appointments/appt-2-3.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' },
-            { image: '/appointments/appt-2-4.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses under $600, Minnesota' }
+            { image: '/appointments/appt-2.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses $800 or less, Minnesota' },
+            { image: '/appointments/appt-2-1.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses $800 or less, Minnesota' },
+            { image: '/appointments/appt-2-2.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses $800 or less, Minnesota' },
+            { image: '/appointments/appt-2-3.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses $800 or less, Minnesota' },
+            { image: '/appointments/appt-2-4.jpg', alt: 'Bride during affordable budget bridal appointment — designer wedding dresses $800 or less, Minnesota' }
           ]} />
         </div>
       </section>
