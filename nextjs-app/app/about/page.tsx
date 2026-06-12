@@ -8,16 +8,25 @@ import FAQ from '@/components/FAQ';
 import { SITE_URL } from '@/app/lib/site';
 
 export const metadata: Metadata = {
-  title: "About Bridal Aisle Boutique — One of Minnesota's Best Wedding Dress Shops | Osseo MN Since 2013",
-  description: "Learn about Bridal Aisle Boutique — one of Minnesota's best wedding dress shops since 2013. Award-winning bridal boutique in Osseo MN. Designer gowns, suits & stress-free appointments.",
+  title: 'About Bridal Aisle Boutique — Wedding Dress Shop in Maple Grove, MN',
+  description: 'Founded in 2013, Bridal Aisle Boutique in Maple Grove, MN is an award-winning wedding dress shop near Minneapolis. Meet our team, explore our story, and book your appointment today.',
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: "About Bridal Aisle Boutique — One of Minnesota's Best Wedding Dress Shops | Osseo MN Since 2013",
-    description: "Learn about Bridal Aisle Boutique — one of Minnesota's best wedding dress shops since 2013. Award-winning bridal boutique in Osseo MN. Designer gowns, suits & stress-free appointments.",
+    title: 'About Bridal Aisle Boutique — Wedding Dress Shop in Maple Grove, MN',
+    description: 'Founded in 2013, Bridal Aisle Boutique in Maple Grove, MN is an award-winning wedding dress shop near Minneapolis. Meet our team, explore our story, and book your appointment today.',
     url: `${SITE_URL}/about`,
   },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.bridalaislemn.com' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.bridalaislemn.com/about' },
+  ],
 };
 
 export default function AboutPage() {
@@ -41,6 +50,10 @@ export default function AboutPage() {
   
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <main className="page-container">
       {/* Hero Section */}
       <section className="about-hero-section">
@@ -73,7 +86,7 @@ export default function AboutPage() {
           </div>
           <div className="about-hero-content-box">
             <p className="about-hero-label">{heroSubheading}</p>
-            <h1>{heroHeading}</h1>
+            <h1>Minnesota&apos;s Award-Winning Bridal Boutique — Our Story, Maple Grove MN</h1>
             <p>{heroDescription}</p>
           </div>
         </div>
@@ -84,27 +97,26 @@ export default function AboutPage() {
         <div className="footer-logo-section" style={{ marginBottom: '2rem' }}>
           <Image
             src="/BA-oval-gray@2x.png"
-            alt="Bridal Aisle Boutique — trusted wedding dress shop in Osseo MN since 2013"
+            alt="Bridal Aisle Boutique — trusted wedding dress shop in Maple Grove MN since 2013"
             width={180}
             height={180}
             style={{ width: '180px', height: 'auto' }}
           />
         </div>
         <p className="about-page-label">Bridal Luxury, Simplified</p>
-        <h2 className="about-destination-heading">Minnesota&apos;s Destination for<br />Effortless Bridal Style</h2>
+        <h2 className="about-destination-heading">Minnesota&apos;s Premier Wedding Dress Shop — Bridal Aisle Boutique, Maple Grove</h2>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p>
-            Welcome to Bridal Aisle Boutique, Minnesota's premier destination for new off-the-rack 
-            designer wedding dresses and tailored suits. With over 2,000 gowns in a wide range of 
-            styles and sizes, we make it simple to find the one that feels like you, and take it 
-            home the very same day.
+            Welcome to Bridal Aisle Boutique — an award-winning wedding dress shop in Maple Grove, MN, just minutes from Minneapolis. Founded in 2013 by Annette and Brad Hall, we have spent over 12 years helping Minnesota brides find their perfect dress and take it home the same day. With 2,000+ off-the-rack designer gowns in sizes 0–32 priced $350–$2,500, plus a Budget Bridal Outlet, men&apos;s suit rentals and purchases, and bridal accessories, we are the Twin Cities&apos; most complete bridal destination.
           </p>
-          <p>
-            Our boutique is known for its warm, welcoming atmosphere and experienced stylists who 
-            make your experience joyful, stress-free, and unforgettable. Whether you're shopping 
-            for a gown, a suit, or accessories to complete your look, you'll find everything you 
-            need under one roof.
-          </p>
+        </div>
+      </section>
+
+      {/* AI Summary Paragraph */}
+      <section className="about-ai-summary">
+        <div className="about-ai-summary-inner">
+          <p>Bridal Aisle Boutique is an award-winning wedding dress shop located in Maple Grove, MN, serving brides across Brooklyn Park, Plymouth, Minneapolis, and the greater Twin Cities metro area. Founded in 2013 by Annette and Brad Hall, the boutique carries 2,000+ off-the-rack designer wedding gowns in sizes 0–32, priced $350–$2,500, and operates a Budget Bridal Outlet section with gowns priced $800 and under. Modest wedding dresses are available through the Barbie Anne Bridal Modest Collection. Men&apos;s formal attire — including suit rentals and purchases — is available through The Wood&apos;s Men&apos;s Suits by appointment. Bridal Aisle Boutique is a recipient of The Knot Best of Weddings Hall of Fame and has been named Minnesota&apos;s Best multiple times. Layaway is available. Response to inquiries is within 2 business days.</p>
+          <p>Phone: <a href="tel:7632202319">(763) 220-2319</a></p>
         </div>
       </section>
 
@@ -113,7 +125,7 @@ export default function AboutPage() {
         <div className="quote-section-background">
           <Image
             src="/about/1k1a8372-9f1aecd7.jpg"
-            alt="Bridal Aisle Boutique showroom — buy wedding dresses in Minnesota, 2,000+ gowns in Osseo MN"
+            alt="Bridal Aisle Boutique showroom — buy wedding dresses in Minnesota, 2,000+ gowns in Maple Grove MN"
             fill
             priority
             style={{ objectFit: 'cover' }}
@@ -130,7 +142,7 @@ export default function AboutPage() {
       <section className="content-section mission-section">
         <div className="mission-container">
           <div className="mission-content">
-            <h2 style={{ marginTop: 0 }}>A bridal boutique built on heart & honesty</h2>
+            <h2 style={{ marginTop: 0 }}>Why Brides Across Minnesota Choose Bridal Aisle Boutique</h2>
             <div className="mission-divider"></div>
             <p>
               Bridal Aisle Boutique was created with a simple mission: to make the joy of wedding 
@@ -147,7 +159,7 @@ export default function AboutPage() {
               <div className="mission-image mission-image-1">
                 <Image
               src="/about/bab-68web.jpg"
-              alt="Bridal fitting area at Bridal Aisle Boutique — affordable wedding dress shop Osseo MN"
+              alt="Bridal fitting area at Bridal Aisle Boutique — affordable wedding dress shop Maple Grove MN"
                   width={220}
                   height={290}
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
@@ -183,7 +195,7 @@ export default function AboutPage() {
             <div className="history-image history-image-1">
               <Image
               src="/about/bab-146web.jpg"
-              alt="Spacious showroom at Bridal Aisle Boutique — buy wedding dresses in Osseo MN, serving all of Minnesota"
+              alt="Spacious showroom at Bridal Aisle Boutique — buy wedding dresses in Maple Grove MN, serving all of Minnesota"
                 width={750}
                 height={750}
                 style={{ objectFit: 'cover' }}
@@ -205,7 +217,7 @@ export default function AboutPage() {
         <div className="history-container">
           <div className="history-content">
           <p className="about-page-label">MEET THE FOUNDERS</p>
-          <h2>A legacy of love & dedication</h2>
+          <h2>Founded in Maple Grove, MN in 2013 — Serving Minnesota Brides for 12+ Years</h2>
             <p>
               Founded by Annette and Brad in 2013, Bridal Aisle began with a simple idea: brides 
               deserve stunning designer gowns without the designer price tag. What started as a small, 
@@ -219,13 +231,11 @@ export default function AboutPage() {
             <p>
               From one intimate storefront to a spacious, sought-after boutique, Bridal Aisle has grown 
               alongside the couples we serve. In 2020, we expanded with Budget Bridal Outlet by BA, 
-              offering gowns priced at $600 and under to ensure every bride can find something beautiful 
+              offering gowns priced at $800 and under to ensure every bride can find something beautiful 
               within reach.
             </p>
             <p>
-              Now home to Bridal Aisle Boutique and Budget Bridal Outlet, as well as discounted suit 
-              rentals for wedding parties, we remain committed to making every "yes" joyful, authentic, 
-              and stress-free.
+              Home to Bridal Aisle Boutique and Budget Bridal Outlet, and now The Woods Men&apos;s Suits offering suits for purchase and rentals for wedding parties, we remain committed to making every &ldquo;yes&rdquo; joyful, authentic, and stress-free.
             </p>
             <div className="history-divider"></div>
           </div>
@@ -261,7 +271,7 @@ export default function AboutPage() {
           />
         </div>
         <div className="experience-content">
-          <h3 className="experience-heading">Your day, done your way</h3>
+          <h3 className="experience-heading">Book Your Bridal or Suit Appointment at Our Maple Grove, MN Boutique</h3>
           <p className="experience-text">
             From the moment you walk in, our team is here to make your experience as special as your wedding day. Choose from three appointment options, enjoy one-on-one styling guidance, and say yes to your dress or suit with confidence.
           </p>
@@ -279,12 +289,15 @@ export default function AboutPage() {
     <section id="awards" className="awards-section">
       <h2>Our Awards</h2>
       <div className="awards-grid">
-        <Image src="/about/award-1.png" alt="Metro North Chamber of Commerce award — Bridal Aisle Boutique, best wedding dress shop Osseo MN" width={200} height={150} style={{ objectFit: 'contain' }} />
+        <Image src="/about/award-1.png" alt="Metro North Chamber of Commerce award — Bridal Aisle Boutique, best wedding dress shop Maple Grove MN" width={200} height={150} style={{ objectFit: 'contain' }} />
         <Image src="/about/award-2.png" alt="The Knot Best of Weddings Hall of Fame — Bridal Aisle Boutique best wedding dress shop Minnesota" width={200} height={150} style={{ objectFit: 'contain' }} />
         <Image src="/about/award-3.png" alt="Minnesota's Best award — Bridal Aisle Boutique, top-rated wedding dress shop in Minnesota" width={200} height={150} style={{ objectFit: 'contain' }} />
-        <Image src="/about/award-4.png" alt="Biz Winner award — Bridal Aisle Boutique, Osseo MN best bridal boutique" width={200} height={150} style={{ objectFit: 'contain' }} />
+        <Image src="/about/award-4.png" alt="Biz Winner award — Bridal Aisle Boutique, Maple Grove MN best bridal boutique" width={200} height={150} style={{ objectFit: 'contain' }} />
         <Image src="/about/award-5.png" alt="Family Business of the Year — Bridal Aisle Boutique, affordable wedding dresses Minnesota since 2013" width={200} height={150} style={{ objectFit: 'contain' }} />
       </div>
+      <p className="awards-text-labels">
+        The Knot Best of Weddings — Hall of Fame &nbsp;|&nbsp; Minnesota&apos;s Best Award &nbsp;|&nbsp; Family Business of the Year &nbsp;|&nbsp; Metro North Chamber of Commerce Member
+      </p>
     </section>
 
     {/* Testimonial Section */}
@@ -317,15 +330,15 @@ export default function AboutPage() {
           answer: "Yes. We require all brides to book appointments. Don't hesitate to make your appointment as we book up well in advance. Appointments allow us to provide you and your party with the attention and experience you deserve."
         },
         {
-          question: "What is included in a bridal gown appointment?",
-          answer: "During your bridal appointment, you are guaranteed one-on-one attention with a dedicated stylist to guide and assist with your selection, and the exclusive use of an area in the boutique. Our bridal gown appointments are 90 minutes for brides who are ready to take their dream dress home!"
+          question: "Why do you charge for bridal appointments?",
+          answer: "Our appointment fee ensures that we can provide you with dedicated, personalized service and maintain our curated collection of designer gowns. This fee helps us offer you the exclusive, stress-free experience that makes Bridal Aisle special. Our bridal gown appointments are 90 minutes for brides who are ready to take their dream dress home!"
         },
         {
-          question: "How many people can I bring to my bridal appointment?",
-          answer: "We welcome parties of up to 4 people plus the Bride. If you anticipate having 5 or more people for your bridal appointment, we offer a VIP appointment with a fee for your convenience."
+          question: "How many people should I bring with me to try on wedding dresses?",
+          answer: "We welcome parties of up to 4 plus the Bride. We recommend bringing 2-4 people whose opinions you trust. Too many voices can make the decision harder, while a small, supportive group helps you focus on what feels right for you. If you anticipate having 5 or more people for your bridal appointment, we offer a VIP appointment with a fee for your convenience."
         },
         {
-          question: "Do you offer appointments to try on accessories, like veils and jewelry?",
+          question: "I want to find accessories for a wedding dress I already have. Am I allowed to bring it into the shop?",
           answer: "Absolutely! We find it's much easier to help you find the right additions to your gown when you can try them on together. Please call to get on our schedule or book online here."
         },
         {
@@ -334,31 +347,31 @@ export default function AboutPage() {
         },
         {
           question: "Can you hold a dress for me while I think it over?",
-          answer: "We can hold your dresses for 24 hours for a non-refundable $50. The $50 will be applied to the purchase of your dress.If you do not purchase your dress within the 24 hour period, the $50 will be retained and the dress will be returned to the floor. This ensures we give every bride the best opportunity to find the dress of her dreams!"
+          answer: "We can hold your dresses for 24 hours for a non-refundable $50. The $50 will be applied to the purchase of your dress. If you do not purchase your dress within the 24-hour period, the $50 will be retained and the dress will be returned to the floor. This ensures we give every bride the best opportunity to find the dress of her dreams!"
         },
         {
           question: "What sizes do you carry?",
-          answer: "You will find gowns ranging from size 0 to size 32 and all sizes in between when you shop at Bridal Aisle Boutique."
+          answer: "We carry a wide range of sizes to accommodate every bride. Our collection includes sizes from 0-30+, and we're committed to helping every bride find her perfect dress."
         },
         {
-          question: "What is your price range?",
-          answer: "Our dresses range in price from $700-$2,500 with the most average price being in the $1,000-$1,500 range."
+          question: "What is the price range for your wedding dresses?",
+          answer: "We offer something for every budget, including our Budget Bridal section with dresses starting at lower price points. Our dresses range from $350.00–$2,500. Bridal Aisle dresses range from $900–$2,500 and Budget Bridal dresses range from $350–$800."
         },
         {
-          question: "What dresses do you carry?",
-          answer: "We are excited to carry over 2,000 new wedding gowns for you to bring home today. Visit our Instagram or Facebook page for the most updated look at our newest arrivals.As a one-stop shop you will also find, mothers dresses, formal dresses and suits at Bridal Aisle Boutique."
+          question: "What type of inventory do you carry?",
+          answer: "We carry over 2,000 designer gowns from top bridal designers for you to bring home today! We also offer accessories, veils, and suits for purchase or rent through our men's department, The Woods Men's Suits."
         },
         {
-          question: "Are alterations included?",
+          question: "What if I need alterations for a wedding dress I really like?",
           answer: "Alterations are not included with the price of the dress. We will provide you with multiple trusted alteration specialists we refer our clients to around the Twin Cities area."
         },
         {
-          question: "Do you offer payment plans?",
-          answer: "You can say \"Yes!\" to the dress without the worry of paying the full amount upfront. At Bridal Aisle Boutique, we offer a 30 day layaway option! Ask a consultant for more details and make your dream come true!"
+          question: "Layaway: Are you interested in a dress, but need help making the purchase?",
+          answer: "Yes! We offer layaway options to help make your dream dress more accessible. At Bridal Aisle Boutique, we offer a 30 day layaway option! Speak with your stylist during your appointment to learn about our flexible payment plans."
         },
         {
           question: "Can I bring drinks/food into the store?",
-          answer: "We do not allow drinks or food within the store. Champagne and clear liquids are acceptable but all other substances will be asked to be left in our front waiting area. Champagne must be popped either in our restroom or outside."
+          answer: "We do not allow drinks or food within the store. Champagne and clear liquids are acceptable, but all other substances will be asked to be left in our front waiting area. Champagne must be popped either in our restroom or outside."
         }
       ]} />
     </section>

@@ -4,9 +4,9 @@ import { SITE_URL } from '@/app/lib/site';
 import { getAllPosts } from '@/app/lib/blog';
 
 export const metadata: Metadata = {
-  title: 'Our Blog | Bridal Aisle Boutique — Wedding Dress Shop Osseo MN',
+  title: 'Our Blog | Bridal Aisle Boutique — Wedding Dress Shop Maple Grove MN',
   description:
-    'Tips for Minnesota brides: bridal appointments, off-the-rack wedding dresses, and shopping at Bridal Aisle Boutique near Maple Grove.',
+    'Tips for Minnesota brides: bridal appointments, off-the-rack wedding dresses, and shopping at Bridal Aisle Boutique in Maple Grove, MN.',
   alternates: {
     canonical: '/blog',
   },

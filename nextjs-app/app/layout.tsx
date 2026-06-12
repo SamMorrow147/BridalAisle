@@ -9,8 +9,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
-  description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Osseo, MN. Book now!',
-  keywords: 'bridal shop Minnesota, wedding dresses Minneapolis, off the rack wedding dresses, bridal boutique Osseo, mens suits, budget bridal, same day wedding dress',
+  description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Maple Grove, MN. Book now!',
+  keywords: 'bridal shop Minnesota, wedding dresses Minneapolis, off the rack wedding dresses, bridal boutique Maple Grove, mens suits, budget bridal, same day wedding dress',
   authors: [{ name: 'Bridal Aisle Boutique' }],
   creator: 'Bridal Aisle Boutique',
   publisher: 'Bridal Aisle Boutique',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: 'Bridal Aisle Boutique',
     title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
-    description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Osseo, MN.',
+    description: 'Say yes to your dream dress today! Over 2,000 designer wedding gowns, suits & accessories. Off-the-rack, personalized appointments. Maple Grove, MN.',
     images: [
       {
         url: '/og-image.jpg', // You'll need to create this
@@ -159,6 +159,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 width={180}
                 height={180}
               />
+              <div className="footer-social-links">
+                <a href="https://www.instagram.com/bridal.aisle.mn" target="_blank" rel="noopener noreferrer" aria-label="Bridal Aisle Boutique on Instagram" className="footer-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/BridalAisleMN" target="_blank" rel="noopener noreferrer" aria-label="Bridal Aisle Boutique on Facebook" className="footer-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
             </div>
             
             <div className="footer-links-section">
@@ -186,18 +196,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </ul>
             </div>
             
-            <div className="footer-instagram-section">
-              <div className="instagram-widget">
-                <div className="instagram-grid">
-                  <Image src="/home/610559507-18549172159010363-3616446910417261816-n-112e522e.jpg" alt="Instagram post" width={100} height={100} style={{ objectFit: 'cover' }} />
-                  <Image src="/home/610875462-18548828374010363-9086914678723352438-n-c7826798.jpg" alt="Instagram post" width={100} height={100} style={{ objectFit: 'cover' }} />
-                  <Image src="/home/608824601-18548315188010363-8965851590628744458-n-99fbf121.jpg" alt="Instagram post" width={100} height={100} style={{ objectFit: 'cover' }} />
-                  <Image src="/home/609222673-18548056630010363-1945993448068693045-n-642c9fa4.jpg" alt="Instagram post" width={100} height={100} style={{ objectFit: 'cover' }} />
-                  <Image src="/home/608857184-18547552804010363-3454360656921616067-n-6948d95c.jpg" alt="Instagram post" width={100} height={100} style={{ objectFit: 'cover' }} />
-                  <Image src="/home/608046442-1413971036745380-3783511421422416122-n-1300d48f.jpg" alt="Instagram post" width={100} height={100} style={{ objectFit: 'cover' }} />
-                </div>
-              </div>
-            </div>
           </div>
           
           <div className="footer-bottom">

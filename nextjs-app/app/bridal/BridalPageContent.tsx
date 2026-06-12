@@ -69,14 +69,28 @@ export default function BridalPageContent() {
         <div className="bridal-hero-overlay"></div>
         <div className="bridal-hero-content">
           <p className="bridal-hero-label">FOR THE MODERN BRIDE</p>
-          <h1 className="bridal-hero-title">Discover Wedding Dresses that Feel Like You</h1>
+          <h1 className="bridal-hero-title">Shop Wedding Dresses in Minnesota — Off-the-Rack Designer Gowns Near Maple Grove</h1>
           <div className="hero-divider"></div>
           <p className="bridal-hero-text">
-            At Bridal Aisle Boutique, we believe every bride deserves to fall in love...with her dress 
-            and her bridal dress shopping experience. Our curated collection of new off-the-rack dresses 
-            and orderable gowns blends designer quality with unmatched value, ensuring you find the 
-            perfect fit, the perfect style, and the perfect moment to say yes.
+            At Bridal Aisle Boutique in Maple Grove, MN — just minutes from Minneapolis — we believe every bride deserves to find a wedding dress she loves and take it home the same day. Our off-the-rack collection features 2,000+ designer gowns in sizes 0–32, all priced significantly below standard retail at $350–$2,500. Whether you&apos;re looking for modest wedding dresses, elegant gowns for your wedding day, or affordable options through our Budget Bridal Outlet ($800 and under), we have your perfect dress in stock and ready to go.
           </p>
+        </div>
+      </section>
+
+      {/* Quick Facts / AI Overview Block */}
+      <section className="bridal-quick-facts">
+        <div className="bridal-quick-facts-inner">
+          <p className="bridal-quick-facts-label">QUICK FACTS</p>
+          <ul className="bridal-quick-facts-list">
+            <li><span className="bqf-key">Location</span><span className="bqf-val">Maple Grove, MN — minutes from Minneapolis</span></li>
+            <li><span className="bqf-key">In-Stock Gowns</span><span className="bqf-val">2,000+ designer gowns | Sizes 0–32 | $350–$2,500</span></li>
+            <li><span className="bqf-key">Same-Day Purchase</span><span className="bqf-val">Yes — take your dress home the day you say yes</span></li>
+            <li><span className="bqf-key">Budget Option</span><span className="bqf-val">Budget Bridal Outlet — all gowns $800 and under</span></li>
+            <li><span className="bqf-key">Made-to-Order</span><span className="bqf-val">Moonlight Bridal (3–4 months) &amp; Barbie Anne Bridal Modest Collection</span></li>
+            <li><span className="bqf-key">Accessories</span><span className="bqf-val">Veils, belts &amp; hair vines — Marionat, JL Johnson &amp; more</span></li>
+            <li><span className="bqf-key">Layaway</span><span className="bqf-val">30-day layaway available</span></li>
+            <li><span className="bqf-key">Appointment</span><span className="bqf-val">Required — <Link href="/appointments">book at bridalaislemn.com/appointments</Link></span></li>
+          </ul>
         </div>
       </section>
 
@@ -87,7 +101,7 @@ export default function BridalPageContent() {
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
               <img 
                 src="/bridal/bride-veil.jpg" 
-                alt="Bride in elegant designer wedding dress and veil — buy wedding dresses near Maple Grove MN"
+                alt="Bride in elegant designer wedding dress and veil — buy wedding dresses in Maple Grove MN"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
@@ -95,7 +109,7 @@ export default function BridalPageContent() {
           
           <div className="bridal-content-right">
             <p className="bridal-section-label">OFF-THE-RACK WEDDING DRESSES</p>
-            <h2 className="bridal-section-title">Thousands of designer gowns, ready when you are</h2>
+            <h2 className="bridal-section-title">Over 2,000 In-Stock Designer Wedding Dresses — Buy &amp; Take Home Today</h2>
             <div className="bridal-horizontal-divider"></div>
             
             <p className="bridal-section-text">
@@ -123,7 +137,7 @@ export default function BridalPageContent() {
         <div className="bridal-mto-overlay"></div>
         <div className="bridal-mto-content">
           <p className="bridal-mto-label">MADE TO ORDER FOR YOUR MOMENT</p>
-          <h2 className="bridal-mto-title">Custom-designed gowns, made just for you</h2>
+          <h2 className="bridal-mto-title">Made-to-Order Wedding Dresses in Minnesota — Moonlight &amp; Barbie Anne Bridal</h2>
           <p className="bridal-mto-text">
             In addition to our in-stock selection, Bridal Aisle Boutique offers made-to-order wedding 
             dresses from two exceptional designers—each known for their quality, craftsmanship, and 
@@ -148,7 +162,7 @@ export default function BridalPageContent() {
             <div className="bridal-image-mobile-insert">
               <Image
                 src="/bridal/moonlight-bride.jpg"
-                alt="Moonlight Bridal elegant wedding gown — designer bridal dress available near Maple Grove MN"
+                alt="Moonlight Bridal elegant wedding gown — designer bridal dress available in Maple Grove MN"
                 width={600}
                 height={800}
                 style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -179,7 +193,7 @@ export default function BridalPageContent() {
           <div className="bridal-image-right">
             <Image
               src="/bridal/moonlight-bride.jpg"
-              alt="Moonlight Bridal elegant wedding gown — designer bridal dress available near Maple Grove MN"
+              alt="Moonlight Bridal elegant wedding gown — designer bridal dress available in Maple Grove MN"
               width={600}
               height={800}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -251,7 +265,7 @@ export default function BridalPageContent() {
           <div className="acc-img-top-left acc-desktop-only">
             <Image
               src="/bridal/acc-top-left.jpg"
-                alt="Bridal accessories — veil and hairpiece at Bridal Aisle Boutique, wedding dress shop Osseo MN"
+                alt="Bridal accessories — veil and hairpiece at Bridal Aisle Boutique, wedding dress shop Maple Grove MN"
                 width={180}
                 height={200}
                 style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -262,7 +276,7 @@ export default function BridalPageContent() {
           <div className="acc-img-top-left acc-mobile-only">
             <Image
               src="/bridal/accessories-img2.jpg"
-              alt="Bride being styled with bridal accessories — elegant bridal dress styling near Maple Grove MN"
+              alt="Bride being styled with bridal accessories — elegant bridal dress styling in Maple Grove MN"
               width={180}
               height={200}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -272,7 +286,7 @@ export default function BridalPageContent() {
           {/* Center Content - spans middle */}
           <div className="accessories-content-center">
             <p className="bridal-section-label">COMPLETE YOUR BRIDAL LOOK</p>
-            <h2 className="accessories-title">The finishing touches that make it yours</h2>
+            <h2 className="accessories-title">Bridal Accessories — Veils, Belts &amp; More at Our Maple Grove, MN Boutique</h2>
             
             <p className="bridal-section-text">
               Your dress tells your story—your accessories complete it. Bridal Aisle Boutique carries 
@@ -295,7 +309,7 @@ export default function BridalPageContent() {
           <div className="acc-img-top-right acc-desktop-only">
             <Image
               src="/bridal/acc-top-right.jpg"
-              alt="Close-up of designer wedding gown detail — affordable designer dresses near Maple Grove MN"
+              alt="Close-up of designer wedding gown detail — affordable designer dresses in Maple Grove MN"
               width={180}
               height={200}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -328,7 +342,7 @@ export default function BridalPageContent() {
           <div className="acc-img-bottom-left acc-mobile-only">
             <Image
               src="/bridal/acc-top-right.jpg"
-              alt="Close-up of designer wedding gown detail — affordable designer dresses near Maple Grove MN"
+              alt="Close-up of designer wedding gown detail — affordable designer dresses in Maple Grove MN"
               width={180}
               height={200}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -339,7 +353,7 @@ export default function BridalPageContent() {
           <div className="acc-img-bottom-right acc-desktop-only">
             <Image
               src="/bridal/accessories-img2.jpg"
-              alt="Bride being styled with bridal accessories — elegant bridal dress styling near Maple Grove MN"
+              alt="Bride being styled with bridal accessories — elegant bridal dress styling in Maple Grove MN"
               width={180}
               height={250}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -350,7 +364,7 @@ export default function BridalPageContent() {
           <div className="acc-img-bottom-right acc-mobile-only">
             <Image
               src="/bridal/acc-top-left.jpg"
-              alt="Bridal accessories — veil and hairpiece at Bridal Aisle Boutique, wedding dress shop Osseo MN"
+              alt="Bridal accessories — veil and hairpiece at Bridal Aisle Boutique, wedding dress shop Maple Grove MN"
               width={180}
               height={250}
               style={{ objectFit: 'cover', borderRadius: '8px', width: '100%' }}
@@ -363,7 +377,7 @@ export default function BridalPageContent() {
       <section className="bridal-layaway-section">
         <div className="layaway-content-circle">
           <p className="layaway-label">FLEXIBLE OPTIONS FOR EVERY BRIDE</p>
-          <h2 className="layaway-title">Layaway Available</h2>
+          <h2 className="layaway-title">Flexible Layaway on Wedding Dresses — No Full Payment Required Upfront</h2>
           <div className="layaway-divider"></div>
           <p className="layaway-text">
             Say yes to your dress with confidence. We offer a 30-day layaway option, allowing you 
@@ -383,35 +397,35 @@ export default function BridalPageContent() {
           },
           {
             question: "Why do you charge for bridal appointments?",
-            answer: "During your bridal appointment, you are guaranteed one-on-one attention with a dedicated stylist to guide and assist with your selection, and the exclusive use of an area in the boutique. Our bridal gown appointments are 90 minutes for brides who are ready to take their dream dress home!"
+            answer: "Our appointment fee ensures that we can provide you with dedicated, personalized service and maintain our curated collection of designer gowns. This fee helps us offer you the exclusive, stress-free experience that makes Bridal Aisle special. Our bridal gown appointments are 90 minutes for brides who are ready to take their dream dress home!"
           },
           {
             question: "How many people should I bring with me to try on wedding dresses?",
-            answer: "We welcome parties of up to 4 people plus the Bride. If you anticipate having 5 or more people for your bridal appointment, we offer a VIP appointment with a fee for your convenience."
+            answer: "We welcome parties of up to 4 plus the Bride. We recommend bringing 2-4 people whose opinions you trust. Too many voices can make the decision harder, while a small, supportive group helps you focus on what feels right for you. If you anticipate having 5 or more people for your bridal appointment, we offer a VIP appointment with a fee for your convenience."
           },
           {
             question: "I want to find accessories for a wedding dress I already have. Am I allowed to bring it into the shop?",
             answer: "Absolutely! We find it's much easier to help you find the right additions to your gown when you can try them on together. Please call to get on our schedule or book online here."
           },
           {
-            question: "What is your return policy?",
+            question: "What is your return/exchange policy?",
             answer: "All sales are final. No exchanges or refunds."
           },
           {
-            question: "If I find a wedding dress but want to come back with a friend the next day, how long could you hold my dress until I return to the shop?",
-            answer: "We can hold your dresses for 24 hours for a non-refundable $50. The $50 will be applied to the purchase of your dress. If you do not purchase your dress within the 24 hour period, the $50 will be retained and the dress will be returned to the floor. This ensures we give every bride the best opportunity to find the dress of her dreams!"
+            question: "Can you hold a dress for me while I think it over?",
+            answer: "We can hold your dresses for 24 hours for a non-refundable $50. The $50 will be applied to the purchase of your dress. If you do not purchase your dress within the 24-hour period, the $50 will be retained and the dress will be returned to the floor. This ensures we give every bride the best opportunity to find the dress of her dreams!"
           },
           {
             question: "What sizes do you carry?",
-            answer: "You will find gowns ranging from size 0 to size 32 and all sizes in between when you shop at Bridal Aisle Boutique."
+            answer: "We carry a wide range of sizes to accommodate every bride. Our collection includes sizes from 0-30+, and we're committed to helping every bride find her perfect dress."
           },
           {
             question: "What is the price range for your wedding dresses?",
-            answer: "Our dresses range in price from $700-$2,500 with the most average price being in the $1,000-$1,500 range."
+            answer: "We offer something for every budget, including our Budget Bridal section with dresses starting at lower price points. Our dresses range from $350.00–$2,500. Bridal Aisle dresses range from $900–$2,500 and Budget Bridal dresses range from $350–$800."
           },
           {
             question: "What type of inventory do you carry?",
-            answer: "We are excited to carry over 2,000 new wedding gowns for you to bring home today. Visit our Instagram or Facebook page for the most updated look at our newest arrivals. As a one-stop shop you will also find, mothers dresses, formal dresses and suits at Bridal Aisle Boutique."
+            answer: "We carry over 2,000 designer gowns from top bridal designers for you to bring home today! We also offer accessories, veils, and suits for purchase or rent through our men's department, The Woods Men's Suits."
           },
           {
             question: "What if I need alterations for a wedding dress I really like?",
@@ -419,11 +433,11 @@ export default function BridalPageContent() {
           },
           {
             question: "Layaway: Are you interested in a dress, but need help making the purchase?",
-            answer: "You can say \"Yes!\" to the dress without the worry of paying the full amount upfront. At Bridal Aisle Boutique, we offer a 30 day layaway option! Ask a consultant for more details and make your dream come true!"
+            answer: "Yes! We offer layaway options to help make your dream dress more accessible. At Bridal Aisle Boutique, we offer a 30 day layaway option! Speak with your stylist during your appointment to learn about our flexible payment plans."
           },
           {
-            question: "Can I bring beverages to my appointment?",
-            answer: "We do not allow drinks or food within the store. Champagne and clear liquids are acceptable but all other substances will be asked to be left in our front waiting area. Champagne must be popped either in our restroom or outside."
+            question: "Can I bring drinks/food into the store?",
+            answer: "We do not allow drinks or food within the store. Champagne and clear liquids are acceptable, but all other substances will be asked to be left in our front waiting area. Champagne must be popped either in our restroom or outside."
           }
         ]} />
       </section>

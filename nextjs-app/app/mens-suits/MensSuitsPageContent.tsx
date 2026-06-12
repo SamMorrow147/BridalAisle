@@ -1,70 +1,10 @@
-'use client';
-
-import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ErrorBoundary from '@/components/ErrorBoundary';
 import BridesSlideshow from '@/components/BridesSlideshow';
+import LindaWidget from '@/components/LindaWidget';
 
 export default function MensSuitsPageContent() {
-  useEffect(() => {
-    // Load Linda widget script after component mounts
-    const container = document.getElementById('linda-widget-container');
-    if (!container) return;
-
-    const script = document.createElement('script');
-    script.id = 'gb_widget_script';
-    script.type = 'module';
-    script.src = 'https://locations.linda.co/gb-widget.js';
-    script.setAttribute('data-widget-token', 'e25b4c7cbee769617bfc85fafd3d29f9');
-    
-    // Append to container instead of body to ensure it renders in the right place
-    container.appendChild(script);
-
-    // Watch for widget content being injected elsewhere and move it to our container
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === 1) { // Element node
-            const element = node as HTMLElement;
-            // Check if this is a Linda widget element
-            if (element.id?.includes('linda') || 
-                element.className?.includes('linda') || 
-                element.className?.includes('gb-widget') ||
-                element.querySelector('[class*="linda"], [id*="linda"], [class*="gb-widget"]')) {
-              // If it's not already in our container, move it
-              if (!container.contains(element)) {
-                container.appendChild(element);
-              }
-            }
-          }
-        });
-      });
-    });
-
-    // Observe the body for any new elements
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    return () => {
-      observer.disconnect();
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-      // Also clean up any widget elements
-      const widgetElements = container.querySelectorAll('[class*="linda"], [id*="linda"], [class*="gb-widget"]');
-      widgetElements.forEach(el => {
-        if (el.parentNode) {
-          el.remove();
-        }
-      });
-    };
-  }, []);
-
   return (
-    <ErrorBoundary>
     <>
     <main className="page-container">
       {/* Hero Section */}
@@ -76,11 +16,13 @@ export default function MensSuitsPageContent() {
             THE WOODS MEN'S SUITS
             <span className="label-line"></span>
             </p>
-          <h1 className="mens-hero-title">For the groom, the groomsmen & beyond</h1>
+          <h1 className="mens-hero-title">Men&apos;s Wedding Suits &amp; Formal Attire Near Maple Grove, MN</h1>
           <p className="mens-hero-text">
-            From timeless rentals to custom-fit suits you can call your own, Bridal Aisle Boutique 
-            offers a full-service formalwear experience. Whether you're walking down the aisle or 
-            showing up in style, our men's department makes finding the right fit effortless.
+            Bridal Aisle Boutique offers men&apos;s formal attire for weddings and special occasions
+            through The Wood&apos;s Men&apos;s Suits, located at our Maple Grove, MN boutique just minutes from
+            Minneapolis. Whether you need a suit rental for the big day or a tailored purchase you can
+            keep forever, our expert stylists guide you through every step — from color selection to
+            professional measuring.
           </p>
         </div>
       </section>
@@ -89,7 +31,14 @@ export default function MensSuitsPageContent() {
       <section className="mens-rentals-section">
         <div className="mens-two-column">
           <div className="mens-content-left">
-            <h2 className="mens-section-title">Full-service suit rentals for weddings, prom & special events</h2>
+            <h2 className="mens-section-title">Suit Rentals for Your Wedding Party in Minnesota</h2>
+            
+            <p className="mens-section-text">
+              We carry suits for rental or purchase. During your free 60-minute appointment, a dedicated
+              stylist will help you and your party choose the perfect color and style. Party members are
+              then measured individually and suits are ordered to fit. Rentals must be ordered at least one
+              month before the event; purchases at least two months in advance.
+            </p>
             
             <p className="mens-section-text">
               Our partnership with <strong>DuBois Formalwear</strong> ensures every suit meets the 
@@ -97,8 +46,9 @@ export default function MensSuitsPageContent() {
               a black-tie event, our stylists will curate a look that complements your style and setting.
             </p>
             
-            <div style={{ marginTop: '2.5rem', marginBottom: '3rem' }}>
-              <Link href="/appointments#appointment-5" className="bridal-cta-btn">BOOK A SUIT APPOINTMENT</Link>
+            <div className="mens-cta-group" style={{ marginTop: '2.5rem', marginBottom: '3rem' }}>
+              <Link href="/appointments#appointment-5" className="bridal-cta-btn">BOOK YOUR MEN&apos;S SUIT APPOINTMENT →</Link>
+              <a href="tel:763-220-2319" className="bridal-cta-btn bridal-cta-btn--outline">CALL US: (763) 220-2319</a>
             </div>
             
             <div className="mens-logos">
@@ -114,7 +64,7 @@ export default function MensSuitsPageContent() {
               <a href="https://puresilkfabrics.com/suits/metro-suits/" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/home/psf-logo.png"
-                  alt="Pure Silk Fabrics — custom made suits near Maple Grove MN at Bridal Aisle Boutique"
+                  alt="Pure Silk Fabrics — custom made suits in Maple Grove MN at Bridal Aisle Boutique"
                   width={180}
                   height={80}
                   style={{ objectFit: 'contain' }}
@@ -126,7 +76,7 @@ export default function MensSuitsPageContent() {
           <div className="mens-image-right">
             <Image
               src="/mens-suits/hero-groom.jpg"
-              alt="Groom in tailored wedding suit from Bridal Aisle Boutique — formal wear near Maple Grove MN"
+              alt="Groom in tailored wedding suit from Bridal Aisle Boutique — formal wear in Maple Grove MN"
               fill
               style={{ objectFit: 'cover' }}
             />
@@ -134,9 +84,15 @@ export default function MensSuitsPageContent() {
         </div>
       </section>
 
-      {/* Section 3 - The Suit Rental Process */}
+      {/* Section 3 - Custom Suit Measurements & Professional Styling */}
       <section className="mens-process-section">
-        <h2 className="mens-process-heading">The Suit Rental Process</h2>
+        <h2 className="mens-process-heading">Custom Suit Measurements &amp; Professional Styling Near Maple Grove</h2>
+        <p className="mens-process-intro">
+          We recommend that the couple visit first to make their suit and color selections. After the
+          primary selections are confirmed, groomsmen and party members book their own measuring
+          appointments. All orders are professionally managed so everything arrives on time and fits
+          perfectly.
+        </p>
         
         <div className="mens-process-grid">
           {/* Row 1: 2 columns */}
@@ -187,9 +143,7 @@ export default function MensSuitsPageContent() {
       </section>
 
       {/* Linda Widget Section */}
-      <section className="linda-widget-section">
-        <div id="linda-widget-container"></div>
-      </section>
+      <LindaWidget />
 
       {/* Photo Gallery - in tan section, below the Linda widget */}
       <section className="mens-gallery-section">
@@ -209,6 +163,5 @@ export default function MensSuitsPageContent() {
       </section>
     </main>
     </>
-    </ErrorBoundary>
   );
 }
