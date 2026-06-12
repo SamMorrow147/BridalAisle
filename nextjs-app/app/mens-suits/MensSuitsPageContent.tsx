@@ -16,13 +16,11 @@ export default function MensSuitsPageContent() {
             THE WOODS MEN'S SUITS
             <span className="label-line"></span>
             </p>
-          <h1 className="mens-hero-title">Men&apos;s Wedding Suits &amp; Formal Attire Near Maple Grove, MN</h1>
+          <h1 className="mens-hero-title">For the groom, the groomsmen & beyond</h1>
           <p className="mens-hero-text">
-            Bridal Aisle Boutique offers men&apos;s formal attire for weddings and special occasions
-            through The Wood&apos;s Men&apos;s Suits, located at our Maple Grove, MN boutique just minutes from
-            Minneapolis. Whether you need a suit rental for the big day or a tailored purchase you can
-            keep forever, our expert stylists guide you through every step — from color selection to
-            professional measuring.
+            From timeless rentals to quality suits you can call your own, Bridal Aisle Boutique 
+            offers a full-service formalwear experience. Whether you're walking down the aisle or 
+            showing up in style, our men's department makes finding the right fit effortless.
           </p>
         </div>
       </section>
@@ -31,14 +29,7 @@ export default function MensSuitsPageContent() {
       <section className="mens-rentals-section">
         <div className="mens-two-column">
           <div className="mens-content-left">
-            <h2 className="mens-section-title">Suit Rentals for Your Wedding Party in Minnesota</h2>
-            
-            <p className="mens-section-text">
-              We carry suits for rental or purchase. During your free 60-minute appointment, a dedicated
-              stylist will help you and your party choose the perfect color and style. Party members are
-              then measured individually and suits are ordered to fit. Rentals must be ordered at least one
-              month before the event; purchases at least two months in advance.
-            </p>
+            <h2 className="mens-section-title">Full-service suit rentals for weddings, prom & special events</h2>
             
             <p className="mens-section-text">
               Our partnership with <strong>DuBois Formalwear</strong> ensures every suit meets the 
@@ -46,9 +37,8 @@ export default function MensSuitsPageContent() {
               a black-tie event, our stylists will curate a look that complements your style and setting.
             </p>
             
-            <div className="mens-cta-group" style={{ marginTop: '2.5rem', marginBottom: '3rem' }}>
-              <Link href="/appointments#appointment-5" className="bridal-cta-btn">BOOK YOUR MEN&apos;S SUIT APPOINTMENT →</Link>
-              <a href="tel:763-220-2319" className="bridal-cta-btn bridal-cta-btn--outline">CALL US: (763) 220-2319</a>
+            <div style={{ marginTop: '2.5rem', marginBottom: '3rem' }}>
+              <Link href="/appointments#appointment-5" className="bridal-cta-btn">BOOK A SUIT APPOINTMENT</Link>
             </div>
             
             <div className="mens-logos">
@@ -84,15 +74,9 @@ export default function MensSuitsPageContent() {
         </div>
       </section>
 
-      {/* Section 3 - Custom Suit Measurements & Professional Styling */}
+      {/* Section 3 - The Suit Rental Process */}
       <section className="mens-process-section">
-        <h2 className="mens-process-heading">Custom Suit Measurements &amp; Professional Styling Near Maple Grove</h2>
-        <p className="mens-process-intro">
-          We recommend that the couple visit first to make their suit and color selections. After the
-          primary selections are confirmed, groomsmen and party members book their own measuring
-          appointments. All orders are professionally managed so everything arrives on time and fits
-          perfectly.
-        </p>
+        <h2 className="mens-process-heading">The Suit Rental Process</h2>
         
         <div className="mens-process-grid">
           {/* Row 1: 2 columns */}

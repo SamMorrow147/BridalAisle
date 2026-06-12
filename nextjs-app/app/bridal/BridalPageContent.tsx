@@ -69,28 +69,14 @@ export default function BridalPageContent() {
         <div className="bridal-hero-overlay"></div>
         <div className="bridal-hero-content">
           <p className="bridal-hero-label">FOR THE MODERN BRIDE</p>
-          <h1 className="bridal-hero-title">Shop Wedding Dresses in Minnesota — Off-the-Rack Designer Gowns Near Maple Grove</h1>
+          <h1 className="bridal-hero-title">Discover Wedding Dresses that Feel Like You</h1>
           <div className="hero-divider"></div>
           <p className="bridal-hero-text">
-            At Bridal Aisle Boutique in Maple Grove, MN — just minutes from Minneapolis — we believe every bride deserves to find a wedding dress she loves and take it home the same day. Our off-the-rack collection features 2,000+ designer gowns in sizes 0–32, all priced significantly below standard retail at $350–$2,500. Whether you&apos;re looking for modest wedding dresses, elegant gowns for your wedding day, or affordable options through our Budget Bridal Outlet ($800 and under), we have your perfect dress in stock and ready to go.
+            At Bridal Aisle Boutique, we believe every bride deserves to fall in love...with her dress 
+            and her bridal dress shopping experience. Our curated collection of new off-the-rack dresses 
+            and orderable gowns blends designer quality with unmatched value, ensuring you find the 
+            perfect fit, the perfect style, and the perfect moment to say yes.
           </p>
-        </div>
-      </section>
-
-      {/* Quick Facts / AI Overview Block */}
-      <section className="bridal-quick-facts">
-        <div className="bridal-quick-facts-inner">
-          <p className="bridal-quick-facts-label">QUICK FACTS</p>
-          <ul className="bridal-quick-facts-list">
-            <li><span className="bqf-key">Location</span><span className="bqf-val">Maple Grove, MN — minutes from Minneapolis</span></li>
-            <li><span className="bqf-key">In-Stock Gowns</span><span className="bqf-val">2,000+ designer gowns | Sizes 0–32 | $350–$2,500</span></li>
-            <li><span className="bqf-key">Same-Day Purchase</span><span className="bqf-val">Yes — take your dress home the day you say yes</span></li>
-            <li><span className="bqf-key">Budget Option</span><span className="bqf-val">Budget Bridal Outlet — all gowns $800 and under</span></li>
-            <li><span className="bqf-key">Made-to-Order</span><span className="bqf-val">Moonlight Bridal (3–4 months) &amp; Barbie Anne Bridal Modest Collection</span></li>
-            <li><span className="bqf-key">Accessories</span><span className="bqf-val">Veils, belts &amp; hair vines — Marionat, JL Johnson &amp; more</span></li>
-            <li><span className="bqf-key">Layaway</span><span className="bqf-val">30-day layaway available</span></li>
-            <li><span className="bqf-key">Appointment</span><span className="bqf-val">Required — <Link href="/appointments">book at bridalaislemn.com/appointments</Link></span></li>
-          </ul>
         </div>
       </section>
 
@@ -109,7 +95,7 @@ export default function BridalPageContent() {
           
           <div className="bridal-content-right">
             <p className="bridal-section-label">OFF-THE-RACK WEDDING DRESSES</p>
-            <h2 className="bridal-section-title">Over 2,000 In-Stock Designer Wedding Dresses — Buy &amp; Take Home Today</h2>
+            <h2 className="bridal-section-title">Thousands of designer gowns, ready when you are</h2>
             <div className="bridal-horizontal-divider"></div>
             
             <p className="bridal-section-text">
@@ -137,7 +123,7 @@ export default function BridalPageContent() {
         <div className="bridal-mto-overlay"></div>
         <div className="bridal-mto-content">
           <p className="bridal-mto-label">MADE TO ORDER FOR YOUR MOMENT</p>
-          <h2 className="bridal-mto-title">Made-to-Order Wedding Dresses in Minnesota — Moonlight &amp; Barbie Anne Bridal</h2>
+          <h2 className="bridal-mto-title">Custom-designed gowns, made just for you</h2>
           <p className="bridal-mto-text">
             In addition to our in-stock selection, Bridal Aisle Boutique offers made-to-order wedding 
             dresses from two exceptional designers—each known for their quality, craftsmanship, and 
@@ -286,7 +272,7 @@ export default function BridalPageContent() {
           {/* Center Content - spans middle */}
           <div className="accessories-content-center">
             <p className="bridal-section-label">COMPLETE YOUR BRIDAL LOOK</p>
-            <h2 className="accessories-title">Bridal Accessories — Veils, Belts &amp; More at Our Maple Grove, MN Boutique</h2>
+            <h2 className="accessories-title">The finishing touches that make it yours</h2>
             
             <p className="bridal-section-text">
               Your dress tells your story—your accessories complete it. Bridal Aisle Boutique carries 
@@ -377,7 +363,7 @@ export default function BridalPageContent() {
       <section className="bridal-layaway-section">
         <div className="layaway-content-circle">
           <p className="layaway-label">FLEXIBLE OPTIONS FOR EVERY BRIDE</p>
-          <h2 className="layaway-title">Flexible Layaway on Wedding Dresses — No Full Payment Required Upfront</h2>
+          <h2 className="layaway-title">Layaway Available</h2>
           <div className="layaway-divider"></div>
           <p className="layaway-text">
             Say yes to your dress with confidence. We offer a 30-day layaway option, allowing you 

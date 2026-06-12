@@ -86,7 +86,7 @@ export default function AboutPage() {
           </div>
           <div className="about-hero-content-box">
             <p className="about-hero-label">{heroSubheading}</p>
-            <h1>Minnesota&apos;s Award-Winning Bridal Boutique — Our Story, Maple Grove MN</h1>
+            <h1>{heroHeading}</h1>
             <p>{heroDescription}</p>
           </div>
         </div>
@@ -104,19 +104,20 @@ export default function AboutPage() {
           />
         </div>
         <p className="about-page-label">Bridal Luxury, Simplified</p>
-        <h2 className="about-destination-heading">Minnesota&apos;s Premier Wedding Dress Shop — Bridal Aisle Boutique, Maple Grove</h2>
+        <h2 className="about-destination-heading">Minnesota&apos;s Destination for<br />Effortless Bridal Style</h2>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p>
-            Welcome to Bridal Aisle Boutique — an award-winning wedding dress shop in Maple Grove, MN, just minutes from Minneapolis. Founded in 2013 by Annette and Brad Hall, we have spent over 12 years helping Minnesota brides find their perfect dress and take it home the same day. With 2,000+ off-the-rack designer gowns in sizes 0–32 priced $350–$2,500, plus a Budget Bridal Outlet, men&apos;s suit rentals and purchases, and bridal accessories, we are the Twin Cities&apos; most complete bridal destination.
+            Welcome to Bridal Aisle Boutique, Minnesota's premier destination for new off-the-rack 
+            designer wedding dresses and tailored suits. With over 2,000 gowns in a wide range of 
+            styles and sizes, we make it simple to find the one that feels like you, and take it 
+            home the very same day.
           </p>
-        </div>
-      </section>
-
-      {/* AI Summary Paragraph */}
-      <section className="about-ai-summary">
-        <div className="about-ai-summary-inner">
-          <p>Bridal Aisle Boutique is an award-winning wedding dress shop located in Maple Grove, MN, serving brides across Brooklyn Park, Plymouth, Minneapolis, and the greater Twin Cities metro area. Founded in 2013 by Annette and Brad Hall, the boutique carries 2,000+ off-the-rack designer wedding gowns in sizes 0–32, priced $350–$2,500, and operates a Budget Bridal Outlet section with gowns priced $800 and under. Modest wedding dresses are available through the Barbie Anne Bridal Modest Collection. Men&apos;s formal attire — including suit rentals and purchases — is available through The Wood&apos;s Men&apos;s Suits by appointment. Bridal Aisle Boutique is a recipient of The Knot Best of Weddings Hall of Fame and has been named Minnesota&apos;s Best multiple times. Layaway is available. Response to inquiries is within 2 business days.</p>
-          <p>Phone: <a href="tel:7632202319">(763) 220-2319</a></p>
+          <p>
+            Our boutique is known for its warm, welcoming atmosphere and experienced stylists who 
+            make your experience joyful, stress-free, and unforgettable. Whether you're shopping 
+            for a gown, a suit, or accessories to complete your look, you'll find everything you 
+            need under one roof.
+          </p>
         </div>
       </section>
 
@@ -142,7 +143,7 @@ export default function AboutPage() {
       <section className="content-section mission-section">
         <div className="mission-container">
           <div className="mission-content">
-            <h2 style={{ marginTop: 0 }}>Why Brides Across Minnesota Choose Bridal Aisle Boutique</h2>
+            <h2 style={{ marginTop: 0 }}>A bridal boutique built on heart & honesty</h2>
             <div className="mission-divider"></div>
             <p>
               Bridal Aisle Boutique was created with a simple mission: to make the joy of wedding 
@@ -217,7 +218,7 @@ export default function AboutPage() {
         <div className="history-container">
           <div className="history-content">
           <p className="about-page-label">MEET THE FOUNDERS</p>
-          <h2>Founded in Maple Grove, MN in 2013 — Serving Minnesota Brides for 12+ Years</h2>
+          <h2>A legacy of love & dedication</h2>
             <p>
               Founded by Annette and Brad in 2013, Bridal Aisle began with a simple idea: brides 
               deserve stunning designer gowns without the designer price tag. What started as a small, 
@@ -271,7 +272,7 @@ export default function AboutPage() {
           />
         </div>
         <div className="experience-content">
-          <h3 className="experience-heading">Book Your Bridal or Suit Appointment at Our Maple Grove, MN Boutique</h3>
+          <h3 className="experience-heading">Your day, done your way</h3>
           <p className="experience-text">
             From the moment you walk in, our team is here to make your experience as special as your wedding day. Choose from three appointment options, enjoy one-on-one styling guidance, and say yes to your dress or suit with confidence.
           </p>
@@ -295,9 +296,6 @@ export default function AboutPage() {
         <Image src="/about/award-4.png" alt="Biz Winner award — Bridal Aisle Boutique, Maple Grove MN best bridal boutique" width={200} height={150} style={{ objectFit: 'contain' }} />
         <Image src="/about/award-5.png" alt="Family Business of the Year — Bridal Aisle Boutique, affordable wedding dresses Minnesota since 2013" width={200} height={150} style={{ objectFit: 'contain' }} />
       </div>
-      <p className="awards-text-labels">
-        The Knot Best of Weddings — Hall of Fame &nbsp;|&nbsp; Minnesota&apos;s Best Award &nbsp;|&nbsp; Family Business of the Year &nbsp;|&nbsp; Metro North Chamber of Commerce Member
-      </p>
     </section>
 
     {/* Testimonial Section */}

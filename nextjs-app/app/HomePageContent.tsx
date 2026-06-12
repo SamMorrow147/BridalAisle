@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import HeroSlideshow from '@/components/HeroSlideshow';
 import BridesSlideshow from '@/components/BridesSlideshow';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
@@ -12,7 +12,6 @@ import Link from 'next/link';
 
 export default function HomePageContent() {
   const mobileNavRef = useRef<MobileNavRef>(null);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const slides = [
     {
       image: '/home/174-a741457-enhanced-nr-ethanhanesphotography-eaa68822.jpg',
@@ -122,7 +121,9 @@ export default function HomePageContent() {
             />
           </div>
           <p className="philosophy-text">
-            At Bridal Aisle Boutique in Maple Grove, MN — just minutes from Minneapolis — we believe wedding dress shopping in Minnesota should be joyful, not stressful. With 2,000+ off-the-rack designer gowns priced $350–$2,500 and a curated selection of luxury suits, our expert stylists are here to help every bride and groom find their perfect look and take it home the same day.
+            At Bridal Aisle, we believe dress & suit shopping should be simple and stress-free. 
+            With a curated collection of designer gowns, luxury suits, and a team that truly cares, 
+            we're here to make your bridal experience fun, effortless and memorable.
           </p>
         </div>
         <div className="marquee-container">
@@ -150,7 +151,7 @@ export default function HomePageContent() {
               />
             </div>
             <p className="feature-label">OFF-THE-RACK</p>
-            <h2 className="feature-title">Off-the-Rack Designer Wedding Gowns — Take It Home Today</h2>
+            <h2 className="feature-title">Designer Gowns</h2>
             <p className="feature-description">
               Say yes and take it home the same day. With over 2,000 designer dresses to choose from, 
               Bridal Aisle offers an off-the-rack experience unlike any other. Find your dream dress 
@@ -171,7 +172,7 @@ export default function HomePageContent() {
               />
             </div>
             <p className="feature-label">PERSONALIZED</p>
-            <h2 className="feature-title">Book a Bridal Appointment in Minnesota — Stress-Free Styling</h2>
+            <h2 className="feature-title">Stress-free Appointments</h2>
             <p className="feature-description">
               From your first hello to the dress of your dreams, our expert stylists make your appointment feel effortless and memorable.
             </p>
@@ -189,27 +190,12 @@ export default function HomePageContent() {
               />
             </div>
             <p className="feature-label">FLEXIBLE OPTIONS</p>
-            <h2 className="feature-title">Budget Bridal, Layaway &amp; VIP Experiences Near Maple Grove, MN</h2>
+            <h2 className="feature-title">For Every Bride</h2>
             <p className="feature-description">
               Whether you're exploring our Budget Bridal section, taking advantage of layaway, or 
               booking a VIP appointment, we offer options to fit your timeline, preferences, and 
               budget—all while keeping the experience joyful and stress-free.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Urgency CTA Strip */}
-      <section className="home-urgency-strip">
-        <div className="home-urgency-content">
-          <h2 className="home-urgency-title">Ready to Find Your Wedding Dress Near Maple Grove, MN?</h2>
-          <p className="home-urgency-text">
-            Our appointment slots fill up fast — especially on weekends. Book today and shop over
-            2,000 designer gowns the same day you say yes.
-          </p>
-          <div className="home-urgency-ctas">
-            <Link href="/appointments" className="home-urgency-btn">BOOK MY APPOINTMENT NOW →</Link>
-            <a href="tel:7632202319" className="home-urgency-btn home-urgency-btn--outline">CALL US: (763) 220-2319</a>
           </div>
         </div>
       </section>
@@ -375,7 +361,7 @@ export default function HomePageContent() {
 
       {/* Designers Section */}
       <section className="designers-section">
-        <h2 className="designers-heading">Designer Wedding Dress Brands Available Near Maple Grove, MN</h2>
+        <h2 className="designers-heading">Designers We Work With</h2>
         <div className="designers-grid">
           <div className="designer-logo">
             <a href="https://barbieannebridal.com/collections/modest" target="_blank" rel="noopener noreferrer">
@@ -419,106 +405,6 @@ export default function HomePageContent() {
               />
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="home-why-section">
-        <div className="home-why-content">
-          <p className="home-why-label">WHY BRIDES CHOOSE US</p>
-          <h2 className="home-why-title">Why Choose Bridal Aisle Boutique?</h2>
-          <ul className="home-why-list">
-            <li>Award-winning boutique — The Knot Best of Weddings Hall of Fame recipient and multiple-year Minnesota&apos;s Best winner</li>
-            <li>Founded in Maple Grove, MN in 2013 — over 12 years helping Minnesota brides say yes</li>
-            <li>2,000+ in-stock designer gowns sized 0–32, priced $350–$2,500 — take yours home the same day</li>
-            <li>Budget Bridal Outlet section — gowns $800 and under, with layaway available</li>
-            <li>VIP appointments available for up to 10 guests — call (763) 220-2319 to reserve</li>
-            <li>Modest wedding dresses available through the Barbie Anne Bridal Modest Collection</li>
-            <li>Men&apos;s suits for rental or purchase — full styling appointment included</li>
-            <li>Response to all contact inquiries within 2 business days</li>
-          </ul>
-          <Link href="/appointments" className="home-why-btn">BOOK YOUR APPOINTMENT →</Link>
-        </div>
-      </section>
-
-      {/* AI Overview Quick Facts Block */}
-      <section className="home-ai-overview-section">
-        <div className="home-ai-overview-content">
-          <p className="home-ai-overview-label">QUICK FACTS</p>
-          <h2 className="home-ai-overview-title">Bridal Aisle Boutique — At a Glance</h2>
-          <div className="home-ai-overview-grid">
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Location</span><span className="home-ai-fact-value">Maple Grove, MN (near Minneapolis)</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Phone</span><span className="home-ai-fact-value"><a href="tel:7632202319">(763) 220-2319</a></span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Hours</span><span className="home-ai-fact-value">Tue 10am–7pm &nbsp;|&nbsp; Wed 10am–5pm &nbsp;|&nbsp; Thu 10am–7pm &nbsp;|&nbsp; Fri–Sat 10am–5pm &nbsp;|&nbsp; Sun 12pm–5pm &nbsp;|&nbsp; Mon Closed</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">In-Stock Gowns</span><span className="home-ai-fact-value">2,000+ designer gowns, sizes 0–32, priced $350–$2,500</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Budget Section</span><span className="home-ai-fact-value">Budget Bridal Outlet — gowns $800 and under</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Same-Day Purchase</span><span className="home-ai-fact-value">Yes — take your dress home the same day</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Layaway</span><span className="home-ai-fact-value">Yes — 30-day layaway available</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Modest Gowns</span><span className="home-ai-fact-value">Yes — Barbie Anne Bridal Modest Collection</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Men&apos;s Suits</span><span className="home-ai-fact-value">Rentals &amp; purchases — The Wood&apos;s Men&apos;s Suits</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Appointments</span><span className="home-ai-fact-value">Standard ($25) &nbsp;|&nbsp; Budget ($25) &nbsp;|&nbsp; VIP up to 10 guests ($100) &nbsp;|&nbsp; Accessory &nbsp;|&nbsp; Men&apos;s Suits (free)</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Founded</span><span className="home-ai-fact-value">2013, by Annette and Brad Hall</span></div>
-            <div className="home-ai-fact"><span className="home-ai-fact-label">Awards</span><span className="home-ai-fact-value">The Knot Best of Weddings Hall of Fame &nbsp;|&nbsp; Minnesota&apos;s Best &nbsp;|&nbsp; Family Business of the Year</span></div>
-          </div>
-          <Link href="/appointments" className="home-ai-overview-btn">BOOK AN APPOINTMENT →</Link>
-        </div>
-      </section>
-
-      {/* SEO FAQ Block */}
-      <section className="home-seo-faq-section">
-        <div className="home-seo-faq-content">
-          <h2 className="home-seo-faq-title">Frequently Asked Questions About Wedding Dress Shopping in Minnesota</h2>
-          <div className="home-seo-faq-list">
-            {[
-              {
-                q: "Where can I buy a wedding dress in Minnesota and take it home the same day?",
-                a: "Bridal Aisle Boutique in Maple Grove, MN (near Minneapolis) is one of the only wedding dress shops in Minnesota with over 2,000 off-the-rack designer gowns in stock. You can try on dresses during a 90-minute appointment and take your dress home the same day you say yes — no ordering delays, no waiting months for delivery."
-              },
-              {
-                q: "What is the price range for wedding dresses at Bridal Aisle Boutique?",
-                a: "Wedding dresses at Bridal Aisle Boutique are priced from $350 to $2,500. The Budget Bridal Outlet section carries gowns priced $800 and under. Layaway is available so you can secure your dress without paying the full amount on the day of your appointment."
-              },
-              {
-                q: "Do I need an appointment to try on wedding dresses near Maple Grove, MN?",
-                a: "Yes — Bridal Aisle Boutique requires all brides to book an appointment. Standard appointments are 90 minutes and include a personal stylist. A $25 appointment fee is applied to your dress purchase if you buy the same day. Appointments fill up quickly, especially on weekends, so we recommend booking at least 4–6 weeks in advance."
-              },
-              {
-                q: "Does Bridal Aisle Boutique carry modest wedding dresses in Minnesota?",
-                a: "Yes. Bridal Aisle Boutique carries the Barbie Anne Bridal Modest Collection, which offers elegant gowns with higher necklines, long sleeves, and full coverage. These are made-to-order dresses available in a range of sizes. If you are looking for modest wedding dresses in Minnesota, ask your stylist during your appointment."
-              },
-              {
-                q: "Can men get fitted for wedding suits at Bridal Aisle Boutique near Minneapolis?",
-                a: "Yes. Bridal Aisle Boutique offers men's suit rentals and purchases through The Wood's Men's Suits, available by appointment. A dedicated stylist will assist with color selection, style, and professional measurements. Suit orders for rentals must be placed at least one month before the event, and purchases at least two months in advance."
-              }
-            ].map((item, i) => (
-              <div key={i} className="home-seo-faq-item">
-                <button
-                  className="home-seo-faq-question"
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  aria-expanded={openFaq === i}
-                >
-                  {item.q}
-                  <span className="home-seo-faq-icon" aria-hidden="true">{openFaq === i ? '−' : '+'}</span>
-                </button>
-                {openFaq === i && (
-                  <p className="home-seo-faq-answer">{item.a}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Areas Section */}
-      <section className="home-service-areas-section">
-        <div className="home-service-areas-content">
-          <h2 className="home-service-areas-title">Serving Brides Across the Greater Minneapolis Metro Area</h2>
-          <p className="home-service-areas-text">
-            Bridal Aisle Boutique proudly serves brides and grooms from Osseo, Maple Grove, Brooklyn Park,
-            Plymouth, Minnetonka, Rogers, Champlin, Crystal, New Hope, Golden Valley, and communities across
-            the Twin Cities.
-          </p>
-          <Link href="/appointments" className="home-service-areas-btn">Find Your Nearest Appointment Time →</Link>
         </div>
       </section>
 

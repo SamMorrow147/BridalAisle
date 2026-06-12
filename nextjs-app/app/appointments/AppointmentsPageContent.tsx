@@ -103,13 +103,12 @@ export default function AppointmentsPageContent() {
             { image: '/appointments/appt-1-5.jpg', alt: 'Bride trying on designer wedding gown during bridal appointment at Bridal Aisle Boutique, Maple Grove MN' }
           ]} />
           <div className="appointment-detail-content">
-            <h2 className="appointment-detail-title">Standard Bridal Dress Appointment — 90 Minutes with a Personal Stylist</h2>
+            <h2 className="appointment-detail-title">Bridal Aisle Dress Appointment</h2>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $25.00 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
-            <p>During your 90-minute bridal appointment at our Maple Grove, MN boutique (near Minneapolis), you and up to 4 guests will work one-on-one with a personal stylist who helps you find the wedding dress that feels like you. A $25 appointment fee applies and is applied to your dress purchase if you buy the same day.</p>
+            <p>The Bride + 4 guests will enjoy a 90-minute bridal appointment with a personal stylist to assist you in finding &apos;The One&apos;! While your guests relax in their designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
             <p>The bride will have access to all dresses in the store including the Budget Bridal Outlet to try on. This appointment type is recommended for brides with a budget higher than $900.</p>
             <p>Bridal Aisle dresses range from $900–$2,500 and Budget Bridal dresses range from $350–$800.</p>
-            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>BOOK ONLINE →</Link>
-            <p className="appointment-phone-cta"><a href="tel:763-220-2319">QUESTIONS? CALL (763) 220-2319</a></p>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>$25 APPOINTMENT FEE</li>
               <li>UP TO 4 GUESTS</li>
@@ -124,12 +123,11 @@ export default function AppointmentsPageContent() {
       <section id="appointment-2" className="appointment-detail-section">
         <div className="appointment-detail-container">
           <div className="appointment-detail-content">
-            <h2 className="appointment-detail-title">Affordable Bridal Appointment — Budget-Focused Styling in Maple Grove, MN</h2>
+            <h2 className="appointment-detail-title">Budget Bridal Outlet Dress Appointment</h2>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $25.00 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
             <p>The Bride + 4 guests will enjoy a 90-minute bridal appointment in our Budget Bridal Outlet section of the store where all dresses are priced $800 or less. While your guests relax in their designated seating area, your personal stylist will guide you in selecting and trying on dresses that suit your style, budget, body shape, and wedding vision.</p>
             <p>The main focus will be on the budget bridal dresses; however, the bride will have access to shop the Bridal Aisle dresses ranging from $900–$2,500.</p>
-            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>BOOK ONLINE →</Link>
-            <p className="appointment-phone-cta"><a href="tel:763-220-2319">QUESTIONS? CALL (763) 220-2319</a></p>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>$25 APPOINTMENT FEE</li>
               <li>UP TO 4 GUESTS</li>
@@ -160,12 +158,12 @@ export default function AppointmentsPageContent() {
             { image: '/appointments/appt-3-6.jpg', alt: 'Bride and guests during VIP bridal experience — exclusive wedding dress shopping in Minnesota' }
           ]} />
           <div className="appointment-detail-content">
-            <h2 className="appointment-detail-title">VIP Bridal Experience — Private Appointment for Up to 10 Guests</h2>
+            <h2 className="appointment-detail-title">VIP Bridal Experience</h2>
             <h3 className="appointment-detail-subtitle">APPT. FEE | $100 (APPLIED TO DRESS SALE WHEN PURCHASED THE SAME DAY AS THE APPOINTMENT)</h3>
             <p>The Bride and up to 10 guests will enjoy a 90-minute bridal appointment with one of our senior stylists to assist you in finding &apos;The One&apos;! While your guests relax in their semi-private designated seating area, your expert stylist will guide you in selecting and trying on dresses that suit your style, body shape, and wedding vision.</p>
             <p>The bride will have access to all dresses in the store.</p>
             <p>Bridal Aisle dresses range from $900–$2,500 and Budget Bridal dresses range from $350–$800.</p>
-            <a href="tel:763-220-2319" className="appointment-cta-btn">CALL TO SCHEDULE: (763) 220-2319</a>
+            <a href="tel:763-220-2319" className="appointment-cta-btn">CALL TO SCHEDULE</a>
             <ul className="appointment-features-list">
               <li>VIP APPOINTMENTS ARE BOOKED BY PHONE ONLY. CALL US TO RESERVE.</li>
               <li>$100 APPOINTMENT FEE</li>
@@ -180,13 +178,12 @@ export default function AppointmentsPageContent() {
       <section id="appointment-4" className="appointment-detail-section">
         <div className="appointment-detail-container">
           <div className="appointment-detail-content">
-            <h2 className="appointment-detail-title">Bridal Accessory &amp; Styling Appointment — Veils, Belts &amp; More</h2>
+            <h2 className="appointment-detail-title">Accessory/Bridal Styling Appointment</h2>
             <h3 className="appointment-detail-subtitle">WE CHARGE A $25 CANCELLATION FEE IF NOT CANCELLED AT LEAST 48 HOURS BEFORE APPOINTMENT</h3>
             <p>You found your perfect dress, now it&apos;s time to accessorize!</p>
             <p>This appointment is a 60-minute one-on-one consultation with a trained stylist to show you the perfect pairing of a veil or belt (& more) with your wedding dress!</p>
             <p>Feel free to bring in your dress to get the full effect and see how the accessories complement one another.</p>
-            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>BOOK ONLINE →</Link>
-            <p className="appointment-phone-cta"><a href="tel:763-220-2319">QUESTIONS? CALL (763) 220-2319</a></p>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>60-MINUTES WITH A BRIDAL STYLIST</li>
               <li>BRING YOUR DRESS (OPTIONAL)</li>
@@ -219,8 +216,7 @@ export default function AppointmentsPageContent() {
             <p>During your 60 Minute appointment, you will have a designated stylist to assist you in selecting the perfect color and style for your wedding or event.</p>
             <p>It is suggested that the couple come in separate from their party members to make their selections. Once the styles are selected, party members are encouraged to make an appointment to get professionally measured with us and we will get your suits ordered!</p>
             <p>All orders and measurements must be provided a month prior to the event date to guarantee you suit rentals or two months prior to the event to guarantee suits for purchase.</p>
-            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>BOOK ONLINE →</Link>
-            <p className="appointment-phone-cta"><a href="tel:763-220-2319">QUESTIONS? CALL (763) 220-2319</a></p>
+            <Link href="#book-appointment" className="appointment-cta-btn" onClick={(e) => scrollToSection(e, 'book-appointment')}>SCHEDULE YOUR APPOINTMENT</Link>
             <ul className="appointment-features-list">
               <li>No Appointment Fee</li>
               <li>60 Minutes with a bridal stylist</li>
@@ -319,18 +315,6 @@ export default function AppointmentsPageContent() {
             answer: "We do not allow drinks or food within the store. Champagne and clear liquids are acceptable, but all other substances will be asked to be left in our front waiting area. Champagne must be popped either in our restroom or outside."
           }
         ]} />
-      </section>
-
-      {/* Appointments Urgency Strip */}
-      <section className="appt-urgency-strip">
-        <div className="appt-urgency-content">
-          <h2 className="appt-urgency-title">Appointments Fill Up Fast — Especially on Weekends</h2>
-          <p className="appt-urgency-text">Bridal Aisle Boutique books up weeks in advance. We recommend scheduling at least 4–6 weeks ahead to secure your preferred date and stylist. Don&apos;t wait — your dream dress is already in the store.</p>
-          <div className="appt-urgency-ctas">
-            <a href="https://bridalaisleboutique.as.me/" target="_blank" rel="noopener noreferrer" className="appt-urgency-btn appt-urgency-btn--primary">BOOK MY APPOINTMENT NOW →</a>
-            <a href="tel:7632202319" className="appt-urgency-btn appt-urgency-btn--secondary">CALL (763) 220-2319</a>
-          </div>
-        </div>
       </section>
     </main>
     </>

@@ -13,7 +13,7 @@ export default function ContactPageContent() {
       <section className="contact-hero-parallax" aria-label="Contact Us">
         <div className="contact-hero-parallax-overlay" />
         <div className="contact-hero-parallax-content">
-          <h1 className="contact-hero-parallax-title">Contact Bridal Aisle Boutique in Maple Grove, MN — Visit, Call or Email</h1>
+          <h1 className="contact-hero-parallax-title">Contact Us</h1>
         </div>
       </section>
 
@@ -97,7 +97,8 @@ export default function ContactPageContent() {
 
             <h2 className="contact-welcome-heading">We are <span className="excited-ex">ex</span>cited to connect with you!</h2>
             <p className="contact-intro-text">
-              We&apos;re excited to hear from you! Send us a message and our team at our Maple Grove, MN boutique will respond within 2 business days. Prefer to talk? Call us at <a href="tel:763-220-2319">(763) 220-2319</a> during store hours. Ready to book? Head straight to our <Link href="/appointments">appointments page</Link> to secure your spot.
+              Fill out the form below & we will be in touch with you within 2 business days! 
+              If you&apos;re looking to book an appointment, <Link href="/appointments">click here</Link>.
             </p>
 
             <div className="contact-form-iframe-wrapper">

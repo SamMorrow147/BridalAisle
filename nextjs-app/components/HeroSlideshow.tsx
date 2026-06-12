@@ -72,12 +72,9 @@ export default function HeroSlideshow({ slides, interval = 5000, onMenuOpen }: H
         <div className="hero-text">
           <p className="hero-subtitle">your dream dress</p>
           <h1 className="hero-title">IS AT BRIDAL AISLE</h1>
-          <div className="hero-ctas">
-            <a href="/appointments" className="hero-cta">BOOK YOUR APPOINTMENT →</a>
-            <a href="tel:763-220-2319" className="hero-cta hero-cta-phone">CALL US: (763) 220-2319</a>
-            <a href="/bridal" className="hero-cta">SEE ALL WEDDING DRESSES →</a>
-          </div>
-          <p className="hero-trust-signals">Award-winning bridal boutique &nbsp;|&nbsp; Open since 2013 &nbsp;|&nbsp; Maple Grove, MN (near Minneapolis) &nbsp;|&nbsp; 2,000+ gowns in stock &nbsp;|&nbsp; Knot Best of Weddings Hall of Fame</p>
+          <a href="/appointments" className="hero-cta">
+            APPOINTMENTS
+          </a>
         </div>
       </div>
     </div>
