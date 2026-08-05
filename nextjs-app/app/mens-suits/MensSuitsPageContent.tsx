@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import BridesSlideshow from '@/components/BridesSlideshow';
-import LindaWidget from '@/components/LindaWidget';
 
 export default function MensSuitsPageContent() {
   return (
@@ -126,10 +125,7 @@ export default function MensSuitsPageContent() {
         </div>
       </section>
 
-      {/* Linda Widget Section */}
-      <LindaWidget />
-
-      {/* Photo Gallery - in tan section, below the Linda widget */}
+      {/* Photo Gallery */}
       <section className="mens-gallery-section">
         <BridesSlideshow slides={[
           { image: '/mens-suits/suit-slide-1.jpg', alt: 'Metro suit' },

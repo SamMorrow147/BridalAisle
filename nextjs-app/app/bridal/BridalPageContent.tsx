@@ -1,66 +1,8 @@
-'use client';
-
-import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQ from '@/components/FAQ';
 
 export default function BridalPageContent() {
-  useEffect(() => {
-    // Load Linda widget script
-    const container = document.getElementById('linda-widget-container');
-    if (!container) return;
-
-    const script = document.createElement('script');
-    script.id = 'gb_widget_script';
-    script.type = 'module';
-    script.src = 'https://locations.linda.co/gb-widget.js';
-    script.setAttribute('data-widget-token', 'e25b4c7cbee769617bfc85fafd3d29f9');
-    
-    // Append to container instead of body to ensure it renders in the right place
-    container.appendChild(script);
-
-    // Watch for widget content being injected elsewhere and move it to our container
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === 1) { // Element node
-            const element = node as HTMLElement;
-            // Check if this is a Linda widget element
-            if (element.id?.includes('linda') || 
-                element.className?.includes('linda') || 
-                element.className?.includes('gb-widget') ||
-                element.querySelector('[class*="linda"], [id*="linda"], [class*="gb-widget"]')) {
-              // If it's not already in our container, move it
-              if (!container.contains(element)) {
-                container.appendChild(element);
-              }
-            }
-          }
-        });
-      });
-    });
-
-    // Observe the body for any new elements
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    return () => {
-      observer.disconnect();
-      if (script && script.parentNode === container) {
-        container.removeChild(script);
-      }
-      // Also clean up any widget elements
-      const widgetElements = container.querySelectorAll('[class*="linda"], [id*="linda"], [class*="gb-widget"]');
-      widgetElements.forEach(el => {
-        if (el.parentNode) {
-          el.remove();
-        }
-      });
-    };
-  }, []);
   return (
     <>
     <main className="page-container">
@@ -426,11 +368,6 @@ export default function BridalPageContent() {
             answer: "We do not allow drinks or food within the store. Champagne and clear liquids are acceptable, but all other substances will be asked to be left in our front waiting area. Champagne must be popped either in our restroom or outside."
           }
         ]} />
-      </section>
-
-      {/* Linda Widget Section */}
-      <section className="linda-widget-section">
-        <div id="linda-widget-container"></div>
       </section>
     </main>
     </>

@@ -4841,11 +4841,6 @@ main.page-container .contact-page-container,
     font-size: 0.95rem;
   }
   
-  /* Linda Widget Section Mobile */
-  .linda-widget-section {
-    padding: 4rem 1.5rem;
-  }
-  
   .secondary-slideshow-section {
     height: 50vh;
     min-height: 400px;
@@ -5974,19 +5969,6 @@ main.page-container .contact-page-container,
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-}
-
-/* Linda Widget Section */
-.linda-widget-section {
-  padding: 4rem 3rem;
-  background: #fff;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-#linda-widget-container {
-  width: 100%;
-  min-height: 200px;
 }
 
 .silk-suits-label {
