@@ -16,6 +16,7 @@ const routes: Array<{
   { path: 'appointments', changeFrequency: 'monthly', priority: 0.9 },
   { path: 'bridal', changeFrequency: 'weekly', priority: 0.9 },
   { path: 'mens-suits', changeFrequency: 'weekly', priority: 0.8 },
+  { path: 'a-very-marry-day', changeFrequency: 'monthly', priority: 0.8 },
   { path: 'about', changeFrequency: 'monthly', priority: 0.7 },
   { path: 'contact', changeFrequency: 'monthly', priority: 0.8 },
   { path: 'blog', changeFrequency: 'monthly', priority: 0.6 },

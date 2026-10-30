@@ -4,8 +4,11 @@ import Link from 'next/link';
 import MobileNav from '@/components/MobileNav';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import NovemberEventPopup from '@/components/NovemberEventPopup';
 import { SITE_URL } from '@/app/lib/site';
 import './globals.css';
+
+const novemberEventLive = Date.now() < Date.UTC(2026, 11, 1, 6, 0, 0);
 
 export const metadata: Metadata = {
   title: 'Bridal Aisle Boutique | Minnesota\'s Premier Bridal & Formalwear Destination',
@@ -80,14 +83,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
-        {/* Mailchimp */}
-        <script
-          id="mcjs"
-          dangerouslySetInnerHTML={{
-            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/632d6f51d6b447d5dd0aac702/69e49655636a18d4e1e744996.js");`,
-          }}
-        />
-        {/* End Mailchimp */}
+        {/* Mailchimp returns after the November event window so it doesn't fight the event popup */}
+        {!novemberEventLive && (
+          <script
+            id="mcjs"
+            dangerouslySetInnerHTML={{
+              __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/632d6f51d6b447d5dd0aac702/69e49655636a18d4e1e744996.js");`,
+            }}
+          />
+        )}
         {/* Favicons & App Icons */}
         <link rel="icon" type="image/png" href="/home/ba-submark-2x-e31c28b4.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/home/ba-submark-2x-e31c28b4.png" />
@@ -114,6 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <GoogleAnalytics />
+        <NovemberEventPopup />
         {/* Announcement Bar */}
         <div className="announcement-bar">
           <div className="announcement-content">
