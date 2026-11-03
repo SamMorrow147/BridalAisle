@@ -143,7 +143,6 @@ export default function VeryMarryDayPage() {
             </p>
           </div>
           <div>
-            <p className="marry-script">Brides</p>
             <h2>November is also Bridal Aisle&apos;s anniversary month!</h2>
             <p>
               We are celebrating with discounted{' '}

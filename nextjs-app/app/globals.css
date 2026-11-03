@@ -6033,6 +6033,14 @@ main.page-container .contact-page-container,
   font-weight: 400;
   font-style: italic;
   text-transform: none;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+a.announcement-text:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .announcement-phone {
@@ -7304,13 +7312,6 @@ main.page-container .contact-page-container,
   text-transform: none;
   color: #2f3233;
   margin: 0 0 1rem;
-}
-
-.marry-script {
-  font-family: 'Printed Moments', cursive;
-  font-size: 2rem;
-  color: #827270;
-  margin: 0 0 0.2rem;
 }
 
 .marry-details p {

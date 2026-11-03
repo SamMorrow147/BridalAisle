@@ -123,7 +123,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div className="announcement-bar">
           <div className="announcement-content">
             <div className="announcement-spacer" aria-hidden="true" />
-            <h3 className="announcement-text">Now in Our New Location</h3>
+            {novemberEventLive ? (
+              <Link href="/a-very-marry-day" className="announcement-text">
+                Join Us Nov. 29 for A Very Marry Day
+              </Link>
+            ) : (
+              <h3 className="announcement-text">Now in Our New Location</h3>
+            )}
             <a href="tel:(763) 220-2319" className="announcement-phone">(763) 220-2319</a>
           </div>
         </div>
