@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import MobileNav from '@/components/MobileNav';
+import HideOnWoods from '@/components/HideOnWoods';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import NovemberEventPopup from '@/components/NovemberEventPopup';
@@ -103,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="stylesheet" href="https://use.typekit.net/yko1pkk.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}
@@ -119,6 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
         <GoogleAnalytics />
         <NovemberEventPopup />
+        <HideOnWoods>
         {/* Announcement Bar */}
         <div className="announcement-bar">
           <div className="announcement-content">
@@ -158,9 +160,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {/* Mobile Navigation */}
           <MobileNav />
         </header>
+        </HideOnWoods>
         <ErrorBoundary>
           {children}
         </ErrorBoundary>
+        <HideOnWoods>
         <footer className="main-footer">
           <div className="footer-content">
             <div className="footer-logo-section">
@@ -246,6 +250,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
           </div>
         </footer>
+        </HideOnWoods>
       </body>
     </html>
   );

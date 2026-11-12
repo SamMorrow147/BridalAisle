@@ -7478,3 +7478,2062 @@ a.announcement-text:hover {
     padding-right: 1.25rem;
   }
 }
+/* ==========================================================================
+   The Woods mini-brand — scoped so bridal defaults never shift
+   Palette: forest #24362C, bone #F1EADF, walnut #57402F, brass #A99A6F, black #1C1C1A
+   ========================================================================== */
+
+body:has(.woods-page) {
+  overflow-x: hidden;
+  max-width: 100%;
+  background: #24362C;
+}
+
+.woods-page {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body:has(.woods-page) > .announcement-bar,
+body:has(.woods-page) > header.sticky-header,
+body:has(.woods-page) > footer.main-footer {
+  display: none !important;
+}
+
+.woods-chrome {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: visible;
+  background: #24362C;
+}
+
+.woods-announcement-bar {
+  background: #24362c;
+  padding: 0.5rem 2rem;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 2.75rem;
+  overflow: visible;
+}
+
+.woods-header {
+  position: relative;
+  top: auto;
+  background: #24362C;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.woods-header .main-nav {
+  gap: clamp(0.85rem, 2.4vw, 3rem);
+  max-width: none;
+  padding: 0 1.25rem;
+}
+
+.woods-header .main-nav > a {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.woods-header .main-nav a {
+  color: #F1EADF;
+}
+
+.woods-header .main-nav a:hover {
+  color: #A99A6F;
+}
+
+.woods-header .main-nav a[aria-current="page"] {
+  font-weight: 600;
+  color: #fff;
+}
+
+.woods-header .main-nav .woods-wordmark,
+.woods-header .main-nav .woods-wordmark:hover {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: inherit;
+}
+
+.woods-header .main-nav .woods-department-link {
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+}
+
+.woods-nav-mark {
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.15rem 1.5rem;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
+
+.woods-nav-trees {
+  display: block;
+  line-height: 0;
+  position: relative;
+  z-index: 2;
+  margin: -2.55rem 0 0.1rem;
+}
+
+.woods-nav-trees img {
+  display: block;
+  height: 64px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.woods-logo {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+}
+
+.woods-logo-mark {
+  display: block;
+  line-height: 0;
+}
+
+.woods-logo-byline {
+  position: absolute;
+  left: 28%;
+  width: 44%;
+  top: 88%;
+  height: 9%;
+  z-index: 3;
+}
+
+.woods-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.woods-header .nav-logo-center img,
+.woods-header .nav-logo-center a:hover img {
+  transform: none;
+}
+
+.woods-logo-nav img {
+  height: 108px;
+}
+
+.woods-logo-footer img {
+  height: 168px;
+  max-width: 100%;
+}
+
+.woods-logo-mobile img {
+  height: 84px;
+  max-height: none;
+}
+
+.woods-logo-drawer img {
+  height: 156px;
+  max-height: none;
+  margin: 0 auto;
+}
+
+.woods-nav-mark .woods-wordmark,
+.woods-nav-mark a.woods-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.05;
+}
+
+.woods-nav-mark .woods-department-link {
+  line-height: 1.2;
+  display: block;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+
+.woods-nav-mark .woods-wordmark-sub-link {
+  text-decoration: none;
+  line-height: 1;
+}
+
+.woods-nav-mark .woods-wordmark-sub {
+  margin-top: 0;
+  font-size: 0.55rem;
+}
+
+.woods-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.woods-wordmark-name {
+  font-family: "libre-caslon-display", serif;
+  font-weight: 400;
+  color: #F1EADF;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.woods-wordmark-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #A99A6F;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+}
+
+.woods-wordmark-nav .woods-wordmark-name {
+  font-size: 1.65rem;
+}
+
+.woods-wordmark-nav .woods-wordmark-sub {
+  font-size: 0.55rem;
+}
+
+.woods-wordmark-footer .woods-wordmark-name {
+  font-size: 2.25rem;
+}
+
+.woods-wordmark-footer .woods-wordmark-sub {
+  font-size: 0.7rem;
+}
+
+.woods-wordmark-mobile .woods-wordmark-name {
+  font-size: 1.35rem;
+}
+
+.woods-wordmark-mobile .woods-wordmark-sub {
+  font-size: 0.5rem;
+}
+
+.woods-header .woods-wordmark-name,
+.woods-header .main-nav .woods-wordmark {
+  color: #F1EADF;
+}
+
+.woods-department-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(169, 154, 111, 0.85);
+  text-decoration: none;
+}
+
+.woods-department-link:hover {
+  color: #A99A6F;
+}
+
+.woods-department-link-footer {
+  margin-top: 0.25rem;
+  font-size: 0.6rem;
+}
+
+.woods-footer {
+  background: #1C1C1A;
+}
+
+/* Tree mark stacked above "The Woods" in the footer lockup */
+.woods-footer-trees {
+  display: block;
+  line-height: 0;
+  margin-bottom: 0.6rem;
+}
+
+.woods-footer-trees img {
+  height: 64px;
+  width: auto;
+}
+
+/* Desktop only, so phones still get the site's single stacked footer column */
+@media (min-width: 769px) {
+  .woods-footer .footer-content {
+    grid-template-columns: 240px 1fr 1fr 1.5fr;
+  }
+}
+
+.woods-department-link-footer {
+  white-space: nowrap;
+}
+
+.woods-footer .footer-bottom {
+  background: #1C1C1A;
+}
+
+.woods-footer .footer-social-link {
+  color: #A99A6F;
+}
+
+.woods-footer .footer-links-section h3,
+.woods-footer .footer-hours-section h3 {
+  color: #A99A6F;
+}
+
+.woods-cta-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #24362c;
+  color: #F1EADF;
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  border: 1px solid #24362c;
+  border-radius: 0;
+  margin-top: 1rem;
+}
+
+.woods-cta-btn:hover {
+  background: transparent;
+  color: #24362c;
+  border-color: #A99A6F;
+}
+
+.woods-cta-btn-on-dark {
+  background: #F1EADF;
+  color: #1C1C1A;
+  border-color: #F1EADF;
+}
+
+.woods-cta-btn-on-dark:hover {
+  background: transparent;
+  color: #F1EADF;
+  border-color: #A99A6F;
+}
+
+.woods-page .woods-hero {
+  background-image: none;
+  background-color: #24362C;
+  justify-content: flex-start;
+  text-align: left;
+  overflow: hidden;
+}
+
+.woods-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/mens-suits/woods-hero-bg.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  transform: scale(1.04);
+  transform-origin: center center;
+  animation:
+    woods-hero-bg-in 1.5s ease-out both,
+    woods-hero-breathe 38s ease-in-out 1.5s infinite;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+@keyframes woods-hero-bg-in {
+  from {
+    opacity: 0.25;
+    transform: scale(1.12);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes woods-hero-breathe {
+  0%, 100% {
+    transform: scale(1.04);
+  }
+  50% {
+    transform: scale(1.09);
+  }
+}
+
+.woods-hero-fg {
+  position: absolute;
+  right: 0;
+  bottom: -2%;
+  width: min(64vw, 860px);
+  height: 108%;
+  background-image: url('/mens-suits/woods-hero-groom.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  z-index: 2;
+  pointer-events: none;
+  animation: woods-hero-fg-in 1.7s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+  will-change: transform, opacity;
+}
+
+@keyframes woods-hero-fg-in {
+  from {
+    opacity: 0;
+    transform: translateX(9%) translateY(4%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Scroll depth (--hero-p, 0 at top → 1 once the hero has scrolled out). Uses the
+   standalone scale/translate/opacity props on elements so it layers on top of the
+   load-in keyframes (which own `transform`) instead of fighting them. */
+.woods-page .woods-hero {
+  --hero-p: 0;
+}
+
+/* Groom grows toward you from his feet */
+.woods-hero-fg {
+  transform-origin: 70% 100%;
+  scale: calc(1 + var(--hero-p) * 0.28);
+}
+
+/* Forest eases back: shrinks slightly and drifts down slower than the page */
+.woods-hero-bg {
+  scale: calc(1 - var(--hero-p) * 0.035);
+  translate: 0 calc(var(--hero-p) * 18%);
+}
+
+/* Title and button lift as you scroll past and stay fully opaque; a soft shadow
+   builds behind them so they stay legible as the groom grows in behind */
+.woods-page .woods-hero .woods-hero-copy,
+.woods-page .woods-hero .woods-hero-cta {
+  translate: 0 calc(var(--hero-p) * -70px);
+}
+
+.woods-page .woods-hero .mens-hero-title {
+  text-shadow:
+    0 2px calc(6px + var(--hero-p) * 18px) rgba(0, 0, 0, calc(0.15 + var(--hero-p) * 0.5)),
+    0 0 calc(var(--hero-p) * 40px) rgba(0, 0, 0, calc(var(--hero-p) * 0.35));
+}
+
+.woods-page .woods-hero .woods-cta-btn {
+  border-color: #A99A6F;
+  box-shadow: 0 calc(2px + var(--hero-p) * 10px) calc(6px + var(--hero-p) * 26px)
+    rgba(0, 0, 0, calc(0.12 + var(--hero-p) * 0.45));
+}
+
+.woods-page .woods-hero .mens-hero-content {
+  z-index: 3;
+  animation: woods-hero-copy-in 1s ease-out 0.75s both;
+}
+
+@keyframes woods-hero-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .woods-hero-bg,
+  .woods-hero-fg,
+  .woods-page .woods-hero .mens-hero-content {
+    animation: none;
+  }
+
+  .woods-hero-bg {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+
+  .woods-hero-fg,
+  .woods-page .woods-hero .mens-hero-content {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 768px) {
+  .woods-hero-fg {
+    transform: none;
+  }
+}
+
+.woods-page .woods-hero-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(36, 54, 44, 0.72) 0%,
+    rgba(36, 54, 44, 0.28) 46%,
+    rgba(36, 54, 44, 0.08) 100%
+  );
+  z-index: 1;
+}
+
+.woods-page .mens-hero-content {
+  max-width: 80%;
+  margin-left: 7%;
+  text-align: left;
+  padding: 3rem 2rem;
+}
+
+.woods-page .mens-hero-label {
+  justify-content: flex-start;
+  color: #A99A6F;
+  letter-spacing: 0.28em;
+}
+
+.woods-page .label-line {
+  background: rgba(169, 154, 111, 0.7);
+}
+
+.woods-page .mens-hero-title {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: clamp(2.75rem, 4.2vw, 4.5rem);
+  line-height: 1.12;
+  white-space: nowrap;
+}
+
+.woods-hero-hook {
+  font-family: "raleway", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: #F1EADF;
+  margin: 0 0 1.25rem;
+  font-weight: 400;
+}
+
+.woods-page .mens-hero-text {
+  margin: 0;
+}
+
+.woods-hero-cta {
+  margin-top: 2rem;
+}
+
+.woods-page .woods-hero .woods-cta-btn:hover,
+.woods-details-cta .woods-cta-btn:hover,
+.woods-own-copy .woods-cta-btn:hover {
+  background: #1C1C1A;
+  color: #F1EADF;
+  border-color: #fff;
+}
+
+.woods-details-section {
+  background: #1C1C1A;
+  padding: 0;
+}
+
+.woods-details-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: stretch;
+  min-height: 36rem;
+}
+
+.woods-details-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.woods-details-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    linear-gradient(to bottom, #1C1C1A 0%, transparent 24%, transparent 76%, #1C1C1A 100%),
+    linear-gradient(to right, transparent 52%, #1C1C1A 100%);
+}
+
+.woods-details-photo-shift {
+  position: absolute;
+  inset: -28%;
+  background-image: url('/mens-suits/woods-details.png');
+  background-size: cover;
+  background-position: 36% 20%;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.woods-details-copy {
+  padding: 5rem 4.5rem 5rem 3.5rem;
+}
+
+.woods-details-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #A99A6F;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.woods-details-label .label-line {
+  width: 48px;
+  height: 1px;
+  background: rgba(169, 154, 111, 0.8);
+}
+
+.woods-details-title {
+  font-family: "libre-caslon-display", serif;
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin: 0 0 1.75rem;
+  color: #F1EADF;
+  font-weight: 400;
+}
+
+/* One phrase per line, stepping down in weight: bold → semibold → regular */
+.woods-details-title > span {
+  display: block;
+}
+
+.woods-page .woods-details-title .woods-details-title-bold {
+  font-weight: 700;
+}
+
+.woods-page .woods-details-title .woods-details-title-semi {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.woods-page .woods-details-title .woods-details-title-regular {
+  font-weight: 400;
+}
+
+/* Lines rise in one after another: Show up. → Get measured. → We'll handle the rest. */
+.woods-details-title[data-motion="ready"] > span {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.woods-details-title[data-motion="inview"] > span {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.woods-details-title[data-motion="inview"] > span:nth-child(2) { transition-delay: 0.45s; }
+.woods-details-title[data-motion="inview"] > span:nth-child(3) { transition-delay: 0.9s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .woods-details-title > span {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.woods-details-text {
+  font-family: "raleway", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #F1EADF;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  max-width: 36rem;
+}
+
+.woods-details-cta {
+  margin-top: 2rem;
+}
+
+.woods-page .mens-silk-suits-section {
+  background: #1C1C1A;
+}
+
+.woods-page .woods-own-section {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.woods-own-photo {
+  position: relative;
+  min-height: 700px;
+  width: 100%;
+}
+
+.woods-own-copy {
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.woods-page .woods-own-section .silk-suits-content {
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
+.woods-page .mens-rentals-section {
+  background: #57402F;
+}
+
+.woods-page .mens-rentals-section .mens-section-title {
+  color: #F1EADF;
+}
+
+/* Walk through the stand: pines exit left/right and are gone once the photo is fully in view */
+.woods-page .mens-rentals-section .mens-image-right {
+  --reveal-p: 0;
+  overflow: hidden;
+}
+
+.woods-page .mens-rentals-section .mens-image-right img {
+  transform:
+    translate3d(0, calc((var(--reveal-p) - 0.45) * -22px), 0)
+    scale(calc(1.03 + var(--reveal-p) * 0.045));
+  transform-origin: center 22%;
+  will-change: transform;
+}
+
+/* Edge forest: tone-on-tone pines frame How It Works from both sides (center kept clear).
+   As it scrolls into view (--pass-p, 0 → 1) they grow and drift outward; the big outer
+   trees slide fully off screen, leaving only the faint inner ones. */
+.woods-pass {
+  --pass-p: 0.5;
+  container-type: size;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.woods-pass-tree {
+  --s: calc(0.8 + var(--pass-p) * var(--grow));
+  /* outward slide runs alongside the growth so trees move diagonally into the corners;
+     exit trees travel past their own edge plus their (scaled) half-width by full view */
+  --shift: calc(
+    var(--pass-p) * var(--drift) * 1cqw +
+    var(--exit) * var(--pass-p) * (var(--x) * 1cqw + 60% * var(--s))
+  );
+  position: absolute;
+  bottom: calc(var(--h) * -0.05cqh);
+  height: calc(var(--h) * 1cqh);
+  aspect-ratio: 337 / 553;
+  background: #1a271f;
+  opacity: var(--o);
+  -webkit-mask: url('/mens-suits/woods-tree-single.png') center bottom / contain no-repeat;
+  mask: url('/mens-suits/woods-tree-single.png') center bottom / contain no-repeat;
+  transform-origin: 50% 100%;
+  will-change: transform;
+}
+
+.woods-pass-left {
+  left: calc(var(--x) * 1cqw);
+  transform: translateX(calc(-50% - var(--shift))) scale(var(--s));
+}
+
+.woods-pass-right {
+  right: calc(var(--x) * 1cqw);
+  transform: translateX(calc(50% + var(--shift))) scale(var(--s));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .woods-page .mens-rentals-section .mens-image-right img {
+    transform: none;
+    will-change: auto;
+  }
+
+  .woods-pass-tree {
+    transform: none;
+  }
+}
+
+.woods-page .mens-rentals-section .mens-section-text {
+  color: #E8E0D2;
+}
+
+.woods-page .mens-rentals-section .mens-logos img,
+.woods-page .woods-own-section .mens-logos img {
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.woods-page .mens-section-title,
+.woods-page .silk-suits-title {
+  color: #1C1C1A;
+}
+
+.woods-page .mens-hero-title,
+.woods-page .woods-details-title,
+.woods-page .mens-section-title,
+.woods-page .mens-process-heading,
+.woods-page .silk-suits-title,
+.woods-page .woods-step-num,
+.woods-rentals-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.woods-rentals-title strong {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.woods-rentals-title-line {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .woods-rentals-title-line {
+    white-space: normal;
+  }
+}
+
+.woods-page .mens-section-text,
+.woods-page .silk-suits-text {
+  color: #3a342c;
+}
+
+.woods-page .silk-suits-label {
+  color: #A99A6F;
+  letter-spacing: 0.28em;
+}
+
+.woods-page .woods-own-section .silk-suits-title {
+  color: #F1EADF;
+  margin-bottom: 1rem;
+}
+
+.woods-page .woods-own-section .silk-suits-label {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.woods-page .woods-own-section .silk-suits-text {
+  color: #E8E0D2;
+}
+
+.woods-page .woods-process-section {
+  background: #24362c;
+  padding: 6rem 3rem 5.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.woods-page .woods-process-section > :not(.woods-pass) {
+  position: relative;
+  z-index: 1;
+}
+
+.woods-page .mens-process-heading {
+  color: #F1EADF;
+  margin-bottom: 3.5rem;
+}
+
+.woods-steps {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.woods-steps li {
+  list-style: none;
+}
+
+.woods-steps::before {
+  content: '';
+  position: absolute;
+  top: 1.35rem;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: rgba(169, 154, 111, 0.4);
+  pointer-events: none;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.woods-process-section[data-motion="ready"] .mens-process-heading {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.woods-process-section[data-motion="ready"] .woods-steps li {
+  opacity: 0;
+  transform: translateX(-48px);
+}
+
+.woods-process-section[data-motion="ready"] .woods-steps::before {
+  transform: scaleX(0);
+}
+
+.woods-process-section[data-motion="inview"] .mens-process-heading,
+.woods-process-section[data-motion="inview"] .woods-steps li {
+  opacity: 1;
+  transform: none;
+}
+
+.woods-process-section[data-motion="inview"] .woods-steps::before {
+  transform: scaleX(1);
+}
+
+.woods-process-section[data-motion="ready"] .mens-process-heading,
+.woods-process-section[data-motion="inview"] .mens-process-heading {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.woods-process-section[data-motion="ready"] .woods-steps::before,
+.woods-process-section[data-motion="inview"] .woods-steps::before {
+  transition: transform 1.9s cubic-bezier(0.22, 1, 0.36, 1) 1.15s;
+}
+
+.woods-process-section[data-motion="ready"] .woods-steps li,
+.woods-process-section[data-motion="inview"] .woods-steps li {
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Sequence: title fades in (0-0.7s), underline draws (0.3-1.15s), then the steps
+   follow from 1.15s, one every 0.34s.
+   Brass underline drawn left to right under "How it works" once the title fades in.
+   The heading shrinks to its text so the line runs exactly from the "H" to the "s". */
+.woods-process-section .mens-process-heading {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1;
+}
+
+.woods-process-section .mens-process-heading::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.15rem;
+  background: #A99A6F;
+  transform-origin: left;
+}
+
+.woods-process-section[data-motion="ready"] .mens-process-heading::after {
+  transform: scaleX(0);
+}
+
+.woods-process-section[data-motion="inview"] .mens-process-heading::after {
+  transform: scaleX(1);
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+}
+
+.woods-process-section[data-motion="inview"] .woods-steps li:nth-child(1) { transition-delay: 1.15s; }
+.woods-process-section[data-motion="inview"] .woods-steps li:nth-child(2) { transition-delay: 1.49s; }
+.woods-process-section[data-motion="inview"] .woods-steps li:nth-child(3) { transition-delay: 1.83s; }
+.woods-process-section[data-motion="inview"] .woods-steps li:nth-child(4) { transition-delay: 2.17s; }
+.woods-process-section[data-motion="inview"] .woods-steps li:nth-child(5) { transition-delay: 2.51s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .woods-process-section .mens-process-heading,
+  .woods-process-section .mens-process-heading::after,
+  .woods-process-section .woods-steps li,
+  .woods-process-section .woods-steps::before {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.woods-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.woods-step-num {
+  font-family: "libre-caslon-display", serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #A99A6F;
+  background: #24362c;
+  padding: 0 0.65rem;
+  margin-bottom: 1.35rem;
+  letter-spacing: 0.06em;
+}
+
+.woods-step h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #F1EADF;
+  font-weight: 400;
+  margin: 0 0 0.7rem;
+}
+
+.woods-step p {
+  font-family: "raleway", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #F1EADF;
+  margin: 0;
+  max-width: 14rem;
+}
+
+.woods-step-link:hover .woods-step-num,
+.woods-step-link:hover h3 {
+  color: #A99A6F;
+}
+
+@media (max-width: 1100px) {
+  .woods-page .woods-process-section {
+    padding: 4.5rem 1.5rem 4rem;
+  }
+
+  .woods-steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 32rem;
+  }
+
+  .woods-steps::before {
+    display: none;
+  }
+
+  .woods-steps li + li .woods-step {
+    border-top: 1px solid rgba(169, 154, 111, 0.28);
+  }
+
+  .woods-step {
+    display: grid;
+    grid-template-columns: 2.75rem 1fr;
+    align-items: center;
+    column-gap: 1rem;
+    text-align: left;
+    padding: 1.35rem 0;
+  }
+
+  .woods-step-num {
+    grid-row: 1 / span 2;
+    margin-bottom: 0;
+    padding: 0;
+    min-width: 2.25rem;
+    align-self: center;
+  }
+
+  .woods-step h3 {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .woods-step p {
+    grid-column: 2;
+    padding-left: 0;
+    max-width: none;
+    margin-top: 0.35rem;
+  }
+}
+
+.woods-page .woods-gallery-section {
+  background: #24362C;
+}
+
+.woods-mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.woods-mobile-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.woods-mobile-lockup .woods-department-link {
+  font-size: 0.42rem;
+  letter-spacing: 0.16em;
+  margin-top: 0.18rem;
+  line-height: 1.2;
+}
+
+.woods-mobile-trees {
+  display: block;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.woods-mobile-logo .woods-mobile-trees img,
+.woods-mobile-logo > img {
+  display: block;
+  height: 42px;
+  max-height: none;
+  width: auto;
+}
+
+.woods-mobile-nav-bar {
+  background: #24362C;
+}
+
+.woods-mobile-nav-bar .hamburger-menu,
+.woods-mobile-nav-bar .hamburger-menu:hover {
+  color: #F1EADF;
+}
+
+.woods-mobile-drawer {
+  background: rgba(36, 54, 44, 0.98);
+}
+
+.woods-mobile-drawer .mobile-menu-close,
+.woods-mobile-drawer .mobile-menu-close:hover {
+  color: #F1EADF;
+}
+
+.woods-mobile-drawer .mobile-menu-header {
+  border-bottom-color: rgba(169, 154, 111, 0.25);
+  padding-right: 4rem;
+}
+
+.woods-mobile-drawer .mobile-menu-links a {
+  color: #F1EADF;
+  border-bottom-color: rgba(169, 154, 111, 0.2);
+}
+
+.woods-mobile-drawer .mobile-menu-links a:hover,
+.woods-mobile-drawer .mobile-menu-links a:active {
+  background: rgba(169, 154, 111, 0.12);
+  color: #A99A6F;
+}
+
+.woods-mobile-drawer .mobile-menu-links a[aria-current="page"] {
+  font-weight: 600;
+  color: #A99A6F;
+}
+
+.woods-mobile-drawer .mobile-menu-footer {
+  border-top-color: rgba(169, 154, 111, 0.25);
+}
+
+.woods-mobile-drawer .mobile-social-icons a {
+  color: #A99A6F;
+}
+
+.woods-mobile-drawer .mobile-social-icons a:hover {
+  color: #F1EADF;
+}
+
+.mens-suits-parallax.woods-home-banner {
+  background-image: url('/mens-suits/woods-hero.jpg');
+  background-position: center right;
+}
+
+.mens-suits-parallax.woods-home-banner .parallax-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(36, 54, 44, 0.55) 0%,
+    rgba(36, 54, 44, 0.35) 50%,
+    rgba(36, 54, 44, 0.2) 100%
+  );
+}
+
+.mens-suits-parallax.woods-home-banner .parallax-label {
+  color: #A99A6F;
+  letter-spacing: 0.32em;
+}
+
+.mens-suits-parallax.woods-home-banner .parallax-title {
+  font-size: 3.25rem;
+}
+
+.mens-suits-parallax.woods-home-banner .parallax-title .serif-text {
+  font-family: "libre-caslon-display", serif;
+  font-size: inherit;
+  white-space: normal;
+}
+
+.mens-suits-parallax.woods-home-banner .parallax-btn {
+  border-color: #A99A6F;
+  color: #F1EADF;
+  border-radius: 0;
+}
+
+.mens-suits-parallax.woods-home-banner .parallax-btn:hover {
+  background: #A99A6F;
+  color: #1C1C1A;
+  border-color: #A99A6F;
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .woods-header .main-nav {
+    gap: 0.65rem;
+  }
+
+  .woods-nav-mark {
+    padding: 0.15rem 0.5rem;
+  }
+
+  .woods-wordmark-nav .woods-wordmark-name {
+    font-size: 1.4rem;
+  }
+
+  .woods-nav-mark .woods-wordmark-sub-link {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .woods-announcement-bar {
+    display: none;
+  }
+
+  .woods-header {
+    padding: 0.4rem 1rem;
+  }
+
+  .woods-page .mens-hero-content {
+    margin-left: 0;
+    padding: 2.35rem 1.5rem 0;
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+    min-height: calc(85vh - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .woods-page .woods-hero .woods-hero-copy,
+  .woods-page .woods-hero .mens-hero-title {
+    text-align: left;
+    width: 80%;
+  }
+
+  .woods-page .woods-hero .woods-hero-cta {
+    text-align: center;
+  }
+
+  .woods-page .mens-hero-label {
+    justify-content: center;
+  }
+
+  .woods-page .mens-hero-title {
+    font-size: clamp(1.85rem, 6.4vw, 2.35rem);
+    white-space: nowrap;
+  }
+
+  .woods-hero-hook {
+    font-size: 1.15rem;
+  }
+
+  .woods-page .woods-hero {
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 85vh;
+    padding-bottom: 2rem;
+  }
+
+  .woods-hero-fg {
+    left: 0;
+    right: 0;
+    bottom: -3%;
+    width: 100%;
+    max-width: 100%;
+    height: 70%;
+    transform: none;
+    background-size: contain;
+    background-position: center bottom;
+    opacity: 1;
+    animation-name: woods-hero-fg-in-mobile;
+  }
+
+  @keyframes woods-hero-fg-in-mobile {
+    from {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .woods-page .woods-hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(36, 54, 44, 0.7) 0%,
+      rgba(36, 54, 44, 0.18) 36%,
+      rgba(36, 54, 44, 0.2) 62%,
+      rgba(36, 54, 44, 0.78) 100%
+    );
+  }
+
+  .woods-page .woods-hero .mens-hero-content {
+    z-index: 3;
+  }
+
+  .woods-page .woods-hero .woods-hero-cta {
+    margin-top: 0;
+    padding-bottom: 0.25rem;
+  }
+
+  .woods-nav-mark {
+    padding: 0;
+  }
+
+  .woods-cta-btn {
+    padding: 0.9rem 1.75rem;
+  }
+
+  .woods-details-section {
+    padding: 0;
+  }
+
+  .woods-details-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .woods-details-photo {
+    min-height: 420px;
+  }
+
+  .woods-details-copy {
+    padding: 3.5rem 1.5rem 4rem;
+    text-align: center;
+  }
+
+  .woods-details-label {
+    justify-content: center;
+  }
+
+  .woods-details-title {
+    font-size: 2rem;
+  }
+
+  .woods-page .woods-own-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .woods-own-copy {
+    padding: 4rem 2rem;
+    order: 2;
+  }
+
+  .woods-own-copy .mens-logos {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .woods-page .woods-own-section .mens-logos img {
+    width: min(148px, 40vw);
+    height: auto;
+  }
+
+  .woods-own-photo {
+    min-height: 500px;
+    order: 1;
+  }
+
+  .woods-page .mens-rentals-section .mens-image-right {
+    order: 1 !important;
+  }
+
+  .woods-page .mens-rentals-section .mens-image-right img {
+    transform:
+      translate3d(0, calc((var(--reveal-p) - 0.45) * -12px), 0)
+      scale(calc(1.02 + var(--reveal-p) * 0.03));
+  }
+
+  .woods-page .mens-rentals-section .mens-content-left {
+    order: 2 !important;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .woods-page .mens-rentals-section .mens-section-title {
+    text-align: left;
+  }
+}
+
+/* ===== Navigate the Woods (/mens-suits landing) ===== */
+.woods-navigate {
+  position: relative;
+  overflow: hidden;
+  background: #1C1C1A;
+  color: #F1EADF;
+  padding: 0;
+}
+
+.woods-navigate-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(28, 28, 26, 0.55) 0%, rgba(28, 28, 26, 0.82) 55%, #1C1C1A 100%),
+    url('/mens-suits/woods-hero-bg.jpg') center 40% / cover no-repeat;
+  transform: scale(1.04);
+  animation: woods-hero-bg-in 1.5s ease-out both;
+  z-index: 0;
+}
+
+.woods-navigate-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem 3rem;
+}
+
+.woods-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.woods-paths {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.woods-paths > li {
+  animation: woods-hero-copy-in 0.9s ease-out both;
+  animation-delay: calc(0.65s + var(--i, 0) * 0.15s);
+}
+
+.woods-path {
+  position: relative;
+  display: block;
+  height: clamp(340px, calc(100svh - 360px), 600px);
+  overflow: hidden;
+  color: #F1EADF;
+  text-decoration: none;
+  border: 1px solid rgba(169, 154, 111, 0.25);
+  container-type: inline-size;
+  transition: border-color 0.4s ease;
+}
+
+.woods-path-photo {
+  position: absolute;
+  inset: 0;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.woods-path-photo img {
+  object-fit: cover;
+  object-position: var(--photo-pos, center 30%);
+  transform: scale(var(--photo-zoom, 1));
+  transform-origin: var(--photo-origin, center 70%);
+}
+
+.woods-path::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(28, 28, 26, 0.78) 0%, rgba(28, 28, 26, 0.28) 26%, rgba(28, 28, 26, 0) 44%);
+  pointer-events: none;
+}
+
+.woods-path-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  padding: 1.5rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.woods-path-title {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: nowrap;
+  column-gap: 0.4rem;
+  row-gap: 0.1rem;
+  max-width: 100%;
+  font-family: "libre-caslon-display", serif;
+  font-weight: 400;
+  font-size: clamp(1.85rem, 12.5cqi, 3rem);
+  line-height: 1.05;
+  white-space: nowrap;
+  color: #F1EADF;
+  margin: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #A99A6F;
+  transform-origin: center top;
+  transition: transform 0.35s ease;
+}
+
+.woods-path-title-text {
+  white-space: nowrap;
+}
+
+.woods-path-arrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.5em;
+  letter-spacing: 0;
+  color: #A99A6F;
+  transition: transform 0.4s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .woods-path:hover,
+  .woods-path:focus-visible {
+    border-color: #A99A6F;
+  }
+
+  .woods-path:hover .woods-path-photo,
+  .woods-path:focus-visible .woods-path-photo {
+    transform: scale(1.05);
+  }
+
+  .woods-path:hover .woods-path-title,
+  .woods-path:focus-visible .woods-path-title {
+    transform: scale(1.16);
+  }
+
+  .woods-path:hover .woods-path-arrow,
+  .woods-path:focus-visible .woods-path-arrow {
+    transform: translateX(4px);
+  }
+}
+
+.woods-navigate-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .woods-page:has(.woods-navigate) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .woods-page:has(.woods-navigate) .woods-chrome {
+    flex-shrink: 0;
+  }
+
+  .woods-page:has(.woods-navigate) .woods-announcement-bar {
+    display: none;
+  }
+
+  .woods-navigate {
+    min-height: calc(100dvh - 3.5rem);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .woods-navigate-inner {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    padding: 0 0 0.65rem;
+  }
+
+  .woods-paths {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    gap: 0.85rem;
+  }
+
+  .woods-paths > li {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+  }
+
+  .woods-path {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    border-left: none;
+    border-right: none;
+  }
+
+  .woods-path-photo img {
+    transform: none;
+  }
+
+  .woods-paths > li:nth-child(1) .woods-path-photo img {
+    object-position: center 30%;
+  }
+
+  .woods-paths > li:nth-child(2) .woods-path-photo img {
+    object-position: center 38%;
+  }
+
+  .woods-paths > li:nth-child(3) .woods-path-photo img {
+    object-position: center 12%;
+  }
+
+  .woods-path-body {
+    top: 0;
+    bottom: auto;
+    padding: 0.85rem 1.15rem 1.4rem 0.85rem;
+    text-align: right;
+  }
+
+  .woods-path-title {
+    font-size: clamp(2rem, 11cqi, 3.15rem);
+    justify-content: flex-end;
+  }
+
+  .woods-navigate-cta {
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .woods-navigate-cta .woods-cta-btn {
+    padding: 0.65rem 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .woods-navigate-bg,
+  .woods-paths > li {
+    animation: none;
+  }
+
+  .woods-path-photo,
+  .woods-path-arrow {
+    transition: none;
+  }
+}
+
+/* ===== The Woods brand guide (unlinked: /mens-suits/brand-guide) ===== */
+.woods-guide {
+  background: #F1EADF;
+  color: #1C1C1A;
+  padding: 4.5rem 1.5rem 6rem;
+}
+
+.woods-guide-inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.woods-guide h1 {
+  font-family: "libre-caslon-display", serif;
+  font-weight: 400;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1;
+  margin: 0 0 1.25rem;
+  color: #24362C;
+}
+
+.woods-guide-lede {
+  font-family: "raleway", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 38rem;
+  margin: 0 0 3.5rem;
+}
+
+.woods-guide-lede span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.woods-guide section {
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(36, 54, 44, 0.15);
+}
+
+.woods-guide h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+  color: #24362C;
+}
+
+.woods-guide section > p,
+.woods-guide li {
+  font-family: "raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.woods-guide-lockups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0 2rem;
+}
+
+.woods-guide-lockup {
+  margin: 0;
+  padding: 2.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.woods-guide-lockup img {
+  width: min(100%, 260px);
+  height: auto;
+  margin-bottom: 0.35rem;
+}
+
+.woods-guide-lockup-dark {
+  background: #24362C;
+}
+
+.woods-guide-lockup-light {
+  background: #F7F3EC;
+  border: 1px solid rgba(36, 54, 44, 0.12);
+}
+
+.woods-guide-name {
+  font-family: "libre-caslon-display", serif;
+  font-size: 2.4rem;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.woods-guide-lockup-dark .woods-guide-name {
+  color: #F1EADF;
+}
+
+.woods-guide-lockup-light .woods-guide-name {
+  color: #24362C;
+}
+
+.woods-guide-sub,
+.woods-guide-by {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  margin: 0.45rem 0 0;
+}
+
+.woods-guide-sub {
+  font-size: 0.72rem;
+}
+
+.woods-guide-by {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+}
+
+.woods-guide-lockup-dark .woods-guide-sub,
+.woods-guide-lockup-dark .woods-guide-by {
+  color: #A99A6F;
+}
+
+.woods-guide-lockup-light .woods-guide-sub,
+.woods-guide-lockup-light .woods-guide-by {
+  color: #57402F;
+}
+
+.woods-guide-lockup figcaption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-top: 1.75rem;
+  color: #A99A6F;
+}
+
+.woods-guide-lockup-light figcaption {
+  color: #57402F;
+}
+
+.woods-guide-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.woods-guide-rules h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #24362C;
+  margin: 0 0 0.75rem;
+}
+
+.woods-guide-rules ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.woods-guide-rules li + li {
+  margin-top: 0.35rem;
+}
+
+.woods-guide-swatches {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.woods-guide-swatches li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.woods-guide-chip {
+  display: block;
+  height: 88px;
+  border: 1px solid rgba(28, 28, 26, 0.08);
+}
+
+.woods-guide-swatch-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.woods-guide-hex,
+.woods-guide-use,
+.woods-guide-specimen-meta,
+.woods-guide-pending,
+.woods-guide-partners figcaption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #57402F;
+  line-height: 1.45;
+}
+
+.woods-guide-type {
+  margin-top: 1.5rem;
+}
+
+.woods-guide-specimen-name {
+  font-family: "libre-caslon-display", serif;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+  color: #24362C;
+}
+
+.woods-guide-specimen-headline {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 1.75rem 0 0;
+  color: #24362C;
+}
+
+.woods-guide-specimen-meta {
+  margin: 0.4rem 0 0;
+}
+
+.woods-guide-pending {
+  margin: 1.5rem 0 0.5rem;
+  color: #A99A6F;
+}
+
+.woods-guide-options {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.woods-guide-options li + li {
+  margin-top: 0.35rem;
+}
+
+.woods-guide-partners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.woods-guide-partners figure {
+  margin: 0;
+}
+
+.woods-guide-partner-well {
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.woods-guide-partner-well img {
+  width: auto;
+  max-width: 100%;
+  height: 64px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.woods-guide-partner-walnut {
+  background: #57402F;
+}
+
+.woods-guide-partner-black {
+  background: #1C1C1A;
+}
+
+.woods-guide-partner-empty {
+  background: #F7F3EC;
+  border: 1px dashed rgba(36, 54, 44, 0.35);
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #24362C;
+}
+
+.woods-guide-partners figcaption {
+  margin-top: 0.65rem;
+}
+
+.woods-guide-download-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #24362C;
+  margin: 2rem 0 0.85rem;
+}
+
+.woods-guide-downloads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.woods-guide-downloads-solid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.woods-guide-downloads figure {
+  margin: 0;
+}
+
+.woods-guide-download-preview {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.woods-guide-download-preview img {
+  width: 100%;
+  height: auto;
+}
+
+.woods-guide-download-dark {
+  background: #24362C;
+}
+
+.woods-guide-download-light {
+  background: #F7F3EC;
+  border: 1px solid rgba(36, 54, 44, 0.12);
+}
+
+.woods-guide-downloads figcaption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #57402F;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.woods-guide-downloads figcaption span {
+  letter-spacing: 0.08em;
+  color: #A99A6F;
+}
+
+.woods-guide-download-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.65rem;
+}
+
+.woods-guide-download-all {
+  margin-top: 1.25rem;
+}
+
+.woods-guide-download-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F1EADF;
+  background: #24362C;
+  padding: 0.55rem 0.9rem;
+}
+
+.woods-guide-download-links a:hover {
+  background: #1C1C1A;
+}
+
+@media (max-width: 800px) {
+  .woods-guide-lockups,
+  .woods-guide-rules,
+  .woods-guide-partners,
+  .woods-guide-downloads,
+  .woods-guide-downloads-solid {
+    grid-template-columns: 1fr;
+  }
+
+  .woods-guide-swatches {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
