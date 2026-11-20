@@ -141,7 +141,7 @@ export default function VeryMarryDayPage() {
               </a>
             </p>
             <p>
-              Christmas Minis by the fireplace with Sweets Root Photography and The Feisty Altelier. Capture the perfect holiday family, child or engagement photo with Santa. Spaces are limited! Call{' '}
+              Christmas Minis by the fireplace with Sweets Root Photography and Feisty Atelier. Capture the perfect holiday family, child or engagement photo with Santa. Spaces are limited! Call{' '}
               <a href="tel:7632202319">763-220-2319</a> to reserve your spot.
             </p>
           </div>
