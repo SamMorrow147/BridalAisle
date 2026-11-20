@@ -6,6 +6,8 @@ import { SITE_URL } from '@/app/lib/site';
 const SANTA_FB_EVENT = 'https://www.facebook.com/events/1153334607157888';
 const ANNIVERSARY_FB_EVENT = 'https://www.facebook.com/events/1675159267306140';
 const GOOGLE_MAP = 'https://maps.app.goo.gl/f9nDcyt7Fx1EwrBy6';
+const SWEET_ROOTS_MINIS = 'https://book.usesession.com/s/etC5Jgo5yO';
+const FEISTY_ATELIER_MINIS = 'https://heatherhansonphoto.hbportal.co/public/6afdb8c55bffc4f3244ea088';
 
 export const metadata: Metadata = {
   title: 'A Very Marry Day | Bridal Aisle Boutique',
@@ -79,6 +81,7 @@ export default function VeryMarryDayPage() {
             </h1>
             <p className="marry-where">at Bridal Aisle</p>
             <p className="marry-when">Santa Claus, 10am – 3pm</p>
+            <p className="marry-note">Bring your camera for photos!</p>
             <AddToCalendar className="marry-btn" />
           </div>
           <figure className="marry-polaroid marry-polaroid-right">
@@ -141,8 +144,18 @@ export default function VeryMarryDayPage() {
               </a>
             </p>
             <p>
-              Christmas Minis by the fireplace with Sweets Root Photography and Feisty Atelier. Capture the perfect holiday family, child or engagement photo with Santa. Spaces are limited! Call{' '}
-              <a href="tel:7632202319">763-220-2319</a> to reserve your spot.
+              Christmas Minis by the fireplace with Sweet Roots Photography and The Feisty Atelier. These indoor sessions are separate from Santa, who will be outside. Capture the perfect holiday family, child or engagement photo. Spaces are limited! Book ahead with the photographers:
+            </p>
+            <p>
+              <a href={SWEET_ROOTS_MINIS} target="_blank" rel="noopener noreferrer">
+                Christmas Minis at Bridal Aisle
+              </a>
+              {' '}with Sweet Roots Photography
+            </p>
+            <p>
+              <a href={FEISTY_ATELIER_MINIS} target="_blank" rel="noopener noreferrer">
+                The Feisty Atelier
+              </a>
             </p>
           </div>
           <div>
