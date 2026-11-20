@@ -79,7 +79,6 @@ export default function VeryMarryDayPage() {
             </h1>
             <p className="marry-where">at Bridal Aisle</p>
             <p className="marry-when">Santa Claus, 10am – 3pm</p>
-            <p className="marry-note">Bring your camera for photos!</p>
             <AddToCalendar className="marry-btn" />
           </div>
           <figure className="marry-polaroid marry-polaroid-right">
@@ -134,12 +133,16 @@ export default function VeryMarryDayPage() {
               Our Community&apos;s beloved Santa from The Woods is returning with us this year along with his reindeer and Santa&apos;s elves, Sparkle &amp; Sprinkle!
             </p>
             <p>
-              Plus games for the kids (and kids at heart), food trucks, tours of our store, and more!
+              Plus games for the kids (and kids at heart), food trucks, a farm stand, Santa letters, tours of our store, and more!
             </p>
             <p>
               <a href={SANTA_FB_EVENT} target="_blank" rel="noopener noreferrer">
                 See our Facebook event for details
               </a>
+            </p>
+            <p>
+              Christmas Minis by the fireplace with Sweets Root Photography and The Feisty Altelier. Capture the perfect holiday family, child or engagement photo with Santa. Spaces are limited! Call{' '}
+              <a href="tel:7632202319">763-220-2319</a> to reserve your spot.
             </p>
           </div>
           <div>
@@ -149,7 +152,10 @@ export default function VeryMarryDayPage() {
               <Link href="/appointments#appointment-3">weekday VIP appointments</Link> (upon availability), vendor giveaways &amp; bride swag.
             </p>
             <p>
-              Purchase a dress, suit or secure your wedding date for suit rentals and you will be entered to win our Grand Prize! Winner will be announced at our event.
+              Purchase a dress, suit or secure your wedding date for suit rentals and you will be entered to win our Grand Prize: $1,000 off your photography package! Winner will be announced at our event.
+            </p>
+            <p>
+              Brides-to-be: tour the boutique and book your future appointment with our stylists at the event.
             </p>
             <p>
               <a href={ANNIVERSARY_FB_EVENT} target="_blank" rel="noopener noreferrer">
